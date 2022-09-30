@@ -193,3 +193,6 @@ def railingRequest(request):
 
 def stuffingRequest(request):
     return render(request, 'stuffingRequest.html')
+
+def documentation(request):
+    return render(request, 'documentation.html')

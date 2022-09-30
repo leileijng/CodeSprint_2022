@@ -27,5 +27,5 @@ urlpatterns = [
     path('resources', views.resources, name='resources'),
     path('company-post-job/', views.postJob, name='company-post-job'),
 
-
+    path('documentation', views.documentation, name='documentation'),
 ]
