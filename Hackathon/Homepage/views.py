@@ -2,9 +2,9 @@ from django.contrib import messages
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
-from .forms import LoginForm, UserSignupForm, CompanySignupForm, PostJobs, Verification
+from .forms import LoginForm, PostCoLoadingListing, UserSignupForm, CompanySignupForm, PostJobs, Verification
 from django.views.decorators.csrf import csrf_exempt  
-from .models import JobListing, Company, Individual, VerifiedJobListing
+from .models import JobListing, Company, Individual, VerifiedJobListing, CoLoadingListing, VerifiedCoLoadingListing
 import requests
 import ssl
 import json
@@ -115,8 +115,8 @@ def company(request):
             print(form.errors)
     else:
         form = PostJobs()
-        Verified = VerifiedJobListing.objects.all()
-        NotVerified = JobListing.objects.all()
+        Verified = VerifiedCoLoadingListing.objects.all()
+        NotVerified = CoLoadingListing.objects.all()
     return render(request, 'company.html', {'form' : form, 'Verified': Verified, 'NotVerified': NotVerified })
 
 def verification(request):
@@ -145,6 +145,20 @@ def verification(request):
 
 def user(request):
     return render(request, 'user.html')
+
+def freightmarket(request):
+    if request.method == 'POST':
+        form = PostCoLoadingListing(request.POST)
+        if(form.is_valid()):
+            form.save()
+        else:
+            print(form.errors)
+    else:
+        form = PostCoLoadingListing()
+        Verified = VerifiedJobListing.objects.all()
+        NotVerified = JobListing.objects.all()
+    return render(request, 'freightmarket.html', {'form' : form, 'Verified': Verified, 'NotVerified': NotVerified })
+
 
 def signup(request):
     return render(request, 'signup.html')

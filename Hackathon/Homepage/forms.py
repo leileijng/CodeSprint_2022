@@ -1,6 +1,6 @@
 from django import forms
 
-from Homepage.models import JobListing, Individual, Company
+from Homepage.models import JobListing, Individual, Company, CoLoadingListing
 
 
 class LoginForm(forms.Form):
@@ -46,6 +46,19 @@ class PostJobs(forms.ModelForm):
         model = JobListing
         fields = '__all__'
         # exclude = ['Company', 'Source']
+
+class PostCoLoadingListing(forms.ModelForm):
+    Date = forms.DateField(widget=forms.TextInput(attrs={'class': 'form-control'}),required=True)
+    Time = forms.TimeField(widget=forms.TextInput(attrs={'class': 'form-control'}),required=True)
+    Destination = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}),required=True)
+    AvailableVolume = forms.IntegerField(widget=forms.TextInput(attrs={'class': 'form-control'}),required=True)
+    AvailableWeight = forms.IntegerField(widget=forms.TextInput(attrs={'class': 'form-control'}),required=True)
+    RequiredVolume = forms.IntegerField(widget=forms.TextInput(attrs={'class': 'form-control'}),required=True)
+    RequiredWeight = forms.IntegerField(widget=forms.TextInput(attrs={'class': 'form-control'}),required=True)
+
+    class Meta:
+        model = CoLoadingListing
+        fields = '__all__'
 
 class Verification(forms.Form):
     VerificationCode = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}), required=True)
