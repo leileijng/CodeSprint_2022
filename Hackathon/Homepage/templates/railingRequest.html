@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% load filter_tags %}
+{% block title %}<title>User Profile</title>{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="company">
+        <div ng-app="tabApp">
+            <div class="row" ng-controller="TabController">
+                <div class="col-md-1 splitLine mt-3" style="height: 600px; width: 12.499999995%">
+                    <div class="mt-n2 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="mb-5 nav nav-pills nav-stacked row">
+                            <div class="companyBtn" ng-class="{ active: isSet(1) }">
+                                <a class="btn" ng-click="setTab(1)"> <i class="mt-1 me-3 fa fa-address-book"></i>
+                                    Resources</a>
+                            </div>
+
+                            <div class="w-100"></div>
+
+                            <div class="companyBtn" ng-class="{ active: isSet(2) }">
+                                <a class="btn" ng-click="setTab(2)"> <i class="mt-1 me-3 fa fa-search"></i> Services</a>
+                            </div>
+
+                            <div class="w-100"></div>
+                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                <a class="btn notification notify" ng-click="setTab(3)"> <i
+                                        class="mt-1 me-3 fa fa-bell"></i> Co-loading</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-10" style="padding-left: 0px; padding-top: 10px; width: 87.49999965%;">
+                    <div class="container" data-aos="fade-up">
+
+                
+                      </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+   
+
+</style>
+{% endblock %}

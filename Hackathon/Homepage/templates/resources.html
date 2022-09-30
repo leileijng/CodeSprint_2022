@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}<title>User Profile</title>{% endblock %}
+        {% block content %}
+        <div class="container">
+            <div class="company">
+                <div ng-app="tabApp">
+                    <div class="row" ng-controller="TabController">
+                        <div class="col-md-1 splitLine mt-3" style="height: 600px; width: 12.499999995%">
+                            <div class="mt-n2 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="mb-5 nav nav-pills nav-stacked row">
+                                    <!-- navbar at the side -->
+                                    <div class="companyBtn" ng-class="{ active: isSet(1) }">
+                                        <a class="btn" ng-click="setTab(1)"> <i class="mt-1 me-3 fa fa-plus-square-o"></i> List</a>
+                                    </div>
+
+                                    <div class="w-100"></div>
+
+                                    <div class="companyBtn" ng-class="{ active: isSet(2) }">
+                                        <a class="btn" ng-click="setTab(2)"> <i class="mt-1 me-3 fa fa-search"></i> Find</a>
+                                    </div>
+                                    
+                                    <div class="w-100"></div>
+                                    <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                        <a class="btn" ng-click="setTab(3)"> <i class="mt-1 me-3 fa fa-list-ul"></i> Loans</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-10" style="padding-left: 50px; padding-top: 10px; width: 87.49999965%;">
+                            <div class="jumbotron">
+                                <div ng-show="isSet(1)">
+                                    <div class="wow fadeInUp" data-wow-delay="0.3s">      
+                                        <section class="resume-section" id="experience">
+                                            <div class="resume-section-content">
+                                                <h2 class="mb-3 resume-title">Work Experience</h2>
+                                                <div class="d-flex flex-column flex-md-row justify-content-between">
+                                                    <div class="flex-grow-1">
+                                                        <h3 class="mb-0">Senior Web Developer</h3>
+                                                        <div class="d-flex mt-2">
+                                                            <img class="mb-2 company-logo" style="width: 33px; height: 33px; margin-right: 10px;" src="https://whiteduck.de/wp-content/uploads/Microsoft-Logo.png" alt="">
+                                                            <p class="mt-1" style="color:darkolivegreen;"> Microsoft</p>
+                                                            <img class="mb-1 verified" style="margin-left: 1rem;" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
+                                                        </div>
+                                                        <p class="margin-bottom: 0;">Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                                                    </div>
+                                                    <div class="flex-shrink-0"><span class="text-primary">March 2013 - Present</span></div>
+                                                </div>
+                                                <div class="mb-3 d-flex">
+                                                    <span class="text-primary me-1" style="font-weight:bold;">Skills : </span>
+                                                    <p>Python, C++, Vue, React, Django, SQL</p>
+                                                </div>
+                                                <div class="d-flex flex-column flex-md-row justify-content-between">
+                                                    <div class="flex-grow-1">
+                                                        <h3 class="mb-0">Web Developer</h3>
+                                                        <div class="d-flex mt-2">
+                                                            <img class="mb-2 company-logo" style="width: 33px; height: 33px; margin-right: 10px;" src="https://media-exp1.licdn.com/dms/image/C560BAQHdAaarsO-eyA/company-logo_100_100/0/1595530301220?e=1662595200&v=beta&t=7QwpJKXzZthPTXzCrYB9mH7K_QG21d9m05GO5BJqZck" alt="">
+                                                            <p class="mt-1" style="color:darkolivegreen;"> Apple</p>
+                                                            <img class="mb-1 pending" style="margin-left: 1rem;" src="{% static 'img/time.png' %}" alt="">
+                                                        </div>
+                                                        <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+                                                    </div>
+                                                    <div class="flex-shrink-0"><span class="text-primary">December 2011 - March 2013</span></div>
+                                                </div>
+                                                <div class="mb-5 d-flex">
+                                                    <span class="text-primary me-1" style="font-weight:bold;">Skills : </span>
+                                                    <p>HTML, CSS, Javascript, github, Latex</p>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        <hr/>
+                                        <section class="resume-section" id="experience">
+                                            <div class="resume-section-content">
+                                                <h2 class="mb-3 resume-title">Education</h2>
+                                                <div class="d-flex flex-column flex-md-row justify-content-between">
+                                                    
+                                                    <div class="flex-grow-1">
+                                                        <h3 class="mb-0">Nanyang Technological University of Singapore</h3>
+                                                        <div class="d-flex mt-2">
+                                                            <p class="mt-1" style="color:darkolivegreen;"> Bachelor of Science</p>
+                                                            <img class="mb-1 verified" style="margin-left: 1rem;" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
+                                                        </div>
+                                                        <div>Computer Science - Web Development Track</div>
+                                                        <p>GPA: 4.23</p>
+                                                    </div>
+                                                    <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div>
+                                                </div>
+                                                <div class="mb-5 d-flex">
+                                                    <span class="text-primary me-1" style="font-weight:bold;">Courses : </span>
+                                                    <p>Computer Architecture, Network, Operating System, Database, Cyber Security</p>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div ng-show="isSet(2)">
+                                    <h1>Find Resources</h1>
+                                    <p>Look for the resources you need today!</p>
+                                    <br>
+                                    <div class="row g-4">
+                                        <!-- This is the display box -->
+                                        <div class="col-lg-4 col-md-6 wow zoomIn">
+                                            <div class="service-item d-flex flex-column rounded">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img class="mb-3 company-logo" src="http://cnltracking.cargoerp.com/cnl-logo.png" alt="">
+                                                        <h5 class="mb-1">Warehouse Forklift</h5>
+                                                        <p class="mb-3" style="color: var(--dark)">CNL Logistic Solutions</p>
+                                                        <ul>
+                                                            <li>Model: Hyster 36-38T</li>
+                                                            <li>Load: 5,000 pounds</li>
+                                                            <li>Price: $35 / day</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <img class="mb-3 ms-auto verified" src="https://acropolis-wp-content-uploads.s3.us-west-1.amazonaws.com/types-of-forklifts.jpg" alt="" style="width:200px;height:200px;">
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <a class="btn px-3 mt-auto ms-auto" href="{% url 'jobinfo' %}">Request Resource</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 wow zoomIn">
+                                            <div class="service-item d-flex flex-column rounded">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img class="mb-3 company-logo" src="http://gilmoncfs.sg/gilmon.png" alt="">
+                                                        <h5 class="mb-1">Electric Pallet Jack</h5>
+                                                        <p class="mb-3" style="color: var(--dark)">Gilmon CFS</p>
+                                                        <ul>
+                                                            <li>Model: Vestil EPT-2048-45</li>
+                                                            <li>Load: 4,500 pounds</li>
+                                                            <li>Price: $20 / day</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <img class="mb-3 ms-auto verified" src="https://m.media-amazon.com/images/I/61I6xQgrIIL._SL1500_.jpg" alt="" style="width:200px;height:200px;">
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <a class="btn px-3 mt-auto ms-auto" href="{% url 'jobinfo' %}">Request Resource</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 wow zoomIn">
+                                            <div class="service-item d-flex flex-column rounded">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img class="mb-3 company-logo" src="https://yt3.ggpht.com/ytc/AMLnZu9NnLdDsTfCk1RHMYnXBm4vSZyn85YFiagBNB7A=s900-c-k-c0x00ffffff-no-rj" alt="">
+                                                        <h5 class="mb-1">Electric Pallet Jack</h5>
+                                                        <p class="mb-3" style="color: var(--dark)">Keppel Corporation</p>
+                                                        <ul>
+                                                            <li>Size: 48 x 40"</li>
+                                                            <li>Available: 2,421 Pallets</li>
+                                                            <li>Price: $20 / week (100 pallets)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <img class="mb-3 ms-auto verified" src="https://img.uline.com/is/image/uline/H-8943?$Mobile_Zoom$" alt="" style="width:200px;height:200px;">
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <a class="btn px-3 mt-auto ms-auto" href="{% url 'jobinfo' %}">Request Resource</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div ng-show="isSet(3)">
+                                    <div class="wow fadeInUp" data-wow-delay="0.3s">
+                                        <h1>Loans</h1>
+                                        <p>Manage your loans here!</p>
+                                        <div class="messages">
+                                            <div class="message-box">
+                                                    <div class="message-content">
+                                                      <div class="message-header">
+                                                        <div class="name"><img src="https://yt3.ggpht.com/ytc/AMLnZu9NnLdDsTfCk1RHMYnXBm4vSZyn85YFiagBNB7A=s900-c-k-c0x00ffffff-no-rj" alt="">Keppel Corporation</div>
+                                                      </div>
+                                                      <p class="message-line">
+                                                          <ul>
+                                                              <li>Item on Loan: AOTONG tri-Axle Skeleton Semi Trailer 40ft truck</li>
+                                                              <li>Loan Period: 3 Weeks</li>
+                                                              <li>Return Date: 22/12/22</li>
+                                                          </ul>
+                                                      </p>
+                                                    <a class="btn" style="width: 110px;" href="{% url 'jobinfo' %}"><p style="margin-left:4px">Contact</p></a>                                                        </div>
+                                            </div>
+                                            <div class="message-box">
+                                                <div class="message-content">
+                                                  <div class="message-header">
+                                                    <div class="name"><img src="https://yt3.ggpht.com/ytc/AMLnZu9NnLdDsTfCk1RHMYnXBm4vSZyn85YFiagBNB7A=s900-c-k-c0x00ffffff-no-rj" alt="">Keppel Corporation</div>
+                                                  </div>
+                                                  <p class="message-line">
+                                                      <ul>
+                                                          <li>Item on Loan: AOTONG tri-Axle Skeleton Semi Trailer 40ft truck</li>
+                                                          <li>Loan Period: 3 Weeks</li>
+                                                          <li>Return Date: 22/12/22</li>
+                                                      </ul>
+                                                  </p>
+                                                <a class="btn" style="width: 110px;" href="{% url 'jobinfo' %}"><p style="margin-left:4px">Contact</p></a>                                                        </div>
+                                            </div>
+                                            <div class="message-box">
+                                              <img src="https://www.tantri.com/en/wp-content/uploads/2019/08/20190508_111923.jpg" alt="">
+                                              <div class="message-content">
+                                                <div class="message-header">
+                                                  <div class="name">Meta</div>
+                                                  <div class="star-checkbox">
+                                                    <input type="checkbox" id="star-2">
+                                                    <label for="star-2">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                                <p class="message-line">
+                                                  Hey, can tell me about progress of project? I'm waiting for your response.
+                                                </p>
+                                                <p class="message-line time">
+                                                  Dec, 12
+                                                </p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock %} 
+

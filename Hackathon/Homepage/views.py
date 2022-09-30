@@ -159,6 +159,8 @@ def freightmarket(request):
         NotVerified = JobListing.objects.all()
     return render(request, 'freightmarket.html', {'form' : form, 'Verified': Verified, 'NotVerified': NotVerified })
 
+def resources(request):
+    return render(request, 'resources.html')
 
 def signup(request):
     return render(request, 'signup.html')
@@ -179,3 +181,9 @@ def postJob(request):
         data = json.loads(response_json)
         print(data)
     return HttpResponse("Posted Successfully")
+
+def services(request):
+    return render(request, 'services.html')
+
+def railingRequest(request):
+    return render(request, 'railingRequest.html')
