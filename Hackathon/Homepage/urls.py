@@ -13,9 +13,14 @@ urlpatterns = [
     path('recommend', views.recommend, name='recommend'),
     path('checking', views.checking, name="checking"),
     path('verification', views.verification, name="verification"),
+<<<<<<< HEAD
 
     path('company-post-job/', views.postJob, name='company-post-job'),
     path('services', views.services, name='services'),
     path('railingRequest', views.railingRequest, name='railingRequest')
     
+=======
+    path('resources', views.resources, name='resources'),
+    path('company-post-job/', views.postJob, name='company-post-job')
+>>>>>>> 825bf22947cea1399621ddde84049c7951c0f973
 ]
