@@ -44,5 +44,23 @@ class JobListing(models.Model):
     Source = models.CharField(max_length=200)
     JobDescription = models.TextField(max_length=1000)
 
+class CoLoadingListing(models.Model):
+    Date = models.DateField()
+    Time = models.TimeField()
+    Destination = models.CharField(max_length=200)
+    AvailableVolume = models.IntegerField()
+    AvailableWeight = models.IntegerField()
+    RequiredVolume = models.IntegerField()
+    RequiredWeight = models.IntegerField()
+
+class VerifiedCoLoadingListing(models.Model):
+    Date = models.DateField()
+    Time = models.TimeField()
+    Destination = models.CharField(max_length=200)
+    AvailableVolume = models.IntegerField()
+    AvailableWeight = models.IntegerField()
+    RequiredVolume = models.IntegerField()
+    RequiredWeight = models.IntegerField()
+
     def __str__(self):
         return '{}/{}'.format(self.Company, self.JobTitle)

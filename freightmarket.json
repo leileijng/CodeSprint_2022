@@ -1,0 +1,26 @@
+{
+    "Entry 1":
+    {
+        "Date":"3 October 2022",
+        "Time":"09:00am",
+        "Destination":"Shanghai",
+        "Cargo Volume":"48.00m3",
+        "Cargo weight":"840.00kg"
+    },
+    "Entry 2":
+    {
+        "Date":"5 October 2022",
+        "Time":"10:00pm",
+        "Destination":"Busan",
+        "Cargo Volume":"60.00m3",
+        "Cargo weight":"1000.00kg"
+    },
+    "Entry 3":
+    {
+        "Date":"7 October 2022",
+        "Time":"12:00pm",
+        "Destination":"Rotterdam",
+        "Cargo Volume":"4.00 m3",
+        "Cargo weight":"70.00kg"
+    }
+}

@@ -22,7 +22,7 @@
                                     
                                     <div class="w-100"></div>
                                     <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                        <a class="btn" ng-click="setTab(3)"> <i class="mt-1 me-3 fa fa-list-ul"></i> Orders</a>
+                                        <a class="btn" ng-click="setTab(3)"> <i class="mt-1 me-3 fa fa-list-ul"></i> Loans</a>
                                     </div>
                                 </div>
                             </div>
@@ -171,56 +171,39 @@
                                 
                                 <div ng-show="isSet(3)">
                                     <div class="wow fadeInUp" data-wow-delay="0.3s">
-                                        <h1>Notification page</h1>
-                                        <p>Messages received</p>        
+                                        <h1>Loans</h1>
+                                        <p>Manage your loans here!</p>
                                         <div class="messages">
                                             <div class="message-box">
-                                              <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQHiNSL4Or29cg/company-logo_200_200/0/1519856215226?e=2147483647&v=beta&t=kJv1gX0_sqLG1g7LKLD5uh_6uEFpWGUTuzpuvVJVdEw" alt="profile image">
-                                              <div class="message-content">
-                                                <div class="message-header">
-                                                  <div class="name">Google<label style="color: red; margin-left: 10px;">New !</label></div>
-                                                  <div class="star-checkbox">
-                                                    <input type="checkbox" id="star-1">
-                                                    <label for="star-1">
-                                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
-                                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
-                                                    </label>
-                                                  </div>
-                                                </div>
-                                                <p class="message-line">
-                                                  I got your first assignment. It was quite good. 🥳 We can continue with the next assignment.
-                                                </p>
-                                                <div class="row">
-                                                    <div class="companyBtn col-md-2">
-                                                        <a class="btn" style="width: 110px;" href="{% url 'jobinfo' %}"><p style="margin-left:4px">Read More</p></a>
-                                                    </div>
-                                                    <p class="col-md-2 ms-auto mt-auto message-line time">
-                                                        Dec, 12
-                                                    </p>
-                                                </div>
-                                              </div>
+                                                    <div class="message-content">
+                                                      <div class="message-header">
+                                                        <div class="name"><img src="https://yt3.ggpht.com/ytc/AMLnZu9NnLdDsTfCk1RHMYnXBm4vSZyn85YFiagBNB7A=s900-c-k-c0x00ffffff-no-rj" alt="">Keppel Corporation</div>
+                                                      </div>
+                                                      <p class="message-line">
+                                                          <ul>
+                                                              <li>Item on Loan: AOTONG tri-Axle Skeleton Semi Trailer 40ft truck</li>
+                                                              <li>Loan Period: 3 Weeks</li>
+                                                              <li>Return Date: 22/12/22</li>
+                                                          </ul>
+                                                      </p>
+                                                    <a class="btn" style="width: 110px;" href="{% url 'jobinfo' %}"><p style="margin-left:4px">Contact</p></a>                                                        </div>
                                             </div>
-                                            <table class="styled-table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Name</th>
-                                                        <th>Points</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Dom</td>
-                                                        <td>6000</td>
-                                                    </tr>
-                                                    <tr class="active-row">
-                                                        <td>Melissa</td>
-                                                        <td>5150</td>
-                                                    </tr>
-                                                    <!-- and so on... -->
-                                                </tbody>
-                                            </table>
                                             <div class="message-box">
-                                              <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQFdNatYGiBelg/company-logo_100_100/0/1636138753911?e=1662595200&v=beta&t=x0mcXgELzzp8PcB5RY_QTZRBtw1QutmpPlG37-6WKkk" alt="profile image">
+                                                <div class="message-content">
+                                                  <div class="message-header">
+                                                    <div class="name"><img src="https://yt3.ggpht.com/ytc/AMLnZu9NnLdDsTfCk1RHMYnXBm4vSZyn85YFiagBNB7A=s900-c-k-c0x00ffffff-no-rj" alt="">Keppel Corporation</div>
+                                                  </div>
+                                                  <p class="message-line">
+                                                      <ul>
+                                                          <li>Item on Loan: AOTONG tri-Axle Skeleton Semi Trailer 40ft truck</li>
+                                                          <li>Loan Period: 3 Weeks</li>
+                                                          <li>Return Date: 22/12/22</li>
+                                                      </ul>
+                                                  </p>
+                                                <a class="btn" style="width: 110px;" href="{% url 'jobinfo' %}"><p style="margin-left:4px">Contact</p></a>                                                        </div>
+                                            </div>
+                                            <div class="message-box">
+                                              <img src="https://www.tantri.com/en/wp-content/uploads/2019/08/20190508_111923.jpg" alt="">
                                               <div class="message-content">
                                                 <div class="message-header">
                                                   <div class="name">Meta</div>
@@ -237,48 +220,6 @@
                                                 </p>
                                                 <p class="message-line time">
                                                   Dec, 12
-                                                </p>
-                                              </div>
-                                            </div>
-                                            <div class="message-box">
-                                              <img src="https://media-exp2.licdn.com/dms/image/C560BAQE88xCsONDULQ/company-logo_200_200/0/1618231291419?e=2147483647&v=beta&t=vc_FjmDR3a48QsN0A5l29y7i07b2NmcTJQrCVCl4jC8" alt="profile image">
-                                              <div class="message-content">
-                                                <div class="message-header">
-                                                  <div class="name">Microsoft</div>
-                                                  <div class="star-checkbox">
-                                                    <input type="checkbox" id="star-3">
-                                                    <label for="star-3">
-                                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
-                                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
-                                                    </label>
-                                                  </div>
-                                                </div>
-                                                <p class="message-line">
-                                                  Awesome! 🤩 I like it. We can schedule a meeting for the next one.
-                                                </p>
-                                                <p class="message-line time">
-                                                  Dec, 12
-                                                </p>
-                                              </div>
-                                            </div>
-                                            <div class="message-box">
-                                              <img src="https://media-exp1.licdn.com/dms/image/C560BAQHdAaarsO-eyA/company-logo_100_100/0/1595530301220?e=1662595200&v=beta&t=7QwpJKXzZthPTXzCrYB9mH7K_QG21d9m05GO5BJqZck" alt="profile image">
-                                              <div class="message-content">
-                                                <div class="message-header">
-                                                  <div class="name">Apple</div>
-                                                  <div class="star-checkbox">
-                                                    <input type="checkbox" id="star-4">
-                                                    <label for="star-4">
-                                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
-                                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
-                                                    </label>
-                                                  </div>
-                                                </div>
-                                                <p class="message-line">
-                                                  I am really impressed! Can't wait to see the final result.
-                                                </p>
-                                                <p class="message-line time">
-                                                  Dec, 11
                                                 </p>
                                               </div>
                                             </div>

@@ -14,8 +14,15 @@ urlpatterns = [
     path('checking', views.checking, name="checking"),
     path('verification', views.verification, name="verification"),
 
+    path('freightmarket', views.freightmarket, name="freightmarket"),
+
+
     path('company-post-job/', views.postJob, name='company-post-job'),
     path('services', views.services, name='services'),
-    path('railingRequest', views.railingRequest, name='railingRequest')
+    path('railingRequest', views.railingRequest, name='railingRequest'),
     
+
+    path('resources', views.resources, name='resources'),
+    path('company-post-job/', views.postJob, name='company-post-job'),
+
 ]
