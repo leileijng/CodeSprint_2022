@@ -59,7 +59,7 @@
               <div class="w-100"></div>
               <div class="companyBtn" ng-class="{ active: isSet(3) }">
                 <a class="btn notification notify" ng-click="setTab(3)">
-                  <i class="mt-1 me-3 fa fa-bell"></i> Message</a
+                  <i class="mt-1 me-3 fa fa-bell"></i> Status</a
                 >
               </div>
             </div>
@@ -74,7 +74,7 @@
               <div class="wow fadeInUp" data-wow-delay="0.3s">
                 <section class="resume-section" id="experience">
                   <div class="resume-section-content">
-                    <h2 class="mb-3 resume-title">Buy space for co-loading</h2>
+                    <h2 class="mb-3 resume-title">Buy Cargo space</h2>
                   </div>
                 </section>
                 <section>
@@ -179,9 +179,7 @@
                 >
                   <section class="resume-section" id="experience">
                     <div class="resume-section-content">
-                      <h2 class="mb-3 resume-title">
-                        Validate Job Opportunity
-                      </h2>
+                      <h2 class="mb-3 resume-title">Sell Cargo Space</h2>
                     </div>
                   </section>
                   <p class="mb-4">
@@ -204,11 +202,9 @@
                   >
                     <form method="POST">
                       {% csrf_token %}
-                      <div class="row g-3">
+                      <div class="row g-3 d-flex justify-content-center">
                         <div class="col-8">
-                          <label for="JobTitle" class="form-label"
-                            >Job Title</label
-                          >
+                          <label for="JobTitle" class="form-label">Date</label>
                           <input
                             type="text"
                             class="form-control"
@@ -219,8 +215,19 @@
                           />
                         </div>
                         <div class="col-8">
+                          <label for="lastName" class="form-label">Time</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="lastName"
+                            placeholder=""
+                            value=""
+                            required
+                          />
+                        </div>
+                        <div class="col-8">
                           <label for="lastName" class="form-label"
-                            >Salary</label
+                            >Destination</label
                           >
                           <input
                             type="text"
@@ -233,7 +240,7 @@
                         </div>
                         <div class="col-8">
                           <label for="lastName" class="form-label"
-                            >Location</label
+                            >Available Volume</label
                           >
                           <input
                             type="text"
@@ -246,7 +253,7 @@
                         </div>
                         <div class="col-8">
                           <label for="lastName" class="form-label"
-                            >Job Description</label
+                            >Available Weight</label
                           >
                           <input
                             type="text"
