@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300|Oswald);
+
+
+.notification.notify:after {
+  content: "1";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 1.3333em;
+  width: 1.2em;
+  margin-top: 1em;
+  margin-left: 1em;
+  border-radius: 50%;
+  font-size: 0.75em;
+  line-height: 1.2;
+  text-align: center;
+  color: white;
+  background: #f53d3d;
+  box-shadow: 0 0 0 0.25em #c20a0a;
+  animation: pulse 0.75s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0.2em #c20a0a;
+  }
+  25% {
+    box-shadow: 0 0 0 0.05em #c20a0a;
+  }
+  50% {
+    box-shadow: 0 0 0 0.375em #c20a0a;
+  }
+  75% {
+    box-shadow: 0 0 0 0.2em #c20a0a;
+  }
+  100% {
+    box-shadow: 0 0 0 0.3em #c20a0a;
+  }
+}
+@-moz-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0.2em #c20a0a;
+  }
+  25% {
+    box-shadow: 0 0 0 0.05em #c20a0a;
+  }
+  50% {
+    box-shadow: 0 0 0 0.375em #c20a0a;
+  }
+  75% {
+    box-shadow: 0 0 0 0.2em #c20a0a;
+  }
+  100% {
+    box-shadow: 0 0 0 0.3em #c20a0a;
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0.2em #c20a0a;
+  }
+  25% {
+    box-shadow: 0 0 0 0.05em #c20a0a;
+  }
+  50% {
+    box-shadow: 0 0 0 0.375em #c20a0a;
+  }
+  75% {
+    box-shadow: 0 0 0 0.2em #c20a0a;
+  }
+  100% {
+    box-shadow: 0 0 0 0.3em #c20a0a;
+  }
+}

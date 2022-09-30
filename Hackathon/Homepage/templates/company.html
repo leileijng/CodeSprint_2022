@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+{% load static %}
+{% load filter_tags %}
+{% block title %}<title>Company Profile</title>{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="company">
+        <div ng-app="tabApp">
+            <div class="row" ng-controller="TabController">
+                <div class="col-md-1 splitLine mt-3" style="height: 600px; width: 12.499999995%">
+                    <div class="mt-n2 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="mb-5 nav nav-pills nav-stacked row">
+                            <div class="companyBtn" ng-class="{ active: isSet(1) }">
+                                <a class="btn" ng-click="setTab(1)"> <i class="mt-1 me-3 fa fa-university"></i> Profile</a>
+                            </div>
+
+                            <div class="w-100"></div>
+
+                            <div class="companyBtn" ng-class="{ active: isSet(2) }">
+                                <a class="btn" ng-click="setTab(2)"> <i class="mt-1 me-3 fa fa-check-square-o"></i> Verify</a>
+                            </div>
+                            
+                            <div class="w-100"></div>
+                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                <a class="btn" ng-click="setTab(3)"> <i class="mt-1 me-3 fa fa-upload"></i> Post</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10" style="padding-left: 50px; padding-top: 10px; width: 87.49999965%;">
+                    <div class="jumbotron">
+                        <div ng-show="isSet(1)">
+                            <div class="wow fadeInUp" data-wow-delay="0.3s">
+                                <h1>Company Profile</h1>
+                                <p>Your company is certified! <a href="{% static 'img/Cert_of_Authenticity.pdf' %}" class="btn btn-outline-primary py-2 px-4 ms-5">View Certification</a></p>  
+                                <!--<p>Your comapny certification has expired! Please upload your documents again!</p>      -->
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="companyname" placeholder="Company Name" disabled="disabled">
+                                                <label for="companyname">GOOGLE SINGAPORE PTE. LTD.</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="UEN" placeholder="Unique Entity Number" disabled="disabled">
+                                                <label for="UEN">UEN: 200605367W </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="registereddate" placeholder="dd/mm/yyyy" disabled="disabled">
+                                                <label for="registereddate">Date of Incorporation: 13/04/2006</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="expiredate" placeholder="dd/mm/yyyy" disabled="disabled">
+                                                <label for="expiredate">Date of Expiry: 23/12/2022</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="phone" id="industry" class="form-control" placeholder="xxxxxxxx" disabled="disabled">
+                                                <label for="phone">Industry: WIRED TELECOMMUNICATIONS NETWORK OPERATION</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="phone" id="phone" class="form-control" placeholder="xxxxxxxx" disabled="disabled">
+                                                <label for="phone">Company Phone: 6521 8000</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="email" id="email" class="form-control" placeholder="name@example.com" disabled="disabled">
+                                                <label for="email">Company Email: support-in@google.com</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" id="address" class="form-control" placeholder="address" disabled="disabled">
+                                                <label for="address">Company Address : 70 Pasir Panjang Rd, #03-71 Mapletree Business City II, Singapore 117371</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div ng-show="isSet(2)">
+                            <h1>Verify job opportunities</h1>
+                            <div class="split section-title position-relative mb-4 pb-2">
+                                <h6 class="position-relative text-primary ps-4">Waiting for Verification</h6>
+                            </div>
+                            {% if NotVerified %}
+                            <div class="row g-4">
+                                <!-- This is the display box -->
+                                {% for UJob in NotVerified %}
+                                <div class="col-lg-4 col-md-6 wow zoomIn jobWaitingForVerify" data-wow-delay="0.1s">
+                                    <div class="service-item2 d-flex flex-column rounded">
+                                        <div class="d-flex imgBlock">
+                                            <img class="mb-3 company-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKWgStyZIRMBw2vhADy9q8GTi-MXXmwc0wADdN&s=0" alt="">
+                                        </div>
+                                        <h5 class="mb-1">{{ UJob.JobTitle }}</h5>
+                                        <p class="mb-2" style="color: var(--dark)">{{ UJob.Company }} </p>
+                                        <p class="mb-0" style="font-size:small"> {{ UJob.Location }}</p>
+                                        <p class="mb-0"style="font-size:small"> USD {{ UJob.Salary }} monthly</p>
+                                        <p class="mb-1" style="font-size:small"> Source: {{ UJob.Source }}</p>
+                                        <ul>
+                                            {% with UJob.JobDescription|split:";" as Rows %}
+                                                {% for details in Rows %}
+                                                    <li>{{ details }}</li>
+                                                {% endfor %}
+                                            {% endwith %}
+                                        </ul>
+                                        <div class="d-flex matchTalents">
+                                            <div class="ms-2">
+                                                <p class="mb-0" style="font-size:small"> 5 days ago</p>
+                                            </div>
+                                            <div class="ms-auto row">
+                                                <a class="col-md-6 btn1 btn px-3 mt-auto">Verify</a>
+                                                <a class="col-md-6 btn2 btn px-3 mt-auto">Scam</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                                <h1>No Data</h1>
+                            {% endif %}
+                            <div class="split splitLine2 section-title position-relative mb-4 pb-2">
+                                <h6 class="position-relative text-primary ps-4">Verified Job Opportunities</h6>
+                            </div>
+                            {% if Verified %}
+                            <div class="row g-4 jobVerified">
+                                <!-- This is the display box -->
+                                {% for Job in Verified %}
+                                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+                                    <div class="service-item d-flex flex-column rounded">
+                                        <div class="d-flex">
+                                            <img class="mb-3 company-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKWgStyZIRMBw2vhADy9q8GTi-MXXmwc0wADdN&s=0" alt="">
+                                            <img class="mb-3 ms-auto verified" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
+                                        </div>
+                                        <h5 class="mb-1">{{ Job.JobTitle }}</h5> 
+                                        <p class="mb-3" style="color: var(--dark)">{{ Job.Company }}</p> 
+                                        <p class="mb-0" style="font-size:small"> {{ Job.Location }}</p> 
+                                        <p style="font-size:small"> SGD {{ Job.Salary }} monthly</p> 
+                                        <ul>
+                                            {% with Job.JobDescription|split:";" as Rows %}
+                                                {% for details in Rows %}
+                                                    <li>{{ details }}</li>
+                                                {% endfor %}
+                                            {% endwith %}
+                                        </ul>
+                                        <div class="d-flex">
+                                            <div class="ms-2">
+                                                <p class="mb-0" style="font-size:small"> 5 days ago</p>
+                                                <p class="mb-0" style="font-size:10px; color:green">{{ Job.Hash }}</p>
+                                            </div>
+                                            <a class="btn px-3 mt-auto ms-auto matchTalentsBtn" href="{% url 'recommend' %}">Match Talents</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            <h1>No Data</h1>
+                            {% endif %}
+                        </div>
+                        <div ng-show="isSet(3)">
+                            
+                            <div class="row g-5">
+                                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="width: 40%; padding-left: 5%;">
+                                    <p class="d-inline-block border rounded-pill py-1 px-4">Post</p>
+                                    <h1 class="mb-4">Validate Job Opportunity</h1>
+                                    <p class="mb-4">Make use of decentralised technology to get trustworthy prove and detect scams!</p>
+                                    <img class="img-fluid mt-5" style="height: 250px;" src="{% static 'img/newsletter.png' %}">
+                                </div>
+                                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style="width: 60%;">
+                                    <div class="bg-light rounded h-100 d-flex align-items-center p-5 mt-5">
+                                        <form method="POST">
+                                            {% csrf_token %}
+                                            <div class="row g-3">
+                                                <div class="col-12 col-sm-6">
+                                                    <div class="form-floating">
+                                                        {{ form.JobTitle }}
+                                                        <label for="jobtitle">Job Title</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <div class="form-floating">
+                                                        {{ form.Salary }}
+                                                        <label for="salary">Salary</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-floating">
+                                                        {{ form.Location }}
+                                                        <label for="location">Location</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-floating">
+                                                        {{ form.JobDescription }}
+                                                        <label for="desc">Job Description</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Post it</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    {% endblock %} 
+

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}<title>Job info</title>{% endblock %}
+{% block content %}
+
+<div class="container-xxl py-5">
+    <div class="container px-lg-5">
+        <div class="section-title position-relative text-center pb-2 wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="position-relative d-inline text-primary ps-4">Find More</h6>
+            <h2 class="mt-2">the job opportunity</h2>
+        </div>
+    </div>
+</div>
+
+<div class="p-4 row">
+    <div class="col-md-3 wow zoomIn" style="margin-left: 5rem;" data-wow-delay="0.1s">
+        <div class="service-item d-flex flex-column rounded">
+            <div class="d-flex">
+                <img class="mb-3 company-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKWgStyZIRMBw2vhADy9q8GTi-MXXmwc0wADdN&s=0" alt="">
+                <img class="mb-3 ms-auto verified" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
+            </div>
+            <h5 class="mb-1">Software Developer</h5>
+            <p class="mb-3" style="color: var(--dark)">Google</p>
+            <p class="mb-0" style="font-size:small"> Singapore</p>
+            <p style="font-size:small"> SGD 8.5K monthly</p>
+            <ul>
+                <li>Full-time</li>
+                <li>Bachelor's degree in Computer Science or related engineering field, or equivalent practical experience.</li>
+                <li>5 years of coding experience in one or more of the following languages: C, C++, Java, or Python.</li>
+            </ul>
+            <div class="d-flex">
+                <div class="ms-2">
+                    <p class="mb-0" style="font-size:small"> 5 days ago</p>
+                    <p class="mb-0" style="font-size:10px; color:green">ALiCzsbYbsXe38y4vRcsRWWIERRlKY6GYA</p>
+                </div>
+                <a class="btn px-3 mt-auto ms-auto">Apply</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8  mt-5">
+        <div class="testimonial-item bg-transparent border rounded p-3" style="color: gray">
+            <i class="fa fa-quote-left fa-2x mb-3 text-primary"></i>
+            <p><b>HR contact:</b> amelia_hr@google.us.com</p>
+            <p><b>Verified Job Posts over 3 months:</b> 19</p>
+            <p><b>Location: </b> Company Address : 8, MARINA BOULEVARD, #05-02, MARINA BAY FINANCIAL CENTRE, SINGAPORE 018981
+            </p>
+            <p><i class="fa fa-warning fa-1x text-warning"></i> If you find anything inappropiate in this job opportunity, please <a href="#"> Contact Us </a> to report.</p>
+             <a href="{% static 'img/Cert_of_Authenticity.pdf' %}" class="btn btn-outline-primary py-2 px-4">Certification</a>
+                                
+        </div>
+        
+    </div>
+</div>
+        {% endblock %} 

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block top %}
+{% endblock %}
+{% block content %}
+<div class="container-xxl py-5 bg-primary hero-header mb-5">
+    <div class="container my-5 py-5 px-lg-5" style="padding-left: 8rem !important; margin-bottom: 0rem !important;">
+        <div class="row g-5 py-5">
+            <div class="col-lg-6 text-center text-lg-start" style="margin-top: 150px;">
+                <h1 class="text-white mb-4 animated zoomIn">The leading platform for verified jobs opportunities</h1>
+                <p class="text-white pb-3 animated zoomIn">Find a job, Post a job. We make sure that jobs are authentic and verified by companies themselves.</p>
+                <a href="{% url 'login' %}" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Login</a>
+                <a href="{% url 'signup' %}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Sign Up</a>
+            </div>
+            <div class="col-lg-6 text-center text-lg-start">
+                <img class="img-fluid" src="{% static 'img/hero-new.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-xxl py-5">
+    <div class="container px-lg-5">
+        <div class="section-title position-relative text-center pb-2 wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="position-relative d-inline text-primary ps-4">Company mode</h6>
+            <h2 class="mt-2">Company Journey Map</h2>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+    <img class="col-lg-8 showbox" src="{% static 'img/company_mode.png' %}" alt="">
+</div>
+
+<div class="container-xxl py-5">
+    <div class="container px-lg-5">
+        <div class="section-title position-relative text-center pb-2 wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="position-relative d-inline text-primary ps-4">User mode</h6>
+            <h2 class="mt-2">User Journey Map</h2>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+    <img class="col-lg-8 showbox" src="{% static 'img/user_mode.png' %}" alt="">
+</div>
+
+{% endblock %}
+

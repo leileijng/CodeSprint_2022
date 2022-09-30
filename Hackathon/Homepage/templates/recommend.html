@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}<title>Recommended Talents</title>{% endblock %}
+{% block content %}
+<div class="container-xxl py-5">
+    <div class="container px-lg-5">
+        <div class="section-title position-relative text-center pb-2 wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="position-relative d-inline text-primary ps-4">Match More</h6>
+            <h2 class="mt-2">View talents suitable for the posted position!</h2>
+        </div>
+    </div>
+</div>
+
+<div class="p-4 row">
+    <div class="col-md-3 wow zoomIn" style="margin-left: 3.5rem;" data-wow-delay="0.1s">
+        <div class="service-item d-flex flex-column rounded" style="box-shadow: 0 0 45px rgba(0, 0, 0, .3);">
+            <div class="d-flex">
+                <img class="mb-3 company-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKWgStyZIRMBw2vhADy9q8GTi-MXXmwc0wADdN&s=0" alt="">
+                <img class="mb-3 ms-auto verified" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
+            </div>
+            <h5 class="mb-1">Software Developer</h5>
+            <p class="mb-3" style="color: var(--dark)">Google</p>
+            <p class="mb-0" style="font-size:small"> Singapore</p>
+            <p style="font-size:small"> SGD 8.5K monthly</p>
+            <ul>
+                <li>Full-time</li>
+                <li>Bachelor's degree in Computer Science or related engineering field, or equivalent practical experience.</li>
+                <li>5 years of coding experience in one or more of the following languages: C, C++, Java, or Python.</li>
+            </ul>
+            <div class="d-flex">
+                <div class="ms-2">
+                    <p class="mb-0" style="font-size:small"> 5 days ago</p>
+                    <p class="mb-0" style="font-size:10px; color:green">ALiCzsbYbsXe38y4vRcsRWWIERRlKY6GYA</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 owl-carousel testimonial-carousel mt-5">
+        <div class="testimonial-item bg-transparent border rounded p-3" style="color: gray">
+            <i class="fa fa-quote-left fa-2x mb-3"></i>
+            <p><b>Skills:</b> Javascript, Python, Java</p>
+            <p><i class="fa fa-check-square-o"></i> Master in Computer Science from New York University</p>
+            <p><i class="fa fa-check-square-o"></i> 2-year experience in software development</p>
+            <div class="d-flex align-items-center">
+                <img class="img-fluid flex-shrink-0 rounded-circle" src="../static/img/testimonial-1.jpg" style="width: 50px; height: 50px;">
+                <div class="ps-3 talents">
+                    <h6 class="text-primary mb-1">Lingxuan Zhao</h6>
+                    <a class="btn px-3 mt-auto ms-auto" style="font-size: 15px;" href="#">Invite for Interview</a>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-item bg-transparent border rounded p-3" style="color: gray">
+            <i class="fa fa-quote-left fa-2x mb-3"></i>
+            <p><b>Skills:</b> Javascript, Python, Java</p>
+            <p><i class="fa fa-check-square-o"></i> Master in Computer Science from New York University</p>
+            <p><i class="fa fa-check-square-o"></i> 2-year experience in software development</p>
+            <div class="d-flex align-items-center">
+                <img class="img-fluid flex-shrink-0 rounded-circle" src="../static/img/testimonial-2.jpg" style="width: 50px; height: 50px;">
+                <div class="ps-3 talents">
+                    <h6 class="text-primary mb-1">Ng Zhi Quan</h6>
+                    <a class="btn px-3 mt-auto ms-auto" style="font-size: 15px;" href="#">Invite for Interview</a>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-item bg-transparent border rounded p-3" style="color: gray">
+            <i class="fa fa-quote-left fa-2x mb-3"></i>
+            <p><b>Skills:</b> Javascript, Python, Java</p>
+            <p><i class="fa fa-check-square-o"></i> Master in Computer Science from New York University</p>
+            <p><i class="fa fa-check-square-o"></i> 2-year experience in software development</p>
+            <div class="d-flex align-items-center">
+                <img class="img-fluid flex-shrink-0 rounded-circle" src="../static/img/testimonial-3.jpg" style="width: 50px; height: 50px;">
+                <div class="ps-3 talents">
+                    <h6 class="text-primary mb-1">Steven Tung</h6>
+                    <a class="btn px-3 mt-auto ms-auto" style="font-size: 15px;" href="#">Invite for Interview</a>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-item bg-transparent border rounded p-3" style="color: gray">
+            <i class="fa fa-quote-left fa-2x mb-3"></i>
+            <p><b>Skills:</b> Javascript, Python, Java</p>
+            <p><i class="fa fa-check-square-o"></i> Master in Computer Science from New York University</p>
+            <p><i class="fa fa-check-square-o"></i> 2-year experience in software development</p>
+            <div class="d-flex align-items-center">
+                <img class="img-fluid flex-shrink-0 rounded-circle" src="../static/img/testimonial-4.jpg" style="width: 50px; height: 50px;">
+                <div class="ps-3 talents">
+                    <h6 class="text-primary mb-1">Jiang Lei</h6>
+                    <a class="btn px-3 mt-auto ms-auto" style="font-size: 15px;" href="#">Invite for Interview</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        {% endblock %} 

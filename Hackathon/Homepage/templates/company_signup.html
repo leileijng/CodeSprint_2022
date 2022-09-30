@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}<title>Company Sign up Page</title>{% endblock %}
+{% block content %}
+<div class="container-xxl py-5">
+    <div class="container px-lg-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="mt-2">Register your company with us</h2>
+                </div>
+                <div class="wow fadeInUp" data-wow-delay="0.3s">
+                    {% if form.errors %}
+                        {% for field in form %}
+                            {% for error in field.errors %} 
+                                <div class="alert alert-danger">
+                                        <strong>{{ error|escape }}</strong>
+                                </div>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    {{ form.CompanyName }}
+                                    <label for="companyname">Company Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    {{ form.UEN }}
+                                    <label for="UEN">Unique Entity Number (UEN) </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    {{ form.Industry }}
+                                    <label for="industry">Company Industry</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    {{ form.Phone }}
+                                    <label for="phone">Company Phone</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    {{ form.Email }}
+                                    <label for="email">Company Email Address</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    {{ form.Address }}
+                                    <label for="address">Company Address</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    {{ form.Password }}
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    {{ form.Documents }}
+                                    <label for="Businessdocs" class="form-label">Upload business documents</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Sign up</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        {% endblock %} 

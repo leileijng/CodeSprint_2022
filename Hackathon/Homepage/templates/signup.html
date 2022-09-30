@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}<title>Register</title>{% endblock %}
+{% block content %}
+<div class="container-xxl py-5">
+    <div class="container px-lg-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="mt-2">Choose your account mode</h2>
+                </div>
+                <div class="wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card_body">
+                        <div id="card" class="card">
+                            <h1 class="card__title">User Mode</h1>
+                            <div class="card__body">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-10">
+                                        <i class="Icon fa fa-address-card" aria-hidden="true"></i>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <ol class="card__list">
+                                <li class="card__list__item">Auto-generate verified profile and resume</li>
+                                <li class="card__list__item">Match massive verified job opportunities</li>
+                                <li class="card__list__item">Connect with wonderful companies </li>
+                            </ol>
+                            <a href="{% url 'signupuser' %}" class="card__button">Sign Up</a>
+                        </div>
+                        
+                        <div id="advanced" class="card">
+                            <h1 class="card__title">Company Mode</h1>
+                            <div class="card__body">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-10">
+                                        <i class="Icon fa fa-university" aria-hidden="true"></i>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <ol class="card__list">
+                                <li class="card__list__item">Auto-generate verified profile and certificate</li>
+                                <li class="card__list__item">Post verified job opportunities</li>
+                                <li class="card__list__item">Connect with powerful talents</li>
+                            </ol>
+                            <a href="{% url 'signupcompany' %}" class="card__button">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+{% endblock %}

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    {% block title %}<title>Newbility</title>{% endblock %}
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    {% load static %}
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/company.css' %}" rel="stylesheet">
+    <link href="{% static 'css/notification.css' %}" rel="stylesheet">
+    <link href="{% static 'css/messages.css' %}" rel="stylesheet">
+    <link href="{% static 'css/card.css' %}" rel="stylesheet">
+    <link href="{% static 'css/timeline.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+        <!-- Navbar & Hero Start -->
+
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="{% url 'index' %}" class="navbar-brand p-0">
+                    <h1 class="m-0"><i class="fa fa-search me-2"></i>Newbility<span class="fs-5">Job Assistant</span>
+                    </h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                    </div>
+                    <a href="https://www.lemmatree.com/"
+                        class="btn btn-outline-light text-light py-2 px-4 ms-5 m-3">Contact us</a>
+                </div>
+
+            </nav>
+            {% block top %}
+            <div class="container-xxl bg-primary hero-header mb-5" style="padding-top: 75px;">
+            </div>
+            {% endblock %}
+        </div>
+        <!-- Navbar & Hero End -->
+
+        {% block content %}
+        <!-- content text -->{% endblock %}
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <!-- <p><i class="fa fa-phone-alt me-3"></i>(+65) 6123 4567</p> -->
+                        <div class="row">
+                            <i class="fa fa-map-marker col-md-1 mt-1"></i>
+                            <p class="col-md-11">50 Nanyang Avenue, Singapore 639798</p>
+                        </div>
+                        <div class="row">
+                            <i class="fa fa-envelope col-md-1  mt-1"></i>
+                            <p class="col-md-11">Contact@Newbility.com</p>
+                        </div>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link" href="{% url 'index' %}">Home</a>
+                        <a class="btn btn-link" href="{% url 'login' %}">Login</a>
+                        <a class="btn btn-link" href="{% url 'signup' %}">Sign up</a>
+                        <a class="btn btn-link" href="https://www.lemmatree.com/">Contact Us</a>
+
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Some of our Verified Companies</h5>
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <img class="img-fluid"
+                                    src="https://media-exp2.licdn.com/dms/image/C560BAQE88xCsONDULQ/company-logo_200_200/0/1618231291419?e=2147483647&v=beta&t=vc_FjmDR3a48QsN0A5l29y7i07b2NmcTJQrCVCl4jC8"
+                                    alt="Microsoft" width="500" height="600">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid"
+                                    src="https://media-exp1.licdn.com/dms/image/C560BAQHdAaarsO-eyA/company-logo_100_100/0/1595530301220?e=1662595200&v=beta&t=7QwpJKXzZthPTXzCrYB9mH7K_QG21d9m05GO5BJqZck"
+                                    alt="Apple" width="500" height="600">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid"
+                                    src="https://media-exp1.licdn.com/dms/image/C4D0BAQHiNSL4Or29cg/company-logo_200_200/0/1519856215226?e=2147483647&v=beta&t=kJv1gX0_sqLG1g7LKLD5uh_6uEFpWGUTuzpuvVJVdEw"
+                                    alt="Google" width="500" height="600">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid"
+                                    src="https://media-exp1.licdn.com/dms/image/C560BAQHTvZwCx4p2Qg/company-logo_200_200/0/1612205615891?e=2147483647&v=beta&t=DbdWu153GcoESwso9HD1UQ8Y4f-3b5XP5h7SiQSlQcE"
+                                    alt="Amazon" width="500" height="600">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid"
+                                    src="https://media-exp1.licdn.com/dms/image/C560BAQFMtLFt_Lfxrw/company-logo_100_100/0/1634620535113?e=1662595200&v=beta&t=G7QJMaSqS6p3c2MXdYRBenBKNzlyBw98jdRTg598HsA"
+                                    alt="NTU" width="500" height="600">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid"
+                                    src="https://media-exp1.licdn.com/dms/image/C4E0BAQFdNatYGiBelg/company-logo_100_100/0/1636138753911?e=1662595200&v=beta&t=x0mcXgELzzp8PcB5RY_QTZRBtw1QutmpPlG37-6WKkk"
+                                    alt="Meta" width="500" height="600">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Search Jobs</h5>
+                        <p>Look for all avaliable jobs that are verified by companies across Newbility</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 w-100 ps-4 pe-5" type="text"
+                                placeholder="Software Engineer..." style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                    class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Newbility</a>, All Rights Reserved © 2022
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            <!--Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                        -->
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FAQs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'lib/notify.js' %}"></script>
+    <script src="{% static 'lib/notify.min.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/company.js' %}"></script>
+    <script src="{% static 'js/timeline.js' %}"></script>
+    <script>
+        function postJobOpportunityValidation(){
+            var jobDesc = $("#id_JobDescription").val();
+            var valid = true;
+            if(jobDesc.indexOf("bank") != -1){
+                return "Please do NOT include financial-related info";
+            }
+            if(jobDesc.indexOf("NRIC") != -1){
+                return "Please do NOT include sensitive personal data requests";
+            }
+            if(jobDesc.indexOf("www") != -1){
+                return "Please do NOT include redirecting urls";
+            }
+            if(jobDesc.indexOf("WhatsApp") != -1){
+                return "External Social Media contact is prohibitted!";
+            }
+            if(valid){
+                return "Job Posted Successfully";
+            }
+            return valid;
+        }
+        $(".btn2").click(function () {
+            var disappearEle = this.closest('div.jobWaitingForVerify');
+            var css = {};
+            css = { display: 'none' };
+            Object.assign(disappearEle.style, css);
+        });
+        $(".btn1").click(function () {
+            var addingEle = this.closest('div.jobWaitingForVerify');
+            var btnBlock = this.closest('div.matchTalents');
+            var blockToedit = this.closest('div.service-item2');
+            var blockToAddImg = blockToedit.firstElementChild;
+            blockToedit.classList.add('service-item');
+            blockToedit.classList.remove('service-item2');
+            var elements = document.getElementsByClassName('matchTalentsBtn');
+            var btnToAdd = elements[0];
+            var verifiedelements = document.getElementsByClassName('verified');
+            var verifyImg = verifiedelements[0];
+            $(".jobVerified").prepend(addingEle);
+            var b2 = this.nextElementSibling;
+            css = { display: 'none' };
+            Object.assign(b2.style, css);
+            Object.assign(this.style, css);
+            $(btnToAdd).clone().appendTo(btnBlock);
+            $(verifyImg).clone().appendTo(blockToAddImg);
+        });
+
+        $("#postBtn").click(function(){
+            var valMsg = postJobOpportunityValidation();
+
+            if(valMsg.indexOf("Successfully") != -1){
+                var formData = {};
+                formData.csrfmiddlewaretoken = '{{ csrf_token }}';
+                formData.description = $("#id_JobDescription").val();
+
+                console.log("testing");
+                $.ajax({
+                    type: "POST",
+                    url: '{{ 'company-post-job/' }}',   
+                    data: formData, 
+                    success:  function(response){
+                        alert(response);
+                        $.notify('Job Posted Successfully!', "success");
+                    }
+                });
+            }
+            else{
+                $.notify(valMsg, "error");
+            }
+        });
+
+
+        $('.slider').each(function (e) {
+            var slider = $(this),
+                width = slider.width(),
+                handle,
+                handleObj;
+
+            let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('viewBox', '0 0 ' + width + ' 83');
+
+            slider.html(svg);
+            slider.append($('<div>').addClass('active').html(svg.cloneNode(true)));
+
+            slider.slider({
+                range: true,
+                values: [1800, 7800],
+                min: 500,
+                step: 5,
+                minRange: 1000,
+                max: 12000,
+                create(event, ui) {
+
+                    slider.find('.ui-slider-handle').append($('<div />'));
+
+                    $(slider.data('value-0')).html(slider.slider('values', 0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '&thinsp;'));
+                    $(slider.data('value-1')).html(slider.slider('values', 1).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '&thinsp;'));
+                    $(slider.data('range')).html((slider.slider('values', 1) - slider.slider('values', 0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '&thinsp;'));
+
+                    setCSSVars(slider);
+
+                },
+                start(event, ui) {
+
+                    $('body').addClass('ui-slider-active');
+
+                    handle = $(ui.handle).data('index', ui.handleIndex);
+                    handleObj = slider.find('.ui-slider-handle');
+
+                },
+                change(event, ui) {
+                    setCSSVars(slider);
+                },
+                slide(event, ui) {
+
+                    let min = slider.slider('option', 'min'),
+                        minRange = slider.slider('option', 'minRange'),
+                        max = slider.slider('option', 'max');
+
+                    if (ui.handleIndex == 0) {
+                        if ((ui.values[0] + minRange) >= ui.values[1]) {
+                            slider.slider('values', 1, ui.values[0] + minRange);
+                        }
+                        if (ui.values[0] > max - minRange) {
+                            return false;
+                        }
+                    } else if (ui.handleIndex == 1) {
+                        if ((ui.values[1] - minRange) <= ui.values[0]) {
+                            slider.slider('values', 0, ui.values[1] - minRange);
+                        }
+                        if (ui.values[1] < min + minRange) {
+                            return false;
+                        }
+                    }
+
+                    $(slider.data('value-0')).html(ui.values[0].toString().replace(/\B(?=(\d{3})+(?!\d))/g, '&thinsp;'));
+                    $(slider.data('value-1')).html(ui.values[1].toString().replace(/\B(?=(\d{3})+(?!\d))/g, '&thinsp;'));
+                    $(slider.data('range')).html((slider.slider('values', 1) - slider.slider('values', 0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '&thinsp;'));
+
+                    setCSSVars(slider);
+
+                },
+                stop(event, ui) {
+
+                    $('body').removeClass('ui-slider-active');
+
+                    let duration = .6,
+                        ease = Elastic.easeOut.config(1.08, .44);
+
+                    TweenMax.to(handle, duration, {
+                        '--y': 0,
+                        ease: ease
+                    });
+
+                    TweenMax.to(svgPath, duration, {
+                        y: 42,
+                        ease: ease
+                    });
+
+                    handle = null;
+
+                }
+            });
+
+            var svgPath = new Proxy({
+                x: null,
+                y: null,
+                b: null,
+                a: null
+            }, {
+                set(target, key, value) {
+                    target[key] = value;
+                    if (target.x !== null && target.y !== null && target.b !== null && target.a !== null) {
+                        slider.find('svg').html(getPath([target.x, target.y], target.b, target.a, width));
+                    }
+                    return true;
+                },
+                get(target, key) {
+                    return target[key];
+                }
+            });
+
+            svgPath.x = width / 2;
+            svgPath.y = 42;
+            svgPath.b = 0;
+            svgPath.a = width;
+
+            $(document).on('mousemove touchmove', e => {
+                if (handle) {
+
+                    let laziness = 4,
+                        max = 24,
+                        edge = 52,
+                        other = handleObj.eq(handle.data('index') == 0 ? 1 : 0),
+                        currentLeft = handle.position().left,
+                        otherLeft = other.position().left,
+                        handleWidth = handle.outerWidth(),
+                        handleHalf = handleWidth / 2,
+                        y = e.pageY - handle.offset().top - handle.outerHeight() / 2,
+                        moveY = (y - laziness >= 0) ? y - laziness : (y + laziness <= 0) ? y + laziness : 0,
+                        modify = 1;
+
+                    moveY = (moveY > max) ? max : (moveY < -max) ? -max : moveY;
+                    modify = handle.data('index') == 0 ? ((currentLeft + handleHalf <= edge ? (currentLeft + handleHalf) / edge : 1) * (otherLeft - currentLeft - handleWidth <= edge ? (otherLeft - currentLeft - handleWidth) / edge : 1)) : ((currentLeft - (otherLeft + handleHalf * 2) <= edge ? (currentLeft - (otherLeft + handleWidth)) / edge : 1) * (slider.outerWidth() - (currentLeft + handleHalf) <= edge ? (slider.outerWidth() - (currentLeft + handleHalf)) / edge : 1));
+                    modify = modify > 1 ? 1 : modify < 0 ? 0 : modify;
+
+                    if (handle.data('index') == 0) {
+                        svgPath.b = currentLeft / 2 * modify;
+                        svgPath.a = otherLeft;
+                    } else {
+                        svgPath.b = otherLeft + handleHalf;
+                        svgPath.a = (slider.outerWidth() - currentLeft) / 2 + currentLeft + handleHalf + ((slider.outerWidth() - currentLeft) / 2) * (1 - modify);
+                    }
+
+                    svgPath.x = currentLeft + handleHalf;
+                    svgPath.y = moveY * modify + 42;
+
+                    handle.css('--y', moveY * modify);
+
+                }
+            });
+
+        });
+
+        function getPoint(point, i, a, smoothing) {
+            let cp = (current, previous, next, reverse) => {
+                let p = previous || current,
+                    n = next || current,
+                    o = {
+                        length: Math.sqrt(Math.pow(n[0] - p[0], 2) + Math.pow(n[1] - p[1], 2)),
+                        angle: Math.atan2(n[1] - p[1], n[0] - p[0])
+                    },
+                    angle = o.angle + (reverse ? Math.PI : 0),
+                    length = o.length * smoothing;
+                return [current[0] + Math.cos(angle) * length, current[1] + Math.sin(angle) * length];
+            },
+                cps = cp(a[i - 1], a[i - 2], point, false),
+                cpe = cp(point, a[i - 1], a[i + 1], true);
+            return `C ${cps[0]},${cps[1]} ${cpe[0]},${cpe[1]} ${point[0]},${point[1]}`;
+        }
+
+        function getPath(update, before, after, width) {
+            let smoothing = .16,
+                points = [
+                    [0, 42],
+                    [before <= 0 ? 0 : before, 42],
+                    update,
+                    [after >= width ? width : after, 42],
+                    [width, 42]
+                ],
+                d = points.reduce((acc, point, i, a) => i === 0 ? `M ${point[0]},${point[1]}` : `${acc} ${getPoint(point, i, a, smoothing)}`, '');
+            return `<path d="${d}" />`;
+        }
+
+        function setCSSVars(slider) {
+            let handle = slider.find('.ui-slider-handle');
+            slider.css({
+                '--l': handle.eq(0).position().left + handle.eq(0).outerWidth() / 2,
+                '--r': slider.outerWidth() - (handle.eq(1).position().left + handle.eq(1).outerWidth() / 2)
+            });
+        }</script>
+</body>
+
+</html>

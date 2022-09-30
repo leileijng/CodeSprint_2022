@@ -1,0 +1,118 @@
+:root {
+    --primary: #2124B1;
+    --secondary: #4777F5;
+    --light: #F7FAFF;
+    --dark: #1D1D27;
+}
+
+.card_body {
+font-family: helvetica, sans-serif;
+font-size: 1rem;
+color: #777777;
+/* background: #d5d5d5; */
+/* background: linear-gradient(#d5d5d5, #ffffff); */
+height: 100%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.card {
+background-color: white;
+color: var(--dark);
+box-shadow: 2px 2px 10px #777777;
+border-top: 8px solid var(--secondary);
+border-radius: 4px;
+padding: 16px 32px 32px 32px;
+margin: 16px 32px 0 32px;
+width: 440px;
+}
+.card:hover {
+border-top: 8px solid var(--primary);
+border-radius: 4px;
+transform: translateY(-1em);
+transition: all 0.2s ease-out;
+}
+
+.card__title {
+font-size: 0.875rem;
+text-transform: uppercase;
+letter-spacing: 4px;
+padding-bottom: 8px;
+}
+
+.card__body {
+position: relative;
+border-top: 2px solid #777777;
+border-bottom: 2px solid #777777;
+/* padding-bottom: 16px; */
+}
+
+.card .Icon {
+font-size: 6rem;
+font-weight: bold;
+text-shadow: 0 0 1px #000;
+color: var(--secondary);
+padding-left: 24px;
+margin: 32px 0;
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.card:hover .Icon {
+color: var(--primary);
+}
+
+.price__symbol {
+position: absolute;
+left: 0px;
+top: 42px;
+font-size: 1.5rem;
+}
+
+.price__tag {
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.card_body ol {
+list-style: none;
+margin-left: -40px;
+}
+
+.card_body li {
+padding: 12px 0;
+font-size: 1.125rem;
+}
+
+.card_body li:before {
+content: "*";
+margin-right: 8px;
+font-size: 0.875rem;
+}
+
+.card_body .card__button {
+text-align: center;
+width: 100%;
+background-color: var(--secondary);
+border: 1px solid var(--secondary);
+border-radius: 8px;
+margin-top: 32px;
+padding: 16px 0;
+font-size: 1.25rem;
+font-weight: bold;
+letter-spacing: 2.6666666667px;
+text-transform: uppercase;
+text-shadow: 1px 1px #3A3A3A;
+color: white;
+}
+
+.card_body .card:hover .card__button {
+background-color: var(--primary);
+border-color: var(--primary);
+}
+
+.card_body .card:hover .price {
+color: #6863CE;
+}

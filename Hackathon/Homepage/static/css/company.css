@@ -1,0 +1,173 @@
+:root {
+    --primary: #2124B1;
+    --secondary: #4777F5;
+    --light: #F7FAFF;
+    --dark: #1D1D27;
+}
+
+.splitLine {
+    border-right: 2px solid var(--primary);
+}
+
+.split {
+    padding-top: 20px;
+    margin-left: 10px;
+}
+
+.splitLine2 {
+    margin-top: 20px;
+    /* padding-top: 40px; */
+    /* border-top: 2px solid var(--secondary); */
+}
+
+.company {
+    margin: 15px;
+}
+
+.companyBtn {
+    margin-top: 10px;
+    height: 40px;
+}
+
+.companyBtn .btn {
+    padding-left: 10px;
+    position: relative;
+    display: flex;
+    color: var(--primary);
+    transition: .5s;
+    z-index: 1;
+}
+
+.companyBtn:hover .btn {
+    color: var(--light);
+}
+
+.companyBtn .btn::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    border-radius: 35px;
+    background: #DDDDDD;
+    transition: .5s;
+    z-index: -1;
+}
+
+.companyBtn:hover .btn::before {
+    width: 100%;
+    background: var(--primary);
+}
+
+.service-item2 {
+    position: relative;
+    height: 400px;
+    padding: 30px 25px;
+    background: #FFFFFF;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+.service-item2:hover {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .3);
+    /* background: var(--primary); */
+}
+
+.service-item2 .service-icon {
+    margin: 0 auto 20px auto;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    background: url(../img/icon-shape-primary.png) center center no-repeat;
+    transition: .5s;
+}
+
+/* .service-item2:hover .service-icon {
+    color: var(--primary);
+    background: url(../img/icon-shape-white.png);
+} */
+
+.service-item2 h5{
+    color: var(--dark);
+}
+
+.service-item2 p {
+    transition: .5s;
+}
+
+.service-item2 ul{
+    height: 10rem;
+    font-size: small;
+    color: var(--dark);
+    padding-left: 1.2rem;
+    overflow: hidden;
+}
+
+/* .service-item2:hover h5,
+.service-item:hover p {
+    color: var(--light);
+} */
+
+.service-item2 a.btn1 {
+    position: relative;
+    display: flex;
+    color: green;
+    transition: .5s;
+    z-index: 1;
+}
+
+.service-item2:hover a.btn1 {
+    color: var(--light);
+}
+
+.service-item2 a.btn1::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    border-radius: 35px;
+    background: #DDDDDD;
+    transition: .5s;
+    z-index: -1;
+}
+
+.service-item2:hover a.btn1::before {
+    width: 100%;
+    background: green;
+}
+
+.service-item2 a.btn2 {
+    position: relative;
+    display: flex;
+    color: red;
+    transition: .5s;
+    z-index: 1;
+}
+
+.service-item2:hover a.btn2 {
+    color: var(--light);
+}
+
+.service-item2 a.btn2::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    border-radius: 35px;
+    background: #DDDDDD;
+    transition: .5s;
+    z-index: -1;
+}
+
+.service-item2:hover a.btn2::before {
+    width: 100%;
+    background: red;
+}

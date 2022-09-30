@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}<title>Company Sign up Page</title>{% endblock %}
+{% block top %}
+<div class="container-xxl position-relative p-0">
+    <div class="container-xxl py-5 bg-primary hero-header mb-5" style="padding-bottom: 0rem !important;">
+        <div class="container my-5 py-5 px-lg-5" style="margin-bottom: 0rem !important;">
+            <div class="row g-5 py-5">
+                <div class="col-12 text-center">
+                    <h1 class="text-white animated zoomIn">Your Details are in the Checking process...</h1>
+                    <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                    <p class="text-white">This process will take 1-3 days 
+                        <!-- <br>verify its authencity. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="row g-5">
+        <!-- <div style="height: 200px;"></div> -->
+        <div class="timeline-body">
+            <div class="container experience">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <!-- <h4>TIMELINE</h4> -->
+        
+                        <section class="cd-horizontal-timeline container">
+                            <div class="timeline">
+                                <div class="events-wrapper">
+                                <div class="events">
+                                    <ol>
+                                        <li><a href="#0" data-date="01/05/2015" class="selected"><i class="fa fa-upload" aria-hidden="true"></i>
+                                        <li><a href="#0" data-date="01/04/2014"><i class="fa fa-spinner" aria-hidden="true"></i></a></li>
+                                        <li><a href="#0" data-date="01/02/2013"><i class="fa fa-address-card" aria-hidden="true"></i></a></li>
+                                    </ol>
+        
+                                    <span class="filling-line" aria-hidden="true"></span>
+                                </div> <!-- .events -->
+                            </div> <!-- .events-wrapper -->
+                            </div> <!-- .timeline -->
+        
+                            <div class="events-content">
+                                <ol>
+                                    <li class="selected" data-date="01/05/2015">
+                                        <h5>Documents Uploaded</h5> 
+                                        <em>Retrieving Documents</em>
+                                        <p> <strong>Thanks you for signing up!</strong> Our team have received your documents and will promptly review your application to see if your credentials are authenthic! </p>
+                                    </li>
+        
+                                    <li data-date="01/04/2014">
+                                        <h5>Credentials Reviewing</h5>
+                                        <em>Processing your documents with our partners</em>
+                                        <p> <strong> Hold on! </strong> Our team is verifying your details with our partners to ensure authencity of your documents</p>
+                                    </li>
+        
+                                    <li data-date="01/02/2013">
+                                        <h5>Account Open</h5>
+                                        <em>Your account is opened!</em>
+                                        <p> <strong> Welcome to Newbility! </strong> We are happy to inform you that your account is opened you and may start looking for authenthic jobs on our platform!</p>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+        
+                    </div>
+                </div> 
+            </div> 
+        </div>
+    </div>
+</div>
+{% endblock %} 
