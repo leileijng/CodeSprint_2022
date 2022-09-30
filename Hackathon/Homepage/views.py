@@ -187,3 +187,6 @@ def services(request):
 
 def railingRequest(request):
     return render(request, 'railingRequest.html')
+
+def stuffingRequest(request):
+    return render(request, 'stuffingRequest.html')

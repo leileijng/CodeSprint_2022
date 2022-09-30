@@ -20,9 +20,10 @@ urlpatterns = [
     path('company-post-job/', views.postJob, name='company-post-job'),
     path('services', views.services, name='services'),
     path('railingRequest', views.railingRequest, name='railingRequest'),
-    
+    path('stuffingRequest', views.stuffingRequest, name='stuffingRequest'),
 
     path('resources', views.resources, name='resources'),
     path('company-post-job/', views.postJob, name='company-post-job'),
+
 
 ]

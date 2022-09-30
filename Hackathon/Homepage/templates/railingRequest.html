@@ -53,22 +53,57 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="companyname" placeholder="">
-                                            <label for="companyname">Quantity of Container</label>
+                                            <input type="number"  class="form-control" id="" placeholder="">
+                                            <label for="Quantity">Quantity of Container</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="UEN" placeholder="">
-                                            <label for="UEN">Start Date </label>
+                                            <input type="number"  class="form-control" id="" placeholder="">
+                                            <label for="companyname">Cargo Weight (kg)</label>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-md-4">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="registereddate" placeholder="">
+                                            <input type="number"  class="form-control" id="" placeholder="">
+                                            <label for="companyname">Dimensions (Width)</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-floating">
+                                            <input type="number"  class="form-control" id="" placeholder="">
+                                            <label for="companyname">Dimensions (Height)</label>
+                                        </div>
+                                    </div>  
+
+                                    <div class="col-md-4">
+                                        <div class="form-floating">
+                                            <input type="number"  class="form-control" id="" placeholder="">
+                                            <label for="companyname">Dimensions (Length)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control"name="birthday">  
+                                            <label for="registereddate">Start Date</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control"name="birthday">  
                                             <label for="registereddate">End Date</label>
                                         </div>
                                     </div>
+
+
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+											<input class="form-control" type="file" id="Businessdocs" multiple />
+											<label for="Businessdocs" class="form-label">Upload Cargo Photo</label>
+                                        </div>
+                                    </div>
+
                                     <div class="col-12">
                                         <div class="form-floating">
                                             <select class="form-select" aria-label="Default select example" placeholder="Transfer From"> 
@@ -93,34 +128,12 @@
                                             <label for="registereddate">Transfer To</label>
                                         </div>
                                     </div>
-
+                                          
                                     <div class="col-12">
-                                        
-                                    
-
-                                    <div class="form-group ">
-                                        <label class="control-label col-sm-2 requiredField" for="date">
-                                         Date
-                                         <span class="asteriskField">
-                                          *
-                                         </span>
-                                        </label>
-                                        <div class="col-sm-10">
-                                         <div class="input-group">
-                                          <div class="input-group-addon">
-                                           <i class="fa fa-calendar">
-                                           </i>
-                                          </div>
-                                          <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
-                                         </div>
-                                        </div>
-                                       </div>
+                                        <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Get a Quote</button>
                                     </div>
                                     
-
-                                    <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Post it</button>
-                                    </div>
+                                    
                                 </div>
 
                             </form>
@@ -152,6 +165,10 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script>
     console.log("testing");
     
