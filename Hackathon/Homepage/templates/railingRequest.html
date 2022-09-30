@@ -39,13 +39,96 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-10" style="padding-left: 50px; padding-top: 10px; width: 87.49999965%;">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="width: 40%; padding-left: 5%;">
+                        <p class="d-inline-block border rounded-pill py-1 px-4">Railing</p>
+                        <h1 class="mb-4">Railing Services</h1>
+                        <p class="mb-4">Make use of decentralised technology to get trustworthy prove and detect scams!</p>
+                        <img class="img-fluid mt-0 " src="{% static 'img/logistics-service.jpg' %}">
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style="width: 60%;">
+                        <div class="bg-light rounded h-100 d-flex align-items-center p-5 mt-5">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="companyname" placeholder="">
+                                            <label for="companyname">Quantity of Container</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="UEN" placeholder="">
+                                            <label for="UEN">Start Date </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="registereddate" placeholder="">
+                                            <label for="registereddate">End Date</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <select class="form-select" aria-label="Default select example" placeholder="Transfer From"> 
+                                                <option value="1" selected></option>
+                                                <option value="1">Warehouse 1</option>
+                                                <option value="2">Warehouse 2</option>
+                                                <option value="3">Warehouse 3</option>
+                                            </select>
 
-                <div class="col-md-10" style="padding-left: 0px; padding-top: 10px; width: 87.49999965%;">
-                    <div class="container" data-aos="fade-up">
+                                            <label for="registereddate">Transfer From</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <select class="form-select" aria-label="Default select example" placeholder="Transfer From">
+                                                <option value="1" selected></option>
+                                                <option value="1">Warehouse 1</option>
+                                                <option value="2">Warehouse 2</option>
+                                                <option value="3">Warehouse 3</option>
+                                            </select>
 
+                                            <label for="registereddate">Transfer To</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        
+                                    
+
+                                    <div class="form-group ">
+                                        <label class="control-label col-sm-2 requiredField" for="date">
+                                         Date
+                                         <span class="asteriskField">
+                                          *
+                                         </span>
+                                        </label>
+                                        <div class="col-sm-10">
+                                         <div class="input-group">
+                                          <div class="input-group-addon">
+                                           <i class="fa fa-calendar">
+                                           </i>
+                                          </div>
+                                          <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+                                         </div>
+                                        </div>
+                                       </div>
+                                    </div>
+                                    
+
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Post it</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
                     </div>
                 </div>
-                
+                </div>
+
             </div>
         </div>
     </div>
@@ -65,4 +148,22 @@
     z-index: -1;
 }
 </style>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+<script>
+    console.log("testing");
+    
+    $(document).ready(function(){
+		var date_input=$('input[name="date"]'); //our date input has the name "date"
+		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		date_input.datepicker({
+			format: 'mm/dd/yyyy',
+			container: container,
+			todayHighlight: true,
+			autoclose: true,
+		});
+	})
+</script>
 {% endblock %}

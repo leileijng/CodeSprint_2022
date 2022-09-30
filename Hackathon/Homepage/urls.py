@@ -20,7 +20,8 @@ urlpatterns = [
     path('company-post-job/', views.postJob, name='company-post-job'),
     path('services', views.services, name='services'),
     path('railingRequest', views.railingRequest, name='railingRequest'),
-    
+    path('new_user', views.new_user, name='new_user'),
+
 
     path('resources', views.resources, name='resources'),
     path('company-post-job/', views.postJob, name='company-post-job'),

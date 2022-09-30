@@ -168,6 +168,9 @@ def signup(request):
 def jobinfo(request):
     return render(request, 'job_display.html')
 
+def new_user(request):
+    return render(request, 'new_user.html')
+
 def recommend(request):
     return render(request, 'recommend.html')
 

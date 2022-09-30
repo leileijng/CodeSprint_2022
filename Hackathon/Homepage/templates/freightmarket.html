@@ -74,7 +74,7 @@
               <div class="wow fadeInUp" data-wow-delay="0.3s">
                 <section class="resume-section" id="experience">
                   <div class="resume-section-content">
-                    <h2 class="mb-3 resume-title">Buy Cargo space</h2>
+                    <h1>Buy Cargo space</h1>
                   </div>
                 </section>
                 <section>
@@ -175,96 +175,91 @@
                 <div
                   class="col-lg-6 wow fadeInUp"
                   data-wow-delay="0.1s"
-                  style="width: 40%; padding-left: 5%"
+                  style="width: 100%; padding-left: 5%"
                 >
-                  <section class="resume-section" id="experience">
-                    <div class="resume-section-content">
-                      <h2 class="mb-3 resume-title">Sell Cargo Space</h2>
-                    </div>
-                  </section>
-                  <p class="mb-4">
-                    Make use of decentralised technology to get trustworthy
-                    prove and detect scams!
-                  </p>
-                  <img
-                    class="img-fluid mt-5"
-                    style="height: 250px"
-                    src="{% static 'img/newsletter.png' %}"
-                  />
-                </div>
-                <div
-                  class="col-lg-6 wow fadeInUp"
-                  data-wow-delay="0.5s"
-                  style="width: 60%"
-                >
-                  <div
-                    class="bg-light rounded h-100 d-flex align-items-center p-5 mt-5"
-                  >
-                    <form method="POST">
-                      {% csrf_token %}
-                      <div class="row g-3 d-flex justify-content-center">
-                        <div class="col-8">
-                          <label for="JobTitle" class="form-label">Date</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="JobTitle"
-                            placeholder=""
-                            value=""
-                            required
-                          />
-                        </div>
-                        <div class="col-8">
-                          <label for="lastName" class="form-label">Time</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="lastName"
-                            placeholder=""
-                            value=""
-                            required
-                          />
-                        </div>
-                        <div class="col-8">
-                          <label for="lastName" class="form-label"
-                            >Destination</label
+                  <div class="resume-section-content">
+                    <h1>Sell Cargo space</h1>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <div
+                      class="col wow fadeInUp"
+                      data-wow-delay="0.5s"
+                      style="width: 60%"
+                    >
+                      <div
+                        class="bg-light rounded h-100 d-flex align-items-center p-5 mt-5"
+                      >
+                        <form method="POST">
+                          {% csrf_token %}
+                          <div
+                            class="row g-3 d-flex justify-content-center align-items-center"
                           >
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="lastName"
-                            placeholder=""
-                            value=""
-                            required
-                          />
-                        </div>
-                        <div class="col-8">
-                          <label for="lastName" class="form-label"
-                            >Available Volume</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="lastName"
-                            placeholder=""
-                            value=""
-                            required
-                          />
-                        </div>
-                        <div class="col-8">
-                          <label for="lastName" class="form-label"
-                            >Available Weight</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="lastName"
-                            placeholder=""
-                            value=""
-                            required
-                          />
-                        </div>
-                        <!-- <div class="col-12 col-sm-6">
+                            <div class="col-8">
+                              <label for="JobTitle" class="form-label"
+                                >Date</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="JobTitle"
+                                placeholder=""
+                                value=""
+                                required
+                              />
+                            </div>
+                            <div class="col-8">
+                              <label for="lastName" class="form-label"
+                                >Time</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="lastName"
+                                placeholder=""
+                                value=""
+                                required
+                              />
+                            </div>
+                            <div class="col-8">
+                              <label for="lastName" class="form-label"
+                                >Destination</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="lastName"
+                                placeholder=""
+                                value=""
+                                required
+                              />
+                            </div>
+                            <div class="col-8">
+                              <label for="lastName" class="form-label"
+                                >Available Volume</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="lastName"
+                                placeholder=""
+                                value=""
+                                required
+                              />
+                            </div>
+                            <div class="col-8">
+                              <label for="lastName" class="form-label"
+                                >Available Weight</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="lastName"
+                                placeholder=""
+                                value=""
+                                required
+                              />
+                            </div>
+                            <!-- <div class="col-12 col-sm-6">
                           <div class="form-floating">
                             {{ form.JobTitle }}
                             <label for="jobtitle">Job Title</label>
@@ -288,21 +283,22 @@
                             <label for="desc">Job Description</label>
                           </div>
                         </div> -->
-                        <div class="col-12">
-                          <button
-                            class="btn btn-primary w-100 py-3"
-                            id="postBtn"
-                            type="submit"
-                          >
-                            Post it
-                          </button>
-                        </div>
+                            <div class="col-12">
+                              <button
+                                class="btn btn-primary w-100 py-3"
+                                id="postBtn"
+                                type="submit"
+                              >
+                                Post
+                              </button>
+                            </div>
+                          </div>
+                        </form>
                       </div>
-                    </form>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!-- <div class="row g-4">
+                <!-- <div class="row g-4">
                                         This is the display box
                                         <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
                                             <div class="service-item d-flex flex-column rounded">
@@ -377,42 +373,40 @@
                                             </div>
                                         </div>
                                     </div> -->
-            </div>
+              </div>
+              </div>
 
-            <div ng-show="isSet(3)">
-              <div class="wow fadeInUp" data-wow-delay="0.3s">
-                <h1>Notification page</h1>
-                <p>Messages received</p>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td colspan="2">Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <!-- <div class="messages">
+              <div ng-show="isSet(3)">
+                <div class="wow fadeInUp" data-wow-delay="0.3s">
+                  <h1>Status page</h1>
+                  <p>Messages received</p>
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Unqiue Id</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td class="table-success">Thornton</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry the Bird</td>
+                        <td class="table-danger">@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- <div class="messages">
                   <div class="message-box">
                     <img
                       src="https://media-exp1.licdn.com/dms/image/C4D0BAQHiNSL4Or29cg/company-logo_200_200/0/1519856215226?e=2147483647&v=beta&t=kJv1gX0_sqLG1g7LKLD5uh_6uEFpWGUTuzpuvVJVdEw"
@@ -578,6 +572,7 @@
                     </div>
                   </div>
                 </div> -->
+                </div>
               </div>
             </div>
           </div>
@@ -585,5 +580,5 @@
       </div>
     </div>
   </div>
+  {% endblock %}
 </div>
-{% endblock %}
