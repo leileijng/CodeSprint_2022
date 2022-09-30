@@ -196,3 +196,8 @@ def stuffingRequest(request):
 
 def documentation(request):
     return render(request, 'documentation.html')
+def truckingRequest(request):
+    return render(request, 'truckingRequest.html')
+
+def forkliftServices(request):
+    return render(request, 'forkliftServices.html')

@@ -20,12 +20,12 @@
                             </div>
                             <div class="w-100"></div>
                             <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                <a class="btn" ng-click="setTab(3)" style="color: var(--light); 
-                                background: var(--primary);"> <i
+                                <a class="btn" ng-click="setTab(3)"> <i
                                         class="mt-1 me-3 fa fa-bell"></i> Stuffing</a>
                             </div>
                             <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                <a class="btn" ng-click="setTab(3)"> <i
+                                <a class="btn" ng-click="setTab(3)" style="color: var(--light); 
+                                background: var(--primary);"> <i
                                         class="mt-1 me-3 fa fa-bell"></i> Trucking</a>
                             </div>
                             <div class="companyBtn" ng-class="{ active: isSet(3) }">
@@ -42,111 +42,65 @@
                 <div class="col-md-10" style="padding-left: 50px; padding-top: 10px; width: 87.49999965%;">
                 <div class="row g-5">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="width: 40%; padding-left: 5%;">
-                        <p class="d-inline-block border rounded-pill py-1 px-4">Stuffing</p>
+                        <p class="d-inline-block border rounded-pill py-1 px-4">Trucking</p>
+                        <h1 class="mb-4">Trucking Services</h1>
                         <p class="mb-4">Make use of decentralised technology to get trustworthy prove and detect scams!</p>
-                        <img class="img-fluid mt-0 " src="{% static 'img/cargo-service.jpg' %}">
+                        <img class="img-fluid mt-0 " src="{% static 'img/trucking-service.jpg' %}">
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style="width: 60%;">
-                        <section id="faq" class="faq">
-                            <div class="container" data-aos="fade-up">
-                      
-                              <div class="section-header">
-                                
-                                <h1 class="mb-1">Stuffing & Unstuffing</h1>
-                                <p>Frequently Asked Questions</p>
-                      
-                              </div>
-                      
-                              <div class="row justify-content-left" data-aos="fade-up" data-aos-delay="200">
-                                <div class="col-lg-12">
-                      
-                                  <div class="accordion accordion-flush" id="faqlist">
-                      
-                                    <div class="accordion-item">
-                                      <h3 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                                          <i class="bi bi-question-circle question-icon"></i>
-                                          How does PSA Stuffing / Unstuffing stand out?
-                                        </button>
-                                      </h3>
-                                      <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                        <div class="accordion-body">
-                                            We have your containers stuffed and stripped, with an eye to optimize, cushion and secure your goods in 20-foot or 40-foot containers. Each forwarded container benefits from a follow-up with guarantees.
-                                        </div>
-                                      </div>
-                                    </div><!-- # Faq item-->
-                      
-                                    <div class="accordion-item">
-                                      <h3 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                                          <i class="bi bi-question-circle question-icon"></i>
-                                          What are the stuffing / unstuffing steps?
-
-                                        </button>
-                                      </h3>
-                                      <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                        <div class="accordion-body">
-                                            At our container freight stations, 
-                                            freight shipments can be consolidated or de-consolidated and staged between transport legs, and cross-dock activities. Many of our terminals offer high-speed conversion of bulk-to-container for better value transportation, for example machinery or large trees that can be lowered into an open top container.
-
-                                        </div>
-                                      </div>
-                                    </div><!-- # Faq item-->
-                      
-                                    <div class="accordion-item">
-                                      <h3 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                                          <i class="bi bi-question-circle question-icon"></i>
-                                          Does PSA provide argumented services?
-                                        </button>
-                                      </h3>
-                                      <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                        <div class="accordion-body">
-                                            We also provide services include:
-                                            Consolidation and deconsolidation of export and import cargo,
-                                            Weighing,
-                                            Special packing/re-packing service, and
-                                            Labeling.
-                                        </div>
-                                      </div>
-                                    </div><!-- # Faq item-->
-                      
-                                    <div class="accordion-item">
-                                      <h3 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
-                                          <i class="bi bi-question-circle question-icon"></i>
-                                          What kind of cargos does PSA team handle with?
-                                        </button>
-                                      </h3>
-                                      <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                        <div class="accordion-body">
-                                          <i class="bi bi-question-circle question-icon"></i>
-                                          We offer stuffing and stripping of containerised & non-conventional cargo. This allows our clients to keep focused on their core business, and adds value, for example through reduced port storage, fewer trips, no empty redelivery and no demurrage, reduced stock buffers, and lower insurance costs.</div>
-                                      </div>
-                                    </div><!-- # Faq item-->
-                      
-                                    <div class="accordion-item">
-                                      <h3 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
-                                          <i class="bi bi-question-circle question-icon"></i>
-                                          Are there security measures in place to ensure the valuable items?
-                                        </button>
-                                      </h3>
-                                      <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                        <div class="accordion-body">
-                                            For valuable items we offer high-levels of security in the stuffing-stripping area, such as live CCTV streams. At many of our facilities cargo can be stuffed or stripped in a customs bonded area to reduce paperwork, and increase security.  
-                                        </div>
-                                      </div>
-                                    </div><!-- # Faq item-->
-                      
+                      <section id="about" class="about pt-0">
+                        <div class="container" data-aos="fade-up">
+                  
+                          <div class="row gy-4">
+                            <section id="featured-services" class="featured-services">
+                              <div class="container">
+                        
+                                  <div class="col-lg-12 col-md-6 service-item" data-aos="fade-up">
+                                    <div class="icon flex-shrink-0"><i class="fa-solid fa fa-dot-circle-o"></i> <span style="
+                                      font-size: 26px;
+                                      font-weight: 700;
+                                      margin-left: 20px;">Mission</span>
+                                    </div>
+                                    <div>
+                                      <p class="description">We ensure that our fleet of trucks are always well maintained, and have the best and the most updated fleet of trucks in service to ensure that it is capable of delivering high value, and oversized deliverables, efficiently and effectively, without causing any kind of loss</p>
+                                    </div>
                                   </div>
-                      
-                                </div>
+                                  <!-- End Service Item -->
+                        
+                                  <div class="col-lg-12 col-md-6 service-item" data-aos="fade-up">
+                                    <div class="icon flex-shrink-0"><i class="fa-solid fa fa-car"></i> <span style="
+                                      font-size: 26px;
+                                      font-weight: 700;
+                                      margin-left: 20px;">Team</span>
+                                    </div>
+                                    <div>
+                                      <p class="description">Our in-house team of experienced drivers We believe in providing quality services to our clients, and with the experience of decades backing us in the field of logistics, there is nothing we overlook when we handle your cargo. </p>
+                                    </div>
+                                  </div>
+                                  <!-- End Service Item -->
+                        
+                                  <div class="col-lg-12 col-md-6 service-item" data-aos="fade-up">
+                                    <div class="icon flex-shrink-0"><i class="fa-solid fa fa-flag"></i> <span style="
+                                      font-size: 26px;
+                                      font-weight: 700;
+                                      margin-left: 20px;">Promise</span>
+                                    </div>
+                                    <div>
+                                      <p class="description">Even if the load is oversized or over-dimensional in nature, our logistic experts and technicians take care of the minute details to ensure the safety of the delivery at its destination, and on time, every time.</p>
+                                    </div>
+                                  </div>
+                                  <!-- End Service Item -->
+                                  
+                        
                               </div>
-                      
-                            </div>
-                          </section><!-- End Frequently Asked Questions Section -->
-                      
+                            </section><!-- End Featured Services Section -->
+                        
+
+                          </div>
+                  
+                        </div>
+                      </section><!-- End About Us Section -->
+                  
                     </div>
 
 
@@ -201,9 +155,21 @@
                                     </div>
                                 </div>
 
-                               
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" aria-label="Default select example" placeholder="Preferred Timeslot"> 
+                                            <option value="1" selected></option>
+                                            <option value="1">Airport - Port</option>
+                                            <option value="2">Port - Port</option>
+                                            <option value="3">Airport - Warehouse</option>
+                                            <option value="3">Port - Warehouse</option>
+                                        </select>
 
-                                <div class="col-6">
+                                        <label for="registereddate">Service Type</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
                                     <div class="form-floating">
                                         <select class="form-select" aria-label="Default select example" placeholder="Preferred Timeslot"> 
                                             <option value="1" selected></option>
@@ -387,6 +353,63 @@
   z-index: 2;
 }
 
+.featured-services .service-item {
+  position: relative;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.featured-services .service-item .icon {
+  margin-right: 20px;
+}
+
+.featured-services .service-item .icon i {
+  color: #001f8d;
+  font-size: 48px;
+  transition: 0.3s;
+}
+
+.featured-services .service-item:hover .icon {
+  background: #fff;
+}
+
+.featured-services .service-item:hover .icon i {
+  color: var(--color-primary);
+}
+
+.featured-services .service-item .title {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: var(--color-secondary);
+  transition: 0.3s;
+}
+
+.featured-services .service-item .description {
+  font-size: 15px;
+  color: #132848;
+  margin-bottom: 10px;
+}
+
+.featured-services .service-item .readmore {
+  display: flex;
+  align-items: center;
+  color: var(--color-secondary);
+  transition: 0.3s;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.featured-services .service-item .readmore i {
+  margin-left: 8px;
+}
+
+.featured-services .service-item:hover .title,
+.featured-services .service-item:hover .readmore,
+.featured-services .service-item:hover .icon i {
+  color: var(--color-primary);
+}
+
 </style>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -396,6 +419,7 @@
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
 <script>
     console.log("testing");
     
