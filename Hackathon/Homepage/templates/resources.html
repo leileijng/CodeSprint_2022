@@ -9,19 +9,20 @@
                         <div class="col-md-1 splitLine mt-3" style="height: 600px; width: 12.499999995%">
                             <div class="mt-n2 wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="mb-5 nav nav-pills nav-stacked row">
+                                    <!-- navbar at the side -->
                                     <div class="companyBtn" ng-class="{ active: isSet(1) }">
-                                        <a class="btn" ng-click="setTab(1)"> <i class="mt-1 me-3 fa fa-address-book"></i> Profile</a>
+                                        <a class="btn" ng-click="setTab(1)"> <i class="mt-1 me-3 fa fa-plus-square-o"></i> List</a>
                                     </div>
 
                                     <div class="w-100"></div>
 
                                     <div class="companyBtn" ng-class="{ active: isSet(2) }">
-                                        <a class="btn" ng-click="setTab(2)"> <i class="mt-1 me-3 fa fa-search"></i> Match</a>
+                                        <a class="btn" ng-click="setTab(2)"> <i class="mt-1 me-3 fa fa-search"></i> Find</a>
                                     </div>
                                     
                                     <div class="w-100"></div>
                                     <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                        <a class="btn notification notify" ng-click="setTab(3)"> <i class="mt-1 me-3 fa fa-bell"></i> Message</a>
+                                        <a class="btn" ng-click="setTab(3)"> <i class="mt-1 me-3 fa fa-list-ul"></i> Orders</a>
                                     </div>
                                 </div>
                             </div>
@@ -94,79 +95,74 @@
                                     </div>
                                 </div>
                                 <div ng-show="isSet(2)">
-                                    <h1>Find job opportunities</h1>
-                                    <p>Match with your fantastic job!</p>
+                                    <h1>Find Resources</h1>
+                                    <p>Look for the resources you need today!</p>
+                                    <br>
                                     <div class="row g-4">
                                         <!-- This is the display box -->
-                                        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+                                        <div class="col-lg-4 col-md-6 wow zoomIn">
                                             <div class="service-item d-flex flex-column rounded">
-                                                <div class="d-flex">
-                                                    <img class="mb-3 company-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKWgStyZIRMBw2vhADy9q8GTi-MXXmwc0wADdN&s=0" alt="">
-                                                    <img class="mb-3 ms-auto verified" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
-                                                </div>
-                                                <h5 class="mb-1">Software Developer</h5>
-                                                <p class="mb-3" style="color: var(--dark)">Google</p>
-                                                <p class="mb-0" style="font-size:small"> Singapore</p>
-                                                <p style="font-size:small"> SGD 8.5K monthly</p>
-                                                <ul>
-                                                    <li>Full-time</li>
-                                                    <li>Bachelor's degree in Computer Science or related engineering field, or equivalent practical experience.</li>
-                                                    <li>5 years of coding experience in one or more of the following languages: C, C++, Java, or Python.</li>
-                                                </ul>
-                                                <div class="d-flex">
-                                                    <div class="ms-2">
-                                                        <p class="mb-0" style="font-size:small"> 5 days ago</p>
-                                                        <p class="mb-0" style="font-size:10px; color:green">ALiCzsbYbsXe38y4vRcsRWWIERRlKY6GYA</p>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img class="mb-3 company-logo" src="http://cnltracking.cargoerp.com/cnl-logo.png" alt="">
+                                                        <h5 class="mb-1">Warehouse Forklift</h5>
+                                                        <p class="mb-3" style="color: var(--dark)">CNL Logistic Solutions</p>
+                                                        <ul>
+                                                            <li>Model: Hyster 36-38T</li>
+                                                            <li>Load: 5,000 pounds</li>
+                                                            <li>Price: $35 / day</li>
+                                                        </ul>
                                                     </div>
-                                                    <a class="btn px-3 mt-auto ms-auto" href="{% url 'jobinfo' %}">Read More</a>
+                                                    <div class="col">
+                                                        <img class="mb-3 ms-auto verified" src="https://acropolis-wp-content-uploads.s3.us-west-1.amazonaws.com/types-of-forklifts.jpg" alt="" style="width:200px;height:200px;">
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <a class="btn px-3 mt-auto ms-auto" href="{% url 'jobinfo' %}">Request Resource</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                                        <div class="col-lg-4 col-md-6 wow zoomIn">
                                             <div class="service-item d-flex flex-column rounded">
-                                                <div class="d-flex">
-                                                    <img class="mb-3 company-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEX///8AAACurq6mpqZNTU3v7++ysrLk5OTV1dW4uLhgYGDS0tL4+PjNzc36+vqDg4OXl5dmZmY8PDx0dHSKiorAwMBISEjl5eUaGhrExMQ3NzePj49CQkKhoaFra2vz8/N5eXkpKSlYWFgSEhIjIyObm5swMDAnJycNDQ3tN1RYAAAEiUlEQVR4nO2c13rbMAxGRct7yXsmXkndvv8TNoqnbMpyY4A/y+8/17nAiWgOAGQUEUIIIYQQQgghhBBCCCGEEEIIIYQQQggRpx4n5TE6CD0aTZMSo+NQopKYI7/QoahQWRkTtOHIXBHgKG2ZDA10POIss4KmhQ5ImvKNoKmgI5Kl/XkraNAhydL+uBPso2OS5f4LmhI6JlHufoOh/QxvZ9GUATooSeoWwbAG6R+bITooSWxj1IzQUQlSsQmaNjosQYY2wSU6KkHsnxAdlSQjm2BQCQybYFAbtnnoY9Q6z9TQQYliEZyjYxKldi8YWPKiGvY0GlnWijo6Imn6Wb/BGh2QOJOMYIg54MWVXzOoU/2Ji+EqrFXwzHGUTuLwfoBH4k2yLAWX3A6RaadRikuN1lNDsdt53+z2s9mi3E/ijv+zT3uc7K/my1X1ccj15fXs+s2w0XUU60+oWlK9g9xZpW49DafriKeb8Uu9+pmIu/E2789TPCyXtjePAja97GhtrR7+dUoVJJLHe2HE5fPva9qz5oRvWUyhRlkqd/OFlUmvMa8mlrpTDu9orzONp2P+R5posyO5M8zr7L1YOZp6gsZ8eJDut1U7BZmh/aKdriC+dGqts8gyhArG+oLYtd9arxYHuUt14bcD+kWPt6Iy9JCCLsYoNiX+3Gb0JTpQwXHogrbeNGHAZSlrNVcUdIPGm7ZgGSxoqXUKgz5V5OXJxIDXhrUFJ2hB9dUeXprqKQviMzQDZUN4fb+rLLhAC0YdZUN8T3Rxivs18CXi4rLDS7yh/aJoXxzlK0CPvQd0BT1o5lsrG+Jr3do7GrSf+mLxG+2nWE47gD4ZflHSNcRvSrWT+R707itvaTz4hsqG0ES+E0N0yTDSL6qh/Wwt96EZaif04Uka9QMwPJOovi9N0II51yTl+EAL6ueD8U17TzUXvgD+rol2nxB+mCo26x0AV3/Vj08eFGZaxTG+CPojttUNt2DD6P6NIGnQ3frKSe8UcEpRfaqBj1P9RgV4usaBIfjRmn5xgK8D3bw5+CEabFuU9gHqyAqouHWjuMCVg7X7Tc7AUhou1osDO9TaP3OmaBJMF5+zYZoC6feeujTEDFT1HtoLoPYT7dz+FageKXeGqIuW6vmoE7Dra87mGlwvpuoF2Qt7mKCj23nQUpSbBQMoqF5I/AabddPu906BCjpIfsMTp8rX8Q36Ezo4JuJr+sqXgYFr4QnlqxfwqyWR8hED+6DCiUlxoD/Gi9dbNFOnvrzfqjZOPWg0PaLVmuHHGE1Rmk/xF0suqOzAN2irDAoJDfz7SVnkH8nAN5lmEb8Khb9keYvwOQpZOMxDtL0dfxHYhuRs489KmEGujQh/ATEHqQYNfItwLo8eqNsm1da0/bUBWtfGvYfJD2+/YEpe2XRQug17nJcwH3j6Gzxh3b8l1tV7bf13oF8WKqZ7O1I/H6zdjdt8a9m3nYyV2rVjUpBoqS2vXtQa+pCVeY7xqDkp90fVp77Ieh4vk6RX/X/0CCGEEEIIIYQQQgghhBBCCCGEEEIIIQTDXw1EQTJa684CAAAAAElFTkSuQmCC" alt="">
-                                                    <img class="mb-3 ms-auto verified" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
-                                                </div>
-                                                <h5 class="mb-1">Product Lead</h5>
-                                                <p class="mb-3" style="color: var(--dark)">Apple</p>
-                                                <p class="mb-0" style="font-size:small"> Singapore</p>
-                                                <p style="font-size:small"> SGD 7.8K monthly</p>
-                                                <ul>
-                                                    <li>Full-time</li>
-                                                    <li>Bachelor's degree or equivalent practical experience.</li>
-                                                    <li>5 years of experience as a brand marketing manager or brand consulting, or corporate affairs/Corporate Social Responsibility (CSR), and public affairs.</li>
-                                                </ul>
-                                                <div class="d-flex">
-                                                    <div class="ms-2">
-                                                        <p class="mb-0" style="font-size:small"> 2 days ago</p>
-                                                        <p class="mb-0" style="font-size:10px; color:green">0CB8QtI8BKAFqFwoTCNiPzLmnkfgCFQAA</p>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img class="mb-3 company-logo" src="http://gilmoncfs.sg/gilmon.png" alt="">
+                                                        <h5 class="mb-1">Electric Pallet Jack</h5>
+                                                        <p class="mb-3" style="color: var(--dark)">Gilmon CFS</p>
+                                                        <ul>
+                                                            <li>Model: Vestil EPT-2048-45</li>
+                                                            <li>Load: 4,500 pounds</li>
+                                                            <li>Price: $20 / day</li>
+                                                        </ul>
                                                     </div>
-                                                    <a class="btn px-3 mt-auto ms-auto">Read More</a>
+                                                    <div class="col">
+                                                        <img class="mb-3 ms-auto verified" src="https://m.media-amazon.com/images/I/61I6xQgrIIL._SL1500_.jpg" alt="" style="width:200px;height:200px;">
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <a class="btn px-3 mt-auto ms-auto" href="{% url 'jobinfo' %}">Request Resource</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                                        <div class="col-lg-4 col-md-6 wow zoomIn">
                                             <div class="service-item d-flex flex-column rounded">
-                                                <div class="d-flex">
-                                                    <img class="mb-3 company-logo" src="https://whiteduck.de/wp-content/uploads/Microsoft-Logo.png" alt="">
-                                                    <img class="mb-3 ms-auto verified" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
-                                                </div>
-                                                <h5 class="mb-1">Marketing Manager</h5>
-                                                <p class="mb-3" style="color: var(--dark)">Microsoft</p>
-                                                <p class="mb-0" style="font-size:small"> America</p>
-                                                <p style="font-size:small"> USD 12.3K monthly</p>
-                                                <ul>
-                                                    <li>Full-time</li>
-                                                    <li>Bachelor's degree or equivalent practical experience.</li>
-                                                    <li>3 years of experience in strategy, operations, project management, relationship building, and stakeholder management across cross-functional teams.</li>
-                                                </ul>
-                                                <div class="d-flex">
-                                                    <div class="ms-2">
-                                                        <p class="mb-0" style="font-size:small"> 4 days ago</p>
-                                                        <p class="mb-0" style="font-size:10px; color:green">2ahUKEwiR6LHsZH4AhVzKbcAHa7VDiMQ2</p>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img class="mb-3 company-logo" src="https://yt3.ggpht.com/ytc/AMLnZu9NnLdDsTfCk1RHMYnXBm4vSZyn85YFiagBNB7A=s900-c-k-c0x00ffffff-no-rj" alt="">
+                                                        <h5 class="mb-1">Electric Pallet Jack</h5>
+                                                        <p class="mb-3" style="color: var(--dark)">Keppel Corporation</p>
+                                                        <ul>
+                                                            <li>Size: 48 x 40"</li>
+                                                            <li>Available: 2,421 Pallets</li>
+                                                            <li>Price: $20 / week (100 pallets)</li>
+                                                        </ul>
                                                     </div>
-                                                    <a class="btn px-3 mt-auto ms-auto">Read More</a>
+                                                    <div class="col">
+                                                        <img class="mb-3 ms-auto verified" src="https://img.uline.com/is/image/uline/H-8943?$Mobile_Zoom$" alt="" style="width:200px;height:200px;">
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <a class="btn px-3 mt-auto ms-auto" href="{% url 'jobinfo' %}">Request Resource</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -204,6 +200,25 @@
                                                 </div>
                                               </div>
                                             </div>
+                                            <table class="styled-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Points</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Dom</td>
+                                                        <td>6000</td>
+                                                    </tr>
+                                                    <tr class="active-row">
+                                                        <td>Melissa</td>
+                                                        <td>5150</td>
+                                                    </tr>
+                                                    <!-- and so on... -->
+                                                </tbody>
+                                            </table>
                                             <div class="message-box">
                                               <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQFdNatYGiBelg/company-logo_100_100/0/1636138753911?e=1662595200&v=beta&t=x0mcXgELzzp8PcB5RY_QTZRBtw1QutmpPlG37-6WKkk" alt="profile image">
                                               <div class="message-content">
@@ -277,3 +292,4 @@
             </div>
         </div>
         {% endblock %} 
+
