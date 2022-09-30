@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}<title>User Profile</title>{% endblock %}
+        {% block content %}
+        <div class="container">
+            <div class="company">
+                <div ng-app="tabApp">
+                    <div class="row" ng-controller="TabController">
+                        <div class="col-md-1 splitLine mt-3" style="height: 600px; width: 12.499999995%">
+                            <div class="mt-n2 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="mb-5 nav nav-pills nav-stacked row">
+                                    <div class="companyBtn" ng-class="{ active: isSet(1) }">
+                                        <a class="btn" ng-click="setTab(1)"> <i class="mt-1 me-3 fa fa-address-book"></i> Profile</a>
+                                    </div>
+
+                                    <div class="w-100"></div>
+
+                                    <div class="companyBtn" ng-class="{ active: isSet(2) }">
+                                        <a class="btn" ng-click="setTab(2)"> <i class="mt-1 me-3 fa fa-search"></i> Match</a>
+                                    </div>
+                                    
+                                    <div class="w-100"></div>
+                                    <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                        <a class="btn notification notify" ng-click="setTab(3)"> <i class="mt-1 me-3 fa fa-bell"></i> Message</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-10" style="padding-left: 50px; padding-top: 10px; width: 87.49999965%;">
+                            <div class="jumbotron">
+                                <div ng-show="isSet(1)">
+                                    <div class="wow fadeInUp" data-wow-delay="0.3s">      
+                                        <section class="resume-section" id="experience">
+                                            <div class="resume-section-content">
+                                                <h2 class="mb-3 resume-title">Work Experience</h2>
+                                                <div class="d-flex flex-column flex-md-row justify-content-between">
+                                                    <div class="flex-grow-1">
+                                                        <h3 class="mb-0">Senior Web Developer</h3>
+                                                        <div class="d-flex mt-2">
+                                                            <img class="mb-2 company-logo" style="width: 33px; height: 33px; margin-right: 10px;" src="https://whiteduck.de/wp-content/uploads/Microsoft-Logo.png" alt="">
+                                                            <p class="mt-1" style="color:darkolivegreen;"> Microsoft</p>
+                                                            <img class="mb-1 verified" style="margin-left: 1rem;" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
+                                                        </div>
+                                                        <p class="margin-bottom: 0;">Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                                                    </div>
+                                                    <div class="flex-shrink-0"><span class="text-primary">March 2013 - Present</span></div>
+                                                </div>
+                                                <div class="mb-3 d-flex">
+                                                    <span class="text-primary me-1" style="font-weight:bold;">Skills : </span>
+                                                    <p>Python, C++, Vue, React, Django, SQL</p>
+                                                </div>
+                                                <div class="d-flex flex-column flex-md-row justify-content-between">
+                                                    <div class="flex-grow-1">
+                                                        <h3 class="mb-0">Web Developer</h3>
+                                                        <div class="d-flex mt-2">
+                                                            <img class="mb-2 company-logo" style="width: 33px; height: 33px; margin-right: 10px;" src="https://media-exp1.licdn.com/dms/image/C560BAQHdAaarsO-eyA/company-logo_100_100/0/1595530301220?e=1662595200&v=beta&t=7QwpJKXzZthPTXzCrYB9mH7K_QG21d9m05GO5BJqZck" alt="">
+                                                            <p class="mt-1" style="color:darkolivegreen;"> Apple</p>
+                                                            <img class="mb-1 pending" style="margin-left: 1rem;" src="{% static 'img/time.png' %}" alt="">
+                                                        </div>
+                                                        <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+                                                    </div>
+                                                    <div class="flex-shrink-0"><span class="text-primary">December 2011 - March 2013</span></div>
+                                                </div>
+                                                <div class="mb-5 d-flex">
+                                                    <span class="text-primary me-1" style="font-weight:bold;">Skills : </span>
+                                                    <p>HTML, CSS, Javascript, github, Latex</p>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        <hr/>
+                                        <section class="resume-section" id="experience">
+                                            <div class="resume-section-content">
+                                                <h2 class="mb-3 resume-title">Education</h2>
+                                                <div class="d-flex flex-column flex-md-row justify-content-between">
+                                                    
+                                                    <div class="flex-grow-1">
+                                                        <h3 class="mb-0">Nanyang Technological University of Singapore</h3>
+                                                        <div class="d-flex mt-2">
+                                                            <p class="mt-1" style="color:darkolivegreen;"> Bachelor of Science</p>
+                                                            <img class="mb-1 verified" style="margin-left: 1rem;" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
+                                                        </div>
+                                                        <div>Computer Science - Web Development Track</div>
+                                                        <p>GPA: 4.23</p>
+                                                    </div>
+                                                    <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div>
+                                                </div>
+                                                <div class="mb-5 d-flex">
+                                                    <span class="text-primary me-1" style="font-weight:bold;">Courses : </span>
+                                                    <p>Computer Architecture, Network, Operating System, Database, Cyber Security</p>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div ng-show="isSet(2)">
+                                    <h1>Find job opportunities</h1>
+                                    <p>Match with your fantastic job!</p>
+                                    <div class="row g-4">
+                                        <!-- This is the display box -->
+                                        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+                                            <div class="service-item d-flex flex-column rounded">
+                                                <div class="d-flex">
+                                                    <img class="mb-3 company-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKWgStyZIRMBw2vhADy9q8GTi-MXXmwc0wADdN&s=0" alt="">
+                                                    <img class="mb-3 ms-auto verified" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
+                                                </div>
+                                                <h5 class="mb-1">Software Developer</h5>
+                                                <p class="mb-3" style="color: var(--dark)">Google</p>
+                                                <p class="mb-0" style="font-size:small"> Singapore</p>
+                                                <p style="font-size:small"> SGD 8.5K monthly</p>
+                                                <ul>
+                                                    <li>Full-time</li>
+                                                    <li>Bachelor's degree in Computer Science or related engineering field, or equivalent practical experience.</li>
+                                                    <li>5 years of coding experience in one or more of the following languages: C, C++, Java, or Python.</li>
+                                                </ul>
+                                                <div class="d-flex">
+                                                    <div class="ms-2">
+                                                        <p class="mb-0" style="font-size:small"> 5 days ago</p>
+                                                        <p class="mb-0" style="font-size:10px; color:green">ALiCzsbYbsXe38y4vRcsRWWIERRlKY6GYA</p>
+                                                    </div>
+                                                    <a class="btn px-3 mt-auto ms-auto" href="{% url 'jobinfo' %}">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                                            <div class="service-item d-flex flex-column rounded">
+                                                <div class="d-flex">
+                                                    <img class="mb-3 company-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEX///8AAACurq6mpqZNTU3v7++ysrLk5OTV1dW4uLhgYGDS0tL4+PjNzc36+vqDg4OXl5dmZmY8PDx0dHSKiorAwMBISEjl5eUaGhrExMQ3NzePj49CQkKhoaFra2vz8/N5eXkpKSlYWFgSEhIjIyObm5swMDAnJycNDQ3tN1RYAAAEiUlEQVR4nO2c13rbMAxGRct7yXsmXkndvv8TNoqnbMpyY4A/y+8/17nAiWgOAGQUEUIIIYQQQgghhBBCCCGEEEIIIYQQQggRpx4n5TE6CD0aTZMSo+NQopKYI7/QoahQWRkTtOHIXBHgKG2ZDA10POIss4KmhQ5ImvKNoKmgI5Kl/XkraNAhydL+uBPso2OS5f4LmhI6JlHufoOh/QxvZ9GUATooSeoWwbAG6R+bITooSWxj1IzQUQlSsQmaNjosQYY2wSU6KkHsnxAdlSQjm2BQCQybYFAbtnnoY9Q6z9TQQYliEZyjYxKldi8YWPKiGvY0GlnWijo6Imn6Wb/BGh2QOJOMYIg54MWVXzOoU/2Ji+EqrFXwzHGUTuLwfoBH4k2yLAWX3A6RaadRikuN1lNDsdt53+z2s9mi3E/ijv+zT3uc7K/my1X1ccj15fXs+s2w0XUU60+oWlK9g9xZpW49DafriKeb8Uu9+pmIu/E2789TPCyXtjePAja97GhtrR7+dUoVJJLHe2HE5fPva9qz5oRvWUyhRlkqd/OFlUmvMa8mlrpTDu9orzONp2P+R5posyO5M8zr7L1YOZp6gsZ8eJDut1U7BZmh/aKdriC+dGqts8gyhArG+oLYtd9arxYHuUt14bcD+kWPt6Iy9JCCLsYoNiX+3Gb0JTpQwXHogrbeNGHAZSlrNVcUdIPGm7ZgGSxoqXUKgz5V5OXJxIDXhrUFJ2hB9dUeXprqKQviMzQDZUN4fb+rLLhAC0YdZUN8T3Rxivs18CXi4rLDS7yh/aJoXxzlK0CPvQd0BT1o5lsrG+Jr3do7GrSf+mLxG+2nWE47gD4ZflHSNcRvSrWT+R707itvaTz4hsqG0ES+E0N0yTDSL6qh/Wwt96EZaif04Uka9QMwPJOovi9N0II51yTl+EAL6ueD8U17TzUXvgD+rol2nxB+mCo26x0AV3/Vj08eFGZaxTG+CPojttUNt2DD6P6NIGnQ3frKSe8UcEpRfaqBj1P9RgV4usaBIfjRmn5xgK8D3bw5+CEabFuU9gHqyAqouHWjuMCVg7X7Tc7AUhou1osDO9TaP3OmaBJMF5+zYZoC6feeujTEDFT1HtoLoPYT7dz+FageKXeGqIuW6vmoE7Dra87mGlwvpuoF2Qt7mKCj23nQUpSbBQMoqF5I/AabddPu906BCjpIfsMTp8rX8Q36Ezo4JuJr+sqXgYFr4QnlqxfwqyWR8hED+6DCiUlxoD/Gi9dbNFOnvrzfqjZOPWg0PaLVmuHHGE1Rmk/xF0suqOzAN2irDAoJDfz7SVnkH8nAN5lmEb8Khb9keYvwOQpZOMxDtL0dfxHYhuRs489KmEGujQh/ATEHqQYNfItwLo8eqNsm1da0/bUBWtfGvYfJD2+/YEpe2XRQug17nJcwH3j6Gzxh3b8l1tV7bf13oF8WKqZ7O1I/H6zdjdt8a9m3nYyV2rVjUpBoqS2vXtQa+pCVeY7xqDkp90fVp77Ieh4vk6RX/X/0CCGEEEIIIYQQQgghhBBCCCGEEEIIIQTDXw1EQTJa684CAAAAAElFTkSuQmCC" alt="">
+                                                    <img class="mb-3 ms-auto verified" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
+                                                </div>
+                                                <h5 class="mb-1">Product Lead</h5>
+                                                <p class="mb-3" style="color: var(--dark)">Apple</p>
+                                                <p class="mb-0" style="font-size:small"> Singapore</p>
+                                                <p style="font-size:small"> SGD 7.8K monthly</p>
+                                                <ul>
+                                                    <li>Full-time</li>
+                                                    <li>Bachelor's degree or equivalent practical experience.</li>
+                                                    <li>5 years of experience as a brand marketing manager or brand consulting, or corporate affairs/Corporate Social Responsibility (CSR), and public affairs.</li>
+                                                </ul>
+                                                <div class="d-flex">
+                                                    <div class="ms-2">
+                                                        <p class="mb-0" style="font-size:small"> 2 days ago</p>
+                                                        <p class="mb-0" style="font-size:10px; color:green">0CB8QtI8BKAFqFwoTCNiPzLmnkfgCFQAA</p>
+                                                    </div>
+                                                    <a class="btn px-3 mt-auto ms-auto">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                                            <div class="service-item d-flex flex-column rounded">
+                                                <div class="d-flex">
+                                                    <img class="mb-3 company-logo" src="https://whiteduck.de/wp-content/uploads/Microsoft-Logo.png" alt="">
+                                                    <img class="mb-3 ms-auto verified" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
+                                                </div>
+                                                <h5 class="mb-1">Marketing Manager</h5>
+                                                <p class="mb-3" style="color: var(--dark)">Microsoft</p>
+                                                <p class="mb-0" style="font-size:small"> America</p>
+                                                <p style="font-size:small"> USD 12.3K monthly</p>
+                                                <ul>
+                                                    <li>Full-time</li>
+                                                    <li>Bachelor's degree or equivalent practical experience.</li>
+                                                    <li>3 years of experience in strategy, operations, project management, relationship building, and stakeholder management across cross-functional teams.</li>
+                                                </ul>
+                                                <div class="d-flex">
+                                                    <div class="ms-2">
+                                                        <p class="mb-0" style="font-size:small"> 4 days ago</p>
+                                                        <p class="mb-0" style="font-size:10px; color:green">2ahUKEwiR6LHsZH4AhVzKbcAHa7VDiMQ2</p>
+                                                    </div>
+                                                    <a class="btn px-3 mt-auto ms-auto">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div ng-show="isSet(3)">
+                                    <div class="wow fadeInUp" data-wow-delay="0.3s">
+                                        <h1>Notification page</h1>
+                                        <p>Messages received</p>        
+                                        <div class="messages">
+                                            <div class="message-box">
+                                              <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQHiNSL4Or29cg/company-logo_200_200/0/1519856215226?e=2147483647&v=beta&t=kJv1gX0_sqLG1g7LKLD5uh_6uEFpWGUTuzpuvVJVdEw" alt="profile image">
+                                              <div class="message-content">
+                                                <div class="message-header">
+                                                  <div class="name">Google<label style="color: red; margin-left: 10px;">New !</label></div>
+                                                  <div class="star-checkbox">
+                                                    <input type="checkbox" id="star-1">
+                                                    <label for="star-1">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                                <p class="message-line">
+                                                  I got your first assignment. It was quite good. 🥳 We can continue with the next assignment.
+                                                </p>
+                                                <div class="row">
+                                                    <div class="companyBtn col-md-2">
+                                                        <a class="btn" style="width: 110px;" href="{% url 'jobinfo' %}"><p style="margin-left:4px">Read More</p></a>
+                                                    </div>
+                                                    <p class="col-md-2 ms-auto mt-auto message-line time">
+                                                        Dec, 12
+                                                    </p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="message-box">
+                                              <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQFdNatYGiBelg/company-logo_100_100/0/1636138753911?e=1662595200&v=beta&t=x0mcXgELzzp8PcB5RY_QTZRBtw1QutmpPlG37-6WKkk" alt="profile image">
+                                              <div class="message-content">
+                                                <div class="message-header">
+                                                  <div class="name">Meta</div>
+                                                  <div class="star-checkbox">
+                                                    <input type="checkbox" id="star-2">
+                                                    <label for="star-2">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                                <p class="message-line">
+                                                  Hey, can tell me about progress of project? I'm waiting for your response.
+                                                </p>
+                                                <p class="message-line time">
+                                                  Dec, 12
+                                                </p>
+                                              </div>
+                                            </div>
+                                            <div class="message-box">
+                                              <img src="https://media-exp2.licdn.com/dms/image/C560BAQE88xCsONDULQ/company-logo_200_200/0/1618231291419?e=2147483647&v=beta&t=vc_FjmDR3a48QsN0A5l29y7i07b2NmcTJQrCVCl4jC8" alt="profile image">
+                                              <div class="message-content">
+                                                <div class="message-header">
+                                                  <div class="name">Microsoft</div>
+                                                  <div class="star-checkbox">
+                                                    <input type="checkbox" id="star-3">
+                                                    <label for="star-3">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                                <p class="message-line">
+                                                  Awesome! 🤩 I like it. We can schedule a meeting for the next one.
+                                                </p>
+                                                <p class="message-line time">
+                                                  Dec, 12
+                                                </p>
+                                              </div>
+                                            </div>
+                                            <div class="message-box">
+                                              <img src="https://media-exp1.licdn.com/dms/image/C560BAQHdAaarsO-eyA/company-logo_100_100/0/1595530301220?e=1662595200&v=beta&t=7QwpJKXzZthPTXzCrYB9mH7K_QG21d9m05GO5BJqZck" alt="profile image">
+                                              <div class="message-content">
+                                                <div class="message-header">
+                                                  <div class="name">Apple</div>
+                                                  <div class="star-checkbox">
+                                                    <input type="checkbox" id="star-4">
+                                                    <label for="star-4">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                                <p class="message-line">
+                                                  I am really impressed! Can't wait to see the final result.
+                                                </p>
+                                                <p class="message-line time">
+                                                  Dec, 11
+                                                </p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock %} 

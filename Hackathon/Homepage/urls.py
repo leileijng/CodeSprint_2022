@@ -13,6 +13,6 @@ urlpatterns = [
     path('recommend', views.recommend, name='recommend'),
     path('checking', views.checking, name="checking"),
     path('verification', views.verification, name="verification"),
-
+    path('resources', views.resources, name='resources'),
     path('company-post-job/', views.postJob, name='company-post-job')
 ]

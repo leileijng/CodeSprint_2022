@@ -146,6 +146,9 @@ def verification(request):
 def user(request):
     return render(request, 'user.html')
 
+def resources(request):
+    return render(request, 'resources.html')
+
 def signup(request):
     return render(request, 'signup.html')
 
