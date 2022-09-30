@@ -49,3 +49,6 @@ class PostJobs(forms.ModelForm):
 
 class Verification(forms.Form):
     VerificationCode = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}), required=True)
+
+class ServicesRequest(forms.ModelForm):
+    VerificationCode = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}), required=True)

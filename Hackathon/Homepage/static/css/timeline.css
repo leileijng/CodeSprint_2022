@@ -118,10 +118,10 @@
 	/* this is the grey line/timeline */
 	position: absolute;
 	z-index: 1;
-	left: -160px;
+	left: -10px;
 	top: 49px;
 	height: 2px;
-    margin-top: 30px;
+    margin-top: 10px;
 	background: #dfdfdf;
 	-webkit-transition: -webkit-transform 0.4s;
 	-moz-transition: -moz-transform 0.4s;
@@ -135,7 +135,7 @@
 	left: 0;
 	top: 0;
 	height: 100%;
-	width: 100%;
+	width: 120%;
 	background-color: var(--secondary);
 	-webkit-transform: scaleX(0);
 	-moz-transform: scaleX(0);
@@ -331,6 +331,12 @@
 	transform: translateX(0);
 }
 
+.cd-horizontal-timeline .events-content li::marker {
+	font-size: 10em;
+	-webkit-appearance:none;
+	
+}
+
 .cd-horizontal-timeline .events-content li.enter-right,
 .cd-horizontal-timeline .events-content li.leave-right {
 	-webkit-animation-name: cd-enter-right;
@@ -353,7 +359,6 @@
 }
 
 .cd-horizontal-timeline .events-content li > * {
-	max-width: 800px;
 	margin: 0 auto;
 }
 

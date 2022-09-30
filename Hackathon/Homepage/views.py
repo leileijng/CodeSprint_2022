@@ -165,3 +165,9 @@ def postJob(request):
         data = json.loads(response_json)
         print(data)
     return HttpResponse("Posted Successfully")
+
+def services(request):
+    return render(request, 'services.html')
+
+def railingRequest(request):
+    return render(request, 'railingRequest.html')
