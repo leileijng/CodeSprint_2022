@@ -190,3 +190,9 @@ def railingRequest(request):
 
 def stuffingRequest(request):
     return render(request, 'stuffingRequest.html')
+
+def truckingRequest(request):
+    return render(request, 'truckingRequest.html')
+
+def forkliftServices(request):
+    return render(request, 'forkliftServices.html')

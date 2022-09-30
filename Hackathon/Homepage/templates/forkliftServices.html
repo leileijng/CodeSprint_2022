@@ -1,0 +1,318 @@
+{% extends "base.html" %}
+{% load static %}
+{% load filter_tags %}
+{% block title %}<title>User Profile</title>{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="company">
+        <div ng-app="tabApp">
+            <div class="row" ng-controller="TabController">
+                <div class="col-md-1 splitLine mt-3" style="height: 700px; width: 12.499999995%">
+                    <div class="mt-n2 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="mb-5 nav nav-pills nav-stacked row" style="padding-top: 5%;">
+                            <div class="companyBtn" ng-class="{ active: isSet(1) }">
+                                <a class="btn"> <i class="mt-1 me-3 fa fa-address-book"></i>
+                                    Forklifting</a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="companyBtn" ng-class="{ active: isSet(2) }">
+                                <a class="btn active" ng-click="setTab(2)"> <i class="mt-1 me-3 fa fa-search"></i> Railing</a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                <a class="btn" ng-click="setTab(3)" style="color: var(--light); 
+                                background: var(--primary);"> <i
+                                        class="mt-1 me-3 fa fa-bell"></i> Stuffing</a>
+                            </div>
+                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                <a class="btn" ng-click="setTab(3)"> <i
+                                        class="mt-1 me-3 fa fa-bell"></i> Trucking</a>
+                            </div>
+                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                <a class="btn" ng-click="setTab(3)"> <i
+                                        class="mt-1 me-3 fa fa-bell"></i> Documentation</a>
+                            </div>
+                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                <a class="btn" ng-click="setTab(3)"> <i
+                                        class="mt-1 me-3 fa fa-bell"></i> Warehouse</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10" style="padding-left: 50px; padding-top: 10px; width: 87.49999965%;">
+                    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+                    <div class="container">
+                    <div class="wrapper wrapper-content animated fadeInRight">
+                        <div class="row">
+                            <div class="col-md-14">
+                                <div class="ibox">
+                                    <div class="ibox-title">
+                                        <span class="pull-right" style="width: 120px;"><strong>Total Charge</strong></span>
+                                        <span class="pull-right" style="width: 170px;"><strong>Weekly Charge</strong></span>
+                                        <span class="pull-right" style="width: 210px;"><strong>Daily Charge</strong></span>
+                                        <h5>Available Forklifting Services</h5>
+                                    </div>
+                                    <div class="ibox-content">
+                                        <div class="table-responsive">
+                                            <table class="table shoping-cart-table">
+                                                <tbody>
+                                                <tr>
+                                                    <td class="desc" width="540">
+                                                        <h3>
+                                                        <a href="#" class="text-navy">
+                                                            Small Forklifts (1.5 - 3 Tons)
+                                                        </a>
+                                                        </h3>
+                                                        <p class="small">
+                                                            It is a long established fact that a reader will be distracted by the readable
+                                                            content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                                        </p>
+                                                    </td>
+                    
+                                                    <td width="200">
+                                                        <span style="padding-left: 40px;">$100.00</span>
+                                                        <dl class="small" style="width: 50px; margin-left: 50px; margin-top: 10px;">
+                                                            <input type="number" class="form-control" placeholder="0">
+                                                        </dl>
+                                                    </td>
+                                                    <td width="150">
+                                                        <span style="padding-left: 20px;">$350.00</span>
+                                                        <dl class="small" style="width: 50px; margin-left: 30px; margin-top: 10px;">
+                                                            <input type="number" class="form-control" placeholder="0">
+                                                        </dl>
+                                                    </td>
+                                                    <td width="70">
+                                                        <h4>
+                                                            $0
+                                                        </h4>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                    
+                                    </div>
+                                    <div class="ibox-content">
+                                        <div class="table-responsive">
+                                            <table class="table shoping-cart-table">
+                                                <tbody>
+                                                <tr>
+                                                    <td class="desc" width="540">
+                                                        <h3>
+                                                        <a href="#" class="text-navy">
+                                                            Medium Forklifts (4 - 7 Tons)
+                                                        </a>
+                                                        </h3>
+                                                        <p class="small">
+                                                            It is a long established fact that a reader will be distracted by the readable
+                                                            content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                                        </p>
+                                                    </td>
+                    
+                                                    <td width="200">
+                                                        <span style="padding-left: 40px;">$150.00</span>
+                                                        <dl class="small" style="width: 50px; margin-left: 50px; margin-top: 10px;">
+                                                            <input type="number" class="form-control" placeholder="0">
+                                                        </dl>
+                                                    </td>
+                                                    <td width="150">
+                                                        <span style="padding-left: 20px;">$600,00</span>
+                                                        <dl class="small" style="width: 50px; margin-left: 30px; margin-top: 10px;">
+                                                            <input type="number" class="form-control" placeholder="0">
+                                                        </dl>
+                                                    </td>
+                                                    <td width="70">
+                                                        <h4>
+                                                            $0
+                                                        </h4>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                    
+                                    </div>
+                                    <div class="ibox-content">
+                                        <div class="table-responsive">
+                                            <table class="table shoping-cart-table">
+                                                <tbody>
+                                                <tr>
+                                                    <td class="desc" width="540">
+                                                        <h3>
+                                                        <a href="#" class="text-navy">
+                                                            Large Forklifts (10 - 16 Tons)
+                                                        </a>
+                                                        </h3>
+                                                        <p class="small">
+                                                            It is a long established fact that a reader will be distracted by the readable
+                                                            content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                                        </p>
+                                                    </td>
+                    
+                                                    <td width="200">
+                                                        <span style="padding-left: 40px;">$380.00</span>
+                                                        <dl class="small" style="width: 50px; margin-left: 50px; margin-top: 10px;">
+                                                            <input type="number" class="form-control" placeholder="0">
+                                                        </dl>
+                                                    </td>
+                                                    <td width="150">
+                                                        <span style="padding-left: 20px;">$800.00</span>
+                                                        <dl class="small" style="width: 50px; margin-left: 30px; margin-top: 10px;">
+                                                            <input type="number" class="form-control" placeholder="0">
+                                                        </dl>
+                                                    </td>
+                                                    <td width="70">
+                                                        <h4>
+                                                            $0
+                                                        </h4>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                    
+                                    </div>
+
+                                    <div class="m-t-sm">
+                                        <div class="pull-right">
+                                        <a href="#" class="btn btn-primary w-100 py-3"> Checkout</a>
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                    
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+.companyBtn .btn::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    border-radius: 35px;
+    background: transparent;
+    transition: .5s;
+    z-index: -1;
+}
+
+.cart-product-imitation {
+  text-align: center;
+  padding-top: 30px;
+  height: 80px;
+  width: 80px;
+  background-color: #f8f8f9;
+}
+.product-imitation.xl {
+  padding: 120px 0;
+}
+.product-desc {
+  padding: 20px;
+  position: relative;
+}
+.ecommerce .tag-list {
+  padding: 0;
+}
+.ecommerce .fa-star {
+  color: #d1dade;
+}
+.ecommerce .fa-star.active {
+  color: #f8ac59;
+}
+.ecommerce .note-editor {
+  border: 1px solid #e7eaec;
+}
+table.shoping-cart-table {
+  margin-bottom: 0;
+}
+table.shoping-cart-table tr td {
+  border: none;
+  text-align: left;
+}
+table.shoping-cart-table tr td.desc,
+table.shoping-cart-table tr td:first-child {
+  text-align: left;
+}
+table.shoping-cart-table tr td:last-child {
+  width: 80px;
+}
+.ibox {
+  clear: both;
+  margin-bottom: 25px;
+  margin-top: 0;
+  padding: 0;
+}
+.ibox.collapsed .ibox-content {
+  display: none;
+}
+.ibox:after,
+.ibox:before {
+  display: table;
+}
+.ibox-title {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-color: #ffffff;
+  border-color: #e7eaec;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 3px 0 0;
+  color: inherit;
+  margin-bottom: 0;
+  padding: 14px 15px 7px;
+  min-height: 48px;
+}
+.ibox-content {
+  background-color: #ffffff;
+  color: inherit;
+  padding: 15px 20px 20px 20px;
+  border-color: #e7eaec;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 1px 0;
+}
+.ibox-footer {
+  color: inherit;
+  border-top: 1px solid #e7eaec;
+  font-size: 90%;
+  background: #ffffff;
+  padding: 10px 15px;
+}
+
+</style>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+    console.log("testing");
+    
+    $(document).ready(function(){
+		var date_input=$('input[name="date"]'); //our date input has the name "date"
+		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		date_input.datepicker({
+			format: 'mm/dd/yyyy',
+			container: container,
+			todayHighlight: true,
+			autoclose: true,
+		});
+	})
+</script>
+{% endblock %}

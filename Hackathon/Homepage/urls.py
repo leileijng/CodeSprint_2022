@@ -26,4 +26,7 @@ urlpatterns = [
     path('company-post-job/', views.postJob, name='company-post-job'),
 
 
+    path('truckingRequest', views.truckingRequest, name='truckingRequest'),
+    path('forkliftServices', views.forkliftServices, name='forkliftServices')
+    
 ]
