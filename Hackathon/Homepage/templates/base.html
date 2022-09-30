@@ -30,6 +30,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <link 
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
+    />
+
 
     {% load static %}
     <!-- Libraries Stylesheet -->
@@ -73,29 +77,51 @@
       <!-- Spinner End -->
       <!-- Navbar & Hero Start -->
 
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="{% url 'index' %}" class="navbar-brand p-0">
-                    <h1 class="m-0"><i class="fa fa-search me-2"></i>KD Community<span class="fs-5">By PSA</span>
-                    </h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                    </div>
-
-                    <a href="#" class="nav-item nav-link text-light">Resources</a>
-                    <a href="#" class="nav-item nav-link text-light">Services</a>
-                    <a href="#" class="nav-item nav-link text-light">Co-Loading</a>
-                    <a href="https://www.lemmatree.com/"
-                        class="btn btn-outline-light text-light py-2 px-4 ms-5 m-3">Contact us</a>
-                </div>
+      <div class="container-xxl position-relative p-0">
+        <nav
+          class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+        >
+          <a href="{% url 'index' %}" class="navbar-brand p-0">
+            <h1 class="m-0">
+              <i class="fa fa-search me-2"></i>Newbility<span class="fs-5"
+                >Job Assistant</span
+              >
+            </h1>
+            <!-- <img src="img/logo.png" alt="Logo"> -->
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0"></div>
+            <a
+              href="https://www.lemmatree.com/"
+              class="btn btn-outline-light text-light py-2 px-4 ms-5 m-3"
+              >Contact us</a
+            >
+          </div>
+        </nav>
+        {% block top %}
+        <div
+          class="container-xxl bg-primary hero-header mb-5"
+          style="padding-top: 75px"
+        ></div>
+        {% endblock %}
+      </div>
+      <!-- Navbar & Hero End -->
 
       {% block content %}
       <!-- content text -->{% endblock %}
@@ -121,31 +147,29 @@
                 <p class="col-md-11">(65) 6274 7111</p>
               </div>
               <div class="d-flex pt-2">
-                <a class="btn btn-outline-light btn-social" href=""
+                <!-- <a class="btn btn-outline-light btn-social" href=""
                   ><i class="fab fa-twitter"></i
-                ></a>
+                ></a> -->
                 <a class="btn btn-outline-light btn-social" href=""
                   ><i class="fab fa-facebook-f"></i
                 ></a>
                 <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-youtube"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-instagram"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
                   ><i class="fab fa-linkedin-in"></i
                 ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <!-- <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-instagram"></i
+                ></a> -->
               </div>
             </div>
             <div class="col-md-6 col-lg-3">
               <h5 class="text-white mb-4">Quick Links</h5>
-              <a class="btn btn-link" href="{% url 'index' %}">Home</a>
-              <a class="btn btn-link" href="{% url 'login' %}">Login</a>
-              <a class="btn btn-link" href="{% url 'signup' %}">Sign up</a>
-              <a class="btn btn-link" href="https://www.lemmatree.com/"
-                >Contact Us</a
-              >
+              <a href="#" class="nav-item nav-link text-light">Resources</a>
+              <a href="#" class="nav-item nav-link text-light">Services</a>
+              <a href="#" class="nav-item nav-link text-light">Co-Loading</a>
+              <a class="btn btn-link" href="https://www.lemmatree.com/">Contact Us</a>
             </div>
             <div class="col-md-6 col-lg-3">
               <h5 class="text-white mb-4">Some of our Verified Companies</h5>
@@ -270,6 +294,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    
     <script src="{% static 'lib/wow/wow.min.js' %}"></script>
     <script src="{% static 'lib/easing/easing.min.js' %}"></script>
     <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
@@ -278,6 +304,8 @@
     <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
     <script src="{% static 'lib/notify.js' %}"></script>
     <script src="{% static 'lib/notify.min.js' %}"></script>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
