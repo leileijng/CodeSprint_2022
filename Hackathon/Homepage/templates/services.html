@@ -7,24 +7,36 @@
     <div class="company">
         <div ng-app="tabApp">
             <div class="row" ng-controller="TabController">
-                <div class="col-md-1 splitLine mt-3" style="height: 600px; width: 12.499999995%">
+                <div class="col-md-1 splitLine mt-3" style="height: 700px; width: 12.499999995%">
                     <div class="mt-n2 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="mb-5 nav nav-pills nav-stacked row">
+                        <div class="mb-5 nav nav-pills nav-stacked row" style="padding-top: 5%;">
                             <div class="companyBtn" ng-class="{ active: isSet(1) }">
-                                <a class="btn" ng-click="setTab(1)"> <i class="mt-1 me-3 fa fa-address-book"></i>
-                                    Resources</a>
+                                <a class="btn"> <i class="mt-1 me-3 fa fa-address-book"></i>
+                                    Storage</a>
                             </div>
 
                             <div class="w-100"></div>
 
                             <div class="companyBtn" ng-class="{ active: isSet(2) }">
-                                <a class="btn" ng-click="setTab(2)"> <i class="mt-1 me-3 fa fa-search"></i> Services</a>
+                                <a class="btn" ng-click="setTab(2)"> <i class="mt-1 me-3 fa fa-search"></i> Railing</a>
                             </div>
 
                             <div class="w-100"></div>
                             <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                <a class="btn notification notify" ng-click="setTab(3)"> <i
-                                        class="mt-1 me-3 fa fa-bell"></i> Co-loading</a>
+                                <a class="btn" ng-click="setTab(3)"> <i
+                                        class="mt-1 me-3 fa fa-bell"></i> Stuffing</a>
+                            </div>
+                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                <a class="btn" ng-click="setTab(3)"> <i
+                                        class="mt-1 me-3 fa fa-bell"></i> Trucking</a>
+                            </div>
+                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                <a class="btn" ng-click="setTab(3)"> <i
+                                        class="mt-1 me-3 fa fa-bell"></i> Documentation</a>
+                            </div>
+                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                <a class="btn" ng-click="setTab(3)"> <i
+                                        class="mt-1 me-3 fa fa-bell"></i> Warehouse</a>
                             </div>
                         </div>
                     </div>
@@ -34,80 +46,94 @@
                     <div class="container" data-aos="fade-up">
 
                         <div class="section-header">
-                          <span>Our Services</span>
-                          <h2>Our Services</h2>
-                
+                            <span>Our Services</span>
+                            <h2>Our Services</h2>
+
                         </div>
-                
-                
+
+
                         <section id="service" class="services pt-0">
-                        
-                        <div class="row gy-3">
-                          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                            <div class="cards">
-                              <div class="card-img">
-                                <img class="img-fluid" style="margin-left: 0rem;" src="{% static 'img/storage-service.jpg' %}" alt="">
-                              </div>
-                              <h3><a href="service-details.html" class="stretched-link">Storage</a></h3>
-                              <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam repellendus temporibus itaqueofficiis odit</p>
+
+                            <div class="row gy-3">
+                                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="cards">
+                                        <div class="card-img">
+                                            <img class="img-fluid" style="margin-left: 0rem;"
+                                                src="{% static 'img/storage-service.jpg' %}" alt="">
+                                        </div>
+                                        <h3><a href="service-details.html" class="stretched-link">Storage</a></h3>
+                                        <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas
+                                            quisquam repellendus temporibus itaqueofficiis odit</p>
+                                    </div>
+                                </div><!-- End Card Item -->
+
+                                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="cards">
+                                        <div class="card-img">
+                                            <img class="img-fluid" style="margin-left: 0rem;"
+                                                src="{% static 'img/logistics-service.jpg' %}" alt="">
+                                        </div>
+                                        <h3><a href="{% url 'railingRequest' %}" class="stretched-link">Railing</a></h3>
+                                        <p>Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et
+                                            iure incidunt molestiae dolor ipsam ducimus occaecati nisi</p>
+                                    </div>
+                                </div><!-- End Card Item -->
+
+                                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="cards">
+                                        <div class="card-img">
+                                            <img class="img-fluid" style="margin-left: 0rem;"
+                                                src="{% static 'img/cargo-service.jpg' %}" alt="">
+                                        </div>
+                                        <h3><a href="service-details.html" class="stretched-link">Stuffing /
+                                                Unstuffing</a></h3>
+                                        <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum
+                                            reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
+                                    </div>
+                                </div><!-- End Card Item -->
+
+                                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="cards">
+                                        <div class="card-img">
+                                            <img class="img-fluid" style="margin-left: 0rem;"
+                                                src="{% static 'img/trucking-service.jpg' %}" alt="">
+                                        </div>
+                                        <h3><a href="service-details.html" class="stretched-link">Trucking</a></h3>
+                                        <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum
+                                            reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
+                                    </div>
+                                </div><!-- End Card Item -->
+
+                                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                                    <div class="cards">
+                                        <div class="card-img">
+                                            <img class="img-fluid" style="margin-left: 0rem;"
+                                                src="{% static 'img/packaging-service.jpg' %}" alt="">
+                                        </div>
+                                        <h3><a href="service-details.html" class="stretched-link">Permit
+                                                Documentation</a></h3>
+                                        <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel
+                                            cum onsequuntur maiores beatae consequatur magni voluptates</p>
+                                    </div>
+                                </div><!-- End Card Item -->
+
+                                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                                    <div class="cards">
+                                        <div class="card-img">
+                                            <img class="img-fluid" style="margin-left: 0rem;"
+                                                src="{% static 'img/warehousing-service.jpg' %}" alt="">
+                                        </div>
+                                        <h3><a href="service-details.html" class="stretched-link">Warehousing</a></h3>
+                                        <p>Quas assumenda non occaecati molestiae. In aut earum sed natus eatae in vero.
+                                            Ab modi quisquam aut nostrum unde et qui est non quo nulla</p>
+                                    </div>
+                                </div><!-- End Card Item -->
                             </div>
-                          </div><!-- End Card Item -->
-                
-                          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                            <div class="cards">
-                              <div class="card-img">
-                                <img class="img-fluid" style="margin-left: 0rem;" src="{% static 'img/logistics-service.jpg' %}" alt="">
-                              </div>
-                              <h3><a href="{% url 'railingRequest' %}" class="stretched-link">Railing</a></h3>
-                              <p>Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et iure incidunt molestiae dolor ipsam ducimus occaecati nisi</p>
-                            </div>
-                          </div><!-- End Card Item -->
-                
-                          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                            <div class="cards">
-                              <div class="card-img">
-                                <img class="img-fluid" style="margin-left: 0rem;" src="{% static 'img/cargo-service.jpg' %}" alt="">
-                              </div>
-                              <h3><a href="service-details.html" class="stretched-link">Stuffing / Unstuffing</a></h3>
-                              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
-                            </div>
-                          </div><!-- End Card Item -->
-                
-                          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                            <div class="cards">
-                              <div class="card-img">
-                                <img class="img-fluid" style="margin-left: 0rem;" src="{% static 'img/trucking-service.jpg' %}" alt="">
-                              </div>
-                              <h3><a href="service-details.html" class="stretched-link">Trucking</a></h3>
-                              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
-                            </div>
-                          </div><!-- End Card Item -->
-                
-                          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                            <div class="cards">
-                              <div class="card-img">
-                                <img class="img-fluid" style="margin-left: 0rem;" src="{% static 'img/packaging-service.jpg' %}" alt="">
-                              </div>
-                              <h3><a href="service-details.html" class="stretched-link">Permit Documentation</a></h3>
-                              <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel cum onsequuntur maiores beatae consequatur magni voluptates</p>
-                            </div>
-                          </div><!-- End Card Item -->
-                
-                          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                            <div class="cards">
-                              <div class="card-img">
-                                <img class="img-fluid" style="margin-left: 0rem;" src="{% static 'img/warehousing-service.jpg' %}" alt="">
-                              </div>
-                              <h3><a href="service-details.html" class="stretched-link">Warehousing</a></h3>
-                              <p>Quas assumenda non occaecati molestiae. In aut earum sed natus eatae in vero. Ab modi quisquam aut nostrum unde et qui est non quo nulla</p>
-                            </div>
-                          </div><!-- End Card Item -->
-                        </div>
-                </section>
-                
-                      </div>
+                        </section>
+
+                    </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -155,13 +181,8 @@
         background: #fb7179;
     }
 
-    .mb-2,
-    .my-2 {
+    .mb-2, .my-2 {
         margin-bottom: .5rem !important;
-    }
-
-    p {
-        line-height: 1.7;
     }
 
     .cd-horizontal-timeline .events-content li>* {
@@ -170,51 +191,50 @@
     }
 
     .services .cards {
-  border: 1px solid rgba(14, 29, 52, 0.15);
-  background: #fff;
-  position: relative;
-  border-radius: 0;
-  height: 100%;
-}
+        border: 1px solid rgba(14, 29, 52, 0.15);
+        background: #fff;
+        position: relative;
+        border-radius: 0;
+        height: 100%;
+    }
 
-.services .cards .card-img {
-  overflow: hidden;
-  margin-bottom: 15px;
-  border-radius: 0;
-}
+    .services .cards .card-img {
+        overflow: hidden;
+        margin-bottom: 15px;
+        border-radius: 0;
+    }
 
-.services .cards .card-img img {
-  transition: 0.3s ease-in-out;
-}
+    .services .cards .card-img img {
+        transition: 0.3s ease-in-out;
+    }
 
-.services .cards h3 {
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 5px;
-  padding: 10px 30px;
-  text-transform: uppercase;
-}
+    .services .cards h3 {
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 5px;
+        padding: 10px 30px;
+        text-transform: uppercase;
+    }
 
-.services .cards a {
-  color: #001973;
-  transition: 0.3;
-}
+    .services .cards a {
+        color: #001973;
+        transition: 0.3;
+    }
 
-.services .cards a:hover {
-  color: var(--color-primary);
-}
+    .services .cards a:hover {
+        color: var(--color-primary);
+    }
 
-.services .cards p {
-  padding: 0 30px;
-  margin-bottom: 30px;
-  color: var(--color-secondary);
-  font-size: 15px;
-}
+    .services .cards p {
+        padding: 0 30px;
+        margin-bottom: 30px;
+        color: var(--color-secondary);
+        font-size: 15px;
+    }
 
-.services .cards:hover .card-img img {
-  transform: scale(1.1);
-}
-
+    .services .cards:hover .card-img img {
+        transform: scale(1.1);
+    }
 </style>
 <link href="{% static 'css/main.css' %}" rel="stylesheet">
 {% endblock %}
