@@ -1,0 +1,425 @@
+{% extends "base.html" %}
+{% load static %}
+{% load filter_tags %}
+{% block title %}<title>User Profile</title>{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="company">
+        <div ng-app="tabApp">
+            <div class="row" ng-controller="TabController">
+                <div class="col-md-1 splitLine mt-3" style="height: 700px; width: 12.499999995%">
+                    <div class="mt-n2 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="mb-5 nav nav-pills nav-stacked row" style="padding-top: 5%;">
+                            <div class="companyBtn" ng-class="{ active: isSet(1) }">
+                                <a class="btn"> <i class="mt-1 me-3 fa fa-address-book"></i>
+                                    Storage</a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="companyBtn" ng-class="{ active: isSet(2) }">
+                                <a class="btn active" ng-click="setTab(2)"> <i class="mt-1 me-3 fa fa-search"></i> Railing</a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                <a class="btn" ng-click="setTab(3)" style="color: var(--light); 
+                                background: var(--primary);"> <i
+                                        class="mt-1 me-3 fa fa-bell"></i> Stuffing</a>
+                            </div>
+                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                <a class="btn" ng-click="setTab(3)"> <i
+                                        class="mt-1 me-3 fa fa-bell"></i> Trucking</a>
+                            </div>
+                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                <a class="btn" ng-click="setTab(3)"> <i
+                                        class="mt-1 me-3 fa fa-bell"></i> Documentation</a>
+                            </div>
+                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                                <a class="btn" ng-click="setTab(3)"> <i
+                                        class="mt-1 me-3 fa fa-bell"></i> Warehouse</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10" style="padding-left: 50px; padding-top: 10px; width: 87.49999965%;">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="width: 40%; padding-left: 5%;">
+                        <p class="d-inline-block border rounded-pill py-1 px-4">Stuffing</p>
+                        <p class="mb-4">Make use of decentralised technology to get trustworthy prove and detect scams!</p>
+                        <img class="img-fluid mt-0 " src="{% static 'img/cargo-service.jpg' %}">
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style="width: 60%;">
+                        <section id="faq" class="faq">
+                            <div class="container" data-aos="fade-up">
+                      
+                              <div class="section-header">
+                                
+                                <h1 class="mb-1">Stuffing & Unstuffing</h1>
+                                <p>Frequently Asked Questions</p>
+                      
+                              </div>
+                      
+                              <div class="row justify-content-left" data-aos="fade-up" data-aos-delay="200">
+                                <div class="col-lg-12">
+                      
+                                  <div class="accordion accordion-flush" id="faqlist">
+                      
+                                    <div class="accordion-item">
+                                      <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                                          <i class="bi bi-question-circle question-icon"></i>
+                                          How does PSA Stuffing / Unstuffing stand out?
+                                        </button>
+                                      </h3>
+                                      <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                        <div class="accordion-body">
+                                            We have your containers stuffed and stripped, with an eye to optimize, cushion and secure your goods in 20-foot or 40-foot containers. Each forwarded container benefits from a follow-up with guarantees.
+                                        </div>
+                                      </div>
+                                    </div><!-- # Faq item-->
+                      
+                                    <div class="accordion-item">
+                                      <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                                          <i class="bi bi-question-circle question-icon"></i>
+                                          What are the stuffing / unstuffing steps?
+
+                                        </button>
+                                      </h3>
+                                      <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                        <div class="accordion-body">
+                                            At our container freight stations, 
+                                            freight shipments can be consolidated or de-consolidated and staged between transport legs, and cross-dock activities. Many of our terminals offer high-speed conversion of bulk-to-container for better value transportation, for example machinery or large trees that can be lowered into an open top container.
+
+                                        </div>
+                                      </div>
+                                    </div><!-- # Faq item-->
+                      
+                                    <div class="accordion-item">
+                                      <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                                          <i class="bi bi-question-circle question-icon"></i>
+                                          Does PSA provide argumented services?
+                                        </button>
+                                      </h3>
+                                      <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                        <div class="accordion-body">
+                                            We also provide services include:
+                                            Consolidation and deconsolidation of export and import cargo,
+                                            Weighing,
+                                            Special packing/re-packing service, and
+                                            Labeling.
+                                        </div>
+                                      </div>
+                                    </div><!-- # Faq item-->
+                      
+                                    <div class="accordion-item">
+                                      <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
+                                          <i class="bi bi-question-circle question-icon"></i>
+                                          What kind of cargos does PSA team handle with?
+                                        </button>
+                                      </h3>
+                                      <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                        <div class="accordion-body">
+                                          <i class="bi bi-question-circle question-icon"></i>
+                                          We offer stuffing and stripping of containerised & non-conventional cargo. This allows our clients to keep focused on their core business, and adds value, for example through reduced port storage, fewer trips, no empty redelivery and no demurrage, reduced stock buffers, and lower insurance costs.</div>
+                                      </div>
+                                    </div><!-- # Faq item-->
+                      
+                                    <div class="accordion-item">
+                                      <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
+                                          <i class="bi bi-question-circle question-icon"></i>
+                                          Are there security measures in place to ensure the valuable items?
+                                        </button>
+                                      </h3>
+                                      <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                        <div class="accordion-body">
+                                            For valuable items we offer high-levels of security in the stuffing-stripping area, such as live CCTV streams. At many of our facilities cargo can be stuffed or stripped in a customs bonded area to reduce paperwork, and increase security.  
+                                        </div>
+                                      </div>
+                                    </div><!-- # Faq item-->
+                      
+                                  </div>
+                      
+                                </div>
+                              </div>
+                      
+                            </div>
+                          </section><!-- End Frequently Asked Questions Section -->
+                      
+                    </div>
+
+
+
+                </div>
+                <div class="col-lg-6 wow row justify-content-center" data-wow-delay="0.5s" style="width: 80%; margin: 10px auto;">
+
+                    <div class="section-header" style="margin: top 10%;">
+                        <span>Get a Quote</span>
+                        <h2>Get a Quote</h2>
+
+                    </div>
+                    <div class="bg-light rounded h-100 d-flex align-items-center p-5 mt-0">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number"  class="form-control" id="" placeholder="">
+                                        <label for="Quantity">Quantity of Container</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number"  class="form-control" id="" placeholder="">
+                                        <label for="companyname">Cargo Weight (kg)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number"  class="form-control" id="" placeholder="">
+                                        <label for="companyname">Dimensions (Width)</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number"  class="form-control" id="" placeholder="">
+                                        <label for="companyname">Dimensions (Height)</label>
+                                    </div>
+                                </div>  
+
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number"  class="form-control" id="" placeholder="">
+                                        <label for="companyname">Dimensions (Length)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control"name="birthday">  
+                                        <label for="registereddate">Estimated Service Date</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" aria-label="Default select example" placeholder="Preferred Timeslot"> 
+                                            <option value="1" selected></option>
+                                            <option value="1">Airport - Port</option>
+                                            <option value="2">Port - Port</option>
+                                            <option value="3">Airport - Warehouse</option>
+                                            <option value="3">Port - Warehouse</option>
+                                        </select>
+
+                                        <label for="registereddate">Service Type</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select" aria-label="Default select example" placeholder="Preferred Timeslot"> 
+                                            <option value="1" selected></option>
+                                            <option value="1">09:00AM - 12:00PM</option>
+                                            <option value="2">13:00PM - 15:00PM</option>
+                                            <option value="3">15:00PM - 18:00PM</option>
+                                            <option value="3">After 18:00PM</option>
+                                        </select>
+
+                                        <label for="registereddate">Preferred Timeslot</label>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="col-md-12">
+                                    <div class="form-floating">
+                                        <input class="form-control" type="file" id="Businessdocs" multiple />
+                                        <label for="Businessdocs" class="form-label">Upload Cargo Photo</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select" aria-label="Default select example" placeholder="Transfer From"> 
+                                            <option value="1" selected></option>
+                                            <option value="1">Warehouse 1</option>
+                                            <option value="2">Warehouse 2</option>
+                                            <option value="3">Warehouse 3</option>
+                                        </select>
+
+                                        <label for="registereddate">Transfer From</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select" aria-label="Default select example" placeholder="Transfer From">
+                                            <option value="1" selected></option>
+                                            <option value="1">Warehouse 1</option>
+                                            <option value="2">Warehouse 2</option>
+                                            <option value="3">Warehouse 3</option>
+                                        </select>
+
+                                        <label for="registereddate">Transfer To</label>
+                                    </div>
+                                </div>
+                                      
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Get a Quote</button>
+                                </div>
+                                
+                                
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+.companyBtn .btn::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    border-radius: 35px;
+    background: transparent;
+    transition: .5s;
+    z-index: -1;
+}
+
+.faq {
+  padding-top: 0px;
+}
+
+.faq .accordion-item {
+  border: 0;
+  margin-bottom: 10px;
+}
+
+.faq .accordion-collapse {
+  border: 0;
+}
+
+.faq .accordion-button {
+  padding: 18px 30px 20px 60px;
+  font-weight: 400;
+  border: 0;
+  font-size: 16px;
+  color: var(--color-default);
+  text-align: left;
+  background: rgba(14, 29, 52, 0.03);
+  border-radius: 5px;
+}
+
+.faq .accordion-button:focus {
+  box-shadow: none;
+}
+
+.faq .accordion-button:not(.collapsed) {
+  color: var(--color-primary);
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+.faq .question-icon {
+  position: absolute;
+  top: 14px;
+  left: 25px;
+  font-size: 20px;
+  color: var(--color-primary);
+}
+
+.faq .accordion-button:after {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.faq .accordion-body {
+  padding: 0 30px 25px 60px;
+  border: 0;
+  background: rgba(14, 29, 52, 0.03);
+  border-radius: 5px;
+}
+
+.section-header {
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+.section-header h2 {
+    margin-top: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  color: #001973;
+  position: relative;
+  z-index: 2;   
+  position: relative;
+}
+
+.section-header h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--color-primary);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-header span {
+  position: absolute;
+  top: 46px;
+  color: rgba(14, 29, 52, 0.06);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 56px;
+  text-transform: uppercase;
+  line-height: 0;
+}
+
+.section-header p {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+</style>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+    console.log("testing");
+    
+    $(document).ready(function(){
+		var date_input=$('input[name="date"]'); //our date input has the name "date"
+		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		date_input.datepicker({
+			format: 'mm/dd/yyyy',
+			container: container,
+			todayHighlight: true,
+			autoclose: true,
+		});
+	})
+</script>
+{% endblock %}

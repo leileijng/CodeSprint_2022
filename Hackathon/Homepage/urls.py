@@ -22,8 +22,10 @@ urlpatterns = [
     path('railingRequest', views.railingRequest, name='railingRequest'),
     path('new_user', views.new_user, name='new_user'),
 
+    path('stuffingRequest', views.stuffingRequest, name='stuffingRequest'),
 
     path('resources', views.resources, name='resources'),
     path('company-post-job/', views.postJob, name='company-post-job'),
+
 
 ]
