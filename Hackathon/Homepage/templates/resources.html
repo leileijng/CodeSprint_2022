@@ -120,6 +120,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- This is the display box -->
                                         <div class="col-lg-4 col-md-6 wow zoomIn">
                                             <div class="service-item d-flex flex-column rounded">
                                                 <div class="row h-100">
@@ -135,28 +136,73 @@
                                                     </div>
                                                     <div class="col d-flex flex-column justify-content-between h-100 align-items-right">
                                                         <img class="mb-3 ms-auto verified" src="https://m.media-amazon.com/images/I/61I6xQgrIIL._SL1500_.jpg" alt="" style="width:200px;height:200px;">
-                                                        <a class="btn px-3 mt-auto" href="{% url 'jobinfo' %}">Request Resource</a>
+                                                        <a class="btn px-3 mt-auto ms-auto" href="{% url 'jobinfo' %}">Request Resource</a>
                                                     </div>
                                      
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- This is the display box -->
                                         <div class="col-lg-4 col-md-6 wow zoomIn">
                                             <div class="service-item d-flex flex-column rounded">
                                                 <div class="row h-100">
                                                     <div class="col">
                                                         <img class="mb-3 company-logo" src="https://yt3.ggpht.com/ytc/AMLnZu9NnLdDsTfCk1RHMYnXBm4vSZyn85YFiagBNB7A=s900-c-k-c0x00ffffff-no-rj" alt="">
-                                                        <h5 class="mb-1">Electric Pallet Jack</h5>
+                                                        <h5 class="mb-1">Pallet</h5>
                                                         <p class="mb-3" style="color: var(--dark)">Keppel Corporation</p>
                                                         <ul>
                                                             <li>Size: 48 x 40"</li>
-                                                            <li>Available: 2,421 Pallets</li>
-                                                            <li>Price: $20 / week (100 pallets)</li>
+                                                            <li>Available: 2,421 Units</li>
+                                                            <li>Price: $20 / week (per 100 units)</li>
                                                         </ul>
                                                     </div>
                                                     <div class="col d-flex flex-column justify-content-between h-100 align-items-right">
                                                         <img class="mb-3 ms-auto verified" src="https://img.uline.com/is/image/uline/H-8943?$Mobile_Zoom$" alt="" style="width:200px;height:200px;">
-                                                        <a class="btn px-3 mt-auto" href="{% url 'jobinfo' %}">Request Resource</a>
+                                                        <a class="btn px-3 mt-auto ms-auto" href="{% url 'jobinfo' %}">Request Resource</a>
+                                                    </div>
+                                              
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- This is the display box -->
+                                        <div class="col-lg-4 col-md-6 wow zoomIn">
+                                            <div class="service-item d-flex flex-column rounded">
+                                                <div class="row h-100">
+                                                    <div class="col">
+                                                        <img class="mb-3 company-logo" src="https://yt3.ggpht.com/ytc/AMLnZu9NnLdDsTfCk1RHMYnXBm4vSZyn85YFiagBNB7A=s900-c-k-c0x00ffffff-no-rj" alt="">
+                                                        <h5 class="mb-1">Telehandler</h5>
+                                                        <p class="mb-3" style="color: var(--dark)">Keppel Corporation</p>
+                                                        <ul>
+                                                            <li>Model: MHE-Demag Telehandler TH412 WACKER NEUSON</li>
+                                                            <li>Load: 2645.55 pounds</li>
+                                                            <li>Price: $20 / week (100 pallets)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col d-flex flex-column justify-content-between h-100 align-items-right">
+                                                        <img class="mb-3 ms-auto verified" src="https://www.usedequipment.com.sg/wp-content/uploads/2019/10/TH412-1.jpg" alt="" style="width:200px;height:200px;">
+                                                        <a class="btn px-3 mt-auto ms-auto" href="{% url 'jobinfo' %}">Request Resource</a>
+                                                    </div>
+                                              
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- This is the display box -->
+                                        <div class="col-lg-4 col-md-6 wow zoomIn">
+                                            <div class="service-item d-flex flex-column rounded">
+                                                <div class="row h-100">
+                                                    <div class="col">
+                                                        <img class="mb-3 company-logo" src="http://cnltracking.cargoerp.com/cnl-logo.png" alt="">
+                                                        <h5 class="mb-1">Foldable Hand Trolley</h5>
+                                                        <p class="mb-3" style="color: var(--dark)">CNL Logistic Solutions</p>
+                                                        <ul>
+                                                            <li>Size: 40 x 25"</li>
+                                                            <li>Available: 33 Units</li>
+                                                            <li>Price: $10 / week (per unit)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col d-flex flex-column justify-content-between h-100 align-items-right">
+                                                        <img class="mb-3 ms-auto verified" src="https://cf.shopee.sg/file/c8fce911484dccdb84d880d308088b90" alt="" style="width:200px;height:200px;">
+                                                        <a class="btn px-3 mt-auto ms-auto" href="{% url 'jobinfo' %}">Request Resource</a>
                                                     </div>
                                               
                                                 </div>
@@ -166,73 +212,133 @@
                                 </div>
                                 
                                 <div ng-show="isSet(3)">
-                                    <div class="wow fadeInUp" data-wow-delay="0.3s">
+                                    <div class="wow fadeInUp row" data-wow-delay="0.3s">
                                         <h1>Loans</h1>
                                         <p>Manage your loans here!</p>
-    
-                                        <div class="messages">
-                                            
-                                            <div class="message-box">
-                                                <div class="message-content">
-                                                      <div class="message-header">
-                                                        <div class="name"><img src="http://sc04.alicdn.com/kf/H5b0638b20fa34012adaa60c7e193143c1.jpg" alt="">
-                                                            <span style="padding-left:10px;">AOTONG tri-Axle Skeleton Semi Trailer 40ft truck</span>
+                                        <div class="col-lg-6 ">
+                                            <span><h5>dsav</h5></span>
+                                            <div class="messages">
+                                                <div class="message-box">
+                                                    <div class="message-content">
+                                                        <div class="message-header">
+                                                            <div class="name"><img src="http://sc04.alicdn.com/kf/H5b0638b20fa34012adaa60c7e193143c1.jpg" alt="">
+                                                                <span style="padding-left:10px;">AOTONG tri-Axle Skeleton Semi Trailer</span>
+                                                            </div>
                                                         </div>
-                                                      </div>
-                                                      <p class="message-line">
-                                                          <ul>
-                                                            <li>Quantity: 1</li>
-                                                            <li>Loan Period: 22/10/21 - 22/12/22</li>
-                                                          </ul>
-                                                      </p>
+                                                        <p class="message-line">
+                                                            <ul>
+                                                                <li>Quantity: 1</li>
+                                                                <li>Loan Period: 22/10/21 - 22/12/22</li>
+                                                            </ul>
+                                                        </p>
+                                                    </div>
+                                                    <div class="justify-centre">
+                                                        <a class="btn pull-right" style="margin-right:60px;margin-top: 40px;" href="">Status</a>
+                                                        <!-- <a class="btn btn-primary pull-right" style="margin-right:7%;" href="">Contact</a> -->
+                                                    </div>
                                                 </div>
-                                                <div class="justify-centre">
-                                                    <a class="btn pull-right" style="margin-right:100px;margin-top: 40px;" href="">Status</a>
-                                                    <!-- <a class="btn btn-primary pull-right" style="margin-right:7%;" href="">Contact</a> -->
+                                                <div class="message-box">
+                                                    <div class="message-content">
+                                                        <div class="message-header">
+                                                            <div class="name"><img src="https://geopalletltd.com/wp-content/uploads/elementor/thumbs/img_4163-pgyy5rg2aha8zn6zfiwrwx32i5ocb9eur84qg06btk.jpg" alt="">
+                                                                <span style="padding-left:10px;">Pallets 48 x 40"</span>
+                                                            </div>
+                                                        </div>
+                                                        <p class="message-line">
+                                                            <ul>
+                                                                <li>Quantity: 200</li>
+                                                                <li>Loan Period: 1/1/21 - 2/2/22</li>
+                                                            </ul>
+                                                        </p>
+                                                    </div>
+                                                    <div class="justify-centre">
+                                                        <a class="btn pull-right" style="margin-right:60px;margin-top: 40px;" href="">Status</a>
+                                                        <!-- <a class="btn btn-primary pull-right" style="margin-right:7%;" href="">Contact</a> -->
+                                                    </div>
+                                                </div>
+                                                <div class="message-box">
+                                                    <div class="message-content">
+                                                        <div class="message-header">
+                                                            <div class="name"><img src="http://sc04.alicdn.com/kf/H5b0638b20fa34012adaa60c7e193143c1.jpg" alt="">
+                                                                <span style="padding-left:10px;">AOTONG tri-Axle Skeleton Semi Trailer</span>
+                                                            </div>
+                                                        </div>
+                                                        <p class="message-line">
+                                                            <ul>
+                                                                <li>Quantity: 200</li>
+                                                                <li>Loan Period: 1/1/21 - 2/2/22</li>
+                                                            </ul>
+                                                        </p>
+                                                    </div>
+                                                    <div class="justify-centre">
+                                                        <a class="btn pull-right" style="margin-right:60px;margin-top: 40px;" href="">Status</a>
+                                                        <!-- <a class="btn btn-primary pull-right" style="margin-right:7%;" href="">Contact</a> -->
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="message-box">
-                                                <div class="message-content">
-                                                      <div class="message-header">
-                                                        <div class="name"><img src="https://geopalletltd.com/wp-content/uploads/elementor/thumbs/img_4163-pgyy5rg2aha8zn6zfiwrwx32i5ocb9eur84qg06btk.jpg" alt="">
-                                                            <span style="padding-left:10px;">Pallets 48 x 40"</span>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="messages">
+                                                
+                                                <div class="message-box">
+                                                    <div class="message-content">
+                                                        <div class="message-header">
+                                                            <div class="name"><img src="http://sc04.alicdn.com/kf/H5b0638b20fa34012adaa60c7e193143c1.jpg" alt="">
+                                                                <span style="padding-left:10px;">AOTONG tri-Axle Skeleton Semi Trailer</span>
+                                                            </div>
                                                         </div>
-                                                      </div>
-                                                      <p class="message-line">
-                                                          <ul>
-                                                            <li>Quantity: 200</li>
-                                                            <li>Loan Period: 1/1/21 - 2/2/22</li>
-                                                          </ul>
-                                                      </p>
+                                                        <p class="message-line">
+                                                            <ul>
+                                                                <li>Quantity: 1</li>
+                                                                <li>Loan Period: 22/10/21 - 22/12/22</li>
+                                                            </ul>
+                                                        </p>
+                                                    </div>
+                                                    <div class="justify-centre">
+                                                        <a class="btn pull-right" style="margin-right:60px;margin-top: 40px;" href="">Status</a>
+                                                        <!-- <a class="btn btn-primary pull-right" style="margin-right:7%;" href="">Contact</a> -->
+                                                    </div>
                                                 </div>
-                                                <div class="justify-centre">
-                                                    <a class="btn pull-right" style="margin-right:100px;margin-top: 40px;" href="">Status</a>
-                                                    <!-- <a class="btn btn-primary pull-right" style="margin-right:7%;" href="">Contact</a> -->
+                                                <div class="message-box">
+                                                    <div class="message-content">
+                                                        <div class="message-header">
+                                                            <div class="name"><img src="https://geopalletltd.com/wp-content/uploads/elementor/thumbs/img_4163-pgyy5rg2aha8zn6zfiwrwx32i5ocb9eur84qg06btk.jpg" alt="">
+                                                                <span style="padding-left:10px;">Pallets 48 x 40"</span>
+                                                            </div>
+                                                        </div>
+                                                        <p class="message-line">
+                                                            <ul>
+                                                                <li>Quantity: 200</li>
+                                                                <li>Loan Period: 1/1/21 - 2/2/22</li>
+                                                            </ul>
+                                                        </p>
+                                                    </div>
+                                                    <div class="justify-centre">
+                                                        <a class="btn pull-right" style="margin-right:60px;margin-top: 40px;" href="">Status</a>
+                                                        <!-- <a class="btn btn-primary pull-right" style="margin-right:7%;" href="">Contact</a> -->
+                                                    </div>
+                                                </div>
+                                                <div class="message-box">
+                                                    <div class="message-content">
+                                                        <div class="message-header">
+                                                            <div class="name"><img src="http://sc04.alicdn.com/kf/H5b0638b20fa34012adaa60c7e193143c1.jpg" alt="">
+                                                                <span style="padding-left:10px;">AOTONG tri-Axle Skeleton Semi Trailer</span>
+                                                            </div>
+                                                        </div>
+                                                        <p class="message-line">
+                                                            <ul>
+                                                                <li>Quantity: 200</li>
+                                                                <li>Loan Period: 1/1/21 - 2/2/22</li>
+                                                            </ul>
+                                                        </p>
+                                                    </div>
+                                                    <div class="justify-centre">
+                                                        <a class="btn pull-right" style="margin-right:60px;margin-top: 40px;" href="">Status</a>
+                                                        <!-- <a class="btn btn-primary pull-right" style="margin-right:7%;" href="">Contact</a> -->
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="message-box">
-                                                <div class="message-content">
-                                                      <div class="message-header">
-                                                        <div class="name"><img src="http://sc04.alicdn.com/kf/H5b0638b20fa34012adaa60c7e193143c1.jpg" alt="">
-                                                            <span style="padding-left:10px;">AOTONG tri-Axle Skeleton Semi Trailer 40ft truck</span>
-                                                        </div>
-                                                      </div>
-                                                      <p class="message-line">
-                                                          <ul>
-                                                            <li>Quantity: 200</li>
-                                                            <li>Loan Period: 1/1/21 - 2/2/22</li>
-                                                          </ul>
-                                                      </p>
-                                                </div>
-                                                <div class="justify-centre">
-                                                    <a class="btn pull-right" style="margin-right:100px;margin-top: 40px;" href="">Status</a>
-                                                    <!-- <a class="btn btn-primary pull-right" style="margin-right:7%;" href="">Contact</a> -->
-                                                </div>
-                                            </div>
-
-
-                                            
-                 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -241,16 +347,6 @@
                 </div>
             </div>
         </div>
-
-        <style type="text/css">
-        .imagery img {
-            border-radius: 50%;
-            -o-object-fit: cover;
-               object-fit: cover;
-            width: 40px;
-            height: 40px;
-          }
-        </style>
 
         {% endblock %} 
 
