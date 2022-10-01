@@ -73,19 +73,19 @@
                                                     </td>
                     
                                                     <td width="200">
-                                                        <span style="padding-left: 40px;">$100.00</span>
-                                                        <dl class="small" style="width: 50px; margin-left: 50px; margin-top: 10px;">
-                                                            <input type="number" class="form-control" placeholder="0">
+                                                        <span style="padding-left: 120px;">$100.00</span>
+                                                        <dl class="small" style="width: 50px; margin-left: 130px; margin-top: 10px;">
+                                                            <input type="number" id="smallDaily" onchange="smallSum(this.value);" class="form-control" placeholder="0" value="0">
                                                         </dl>
                                                     </td>
                                                     <td width="150">
-                                                        <span style="padding-left: 20px;">$350.00</span>
-                                                        <dl class="small" style="width: 50px; margin-left: 30px; margin-top: 10px;">
-                                                            <input type="number" class="form-control" placeholder="0">
+                                                        <span style="padding-left: 60px;">$350.00</span>
+                                                        <dl class="small" style="width: 50px; margin-left: 70px; margin-top: 10px;">
+                                                            <input type="number" id="smallWeekly" onchange="smallSum(this.value);" class="form-control" placeholder="0" value="0">
                                                         </dl>
                                                     </td>
                                                     <td width="70">
-                                                        <h4>
+                                                        <h4 id="smallTotal" style="margin-left: 25px;">
                                                             $0
                                                         </h4>
                                                     </td>
@@ -113,19 +113,19 @@
                                                     </td>
                     
                                                     <td width="200">
-                                                        <span style="padding-left: 40px;">$150.00</span>
-                                                        <dl class="small" style="width: 50px; margin-left: 50px; margin-top: 10px;">
-                                                            <input type="number" class="form-control" placeholder="0">
+                                                        <span style="padding-left: 120px;">$150.00</span>
+                                                        <dl class="small" style="width: 50px; margin-left: 130px; margin-top: 10px;">
+                                                            <input type="number" id="mediumDaily" onchange="mediumSum(this.value);" class="form-control" placeholder="0" value="0">
                                                         </dl>
                                                     </td>
                                                     <td width="150">
-                                                        <span style="padding-left: 20px;">$600,00</span>
-                                                        <dl class="small" style="width: 50px; margin-left: 30px; margin-top: 10px;">
-                                                            <input type="number" class="form-control" placeholder="0">
+                                                        <span style="padding-left: 60px;">$600,00</span>
+                                                        <dl class="small" style="width: 50px; margin-left: 70px; margin-top: 10px;">
+                                                            <input type="number" id="mediumWeekly" onchange="mediumSum(this.value);" class="form-control" placeholder="0" value="0">
                                                         </dl>
                                                     </td>
                                                     <td width="70">
-                                                        <h4>
+                                                        <h4 id="mediumTotal" style="margin-left: 25px;">
                                                             $0
                                                         </h4>
                                                     </td>
@@ -153,19 +153,19 @@
                                                     </td>
                     
                                                     <td width="200">
-                                                        <span style="padding-left: 40px;">$380.00</span>
-                                                        <dl class="small" style="width: 50px; margin-left: 50px; margin-top: 10px;">
-                                                            <input type="number" class="form-control" placeholder="0">
+                                                        <span style="padding-left: 120px;">$380.00</span>
+                                                        <dl class="small" style="width: 50px; margin-left: 130px; margin-top: 10px;">
+                                                            <input type="number" id="largeDaily"  onchange="largeSum(this.value);" class="form-control" placeholder="0" value="0">
                                                         </dl>
                                                     </td>
                                                     <td width="150">
-                                                        <span style="padding-left: 20px;">$800.00</span>
-                                                        <dl class="small" style="width: 50px; margin-left: 30px; margin-top: 10px;">
-                                                            <input type="number" class="form-control" placeholder="0">
+                                                        <span style="padding-left: 60px;">$800.00</span>
+                                                        <dl class="small" style="width: 50px; margin-left: 70px; margin-top: 10px;">
+                                                            <input type="number" id="largeWeekly"  onchange="largeSum(this.value);" class="form-control" placeholder="0" value="0">
                                                         </dl>
                                                     </td>
                                                     <td width="70">
-                                                        <h4>
+                                                        <h4 id="largeTotal" style="margin-left: 25px;">
                                                             $0
                                                         </h4>
                                                     </td>
@@ -307,15 +307,43 @@ table.shoping-cart-table tr td:last-child {
 <script>
     console.log("testing");
     
-    $(document).ready(function(){
-		var date_input=$('input[name="date"]'); //our date input has the name "date"
-		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-		date_input.datepicker({
-			format: 'mm/dd/yyyy',
-			container: container,
-			todayHighlight: true,
-			autoclose: true,
-		});
-	})
+    // $(document).ready(function(){
+	// 	var date_input=$('input[name="date"]'); //our date input has the name "date"
+	// 	var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+	// 	date_input.datepicker({
+	// 		format: 'mm/dd/yyyy',
+	// 		container: container,
+	// 		todayHighlight: true,
+	// 		autoclose: true,
+	// 	});
+	// })
+
+function smallSum() {
+    console.log("hello");
+    var smallDaily,smallWeekly;
+    var total = 0
+    smallDaily = document.getElementById("smallDaily").value;
+    smallWeekly = document.getElementById("smallWeekly").value;
+     total = (parseInt(smallDaily) * 100) + (parseInt(smallWeekly) * 350);
+    document.getElementById("smallTotal").innerHTML = total;
+}
+
+function mediumSum() {
+    var mediumDaily,mediumWeekly;
+    var total = 0
+    mediumDaily = document.getElementById("mediumDaily").value;
+    mediumWeekly = document.getElementById("mediumWeekly").value;
+     total = (parseInt(mediumDaily) * 150) + (parseInt(mediumWeekly) * 600);
+    document.getElementById("mediumTotal").innerHTML = total;
+}
+
+function largeSum() {
+    var largeDaily,largeWeekly, total;
+    largeDaily = largeWeekly = total = 0;
+    largeDaily = document.getElementById("largeDaily").value;
+    largeWeekly = document.getElementById("largeWeekly").value;
+     total = (parseInt(largeDaily) * 380) + (parseInt(largeWeekly) * 800);
+    document.getElementById("largeTotal").innerHTML = total;
+}
 </script>
 {% endblock %}
