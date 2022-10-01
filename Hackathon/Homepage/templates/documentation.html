@@ -10,32 +10,35 @@
                 <div class="col-md-1 splitLine mt-3" style="height: 700px; width: 12.499999995%">
                     <div class="mt-n2 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="mb-5 nav nav-pills nav-stacked row" style="padding-top: 5%;">
-                            <div class="companyBtn" ng-class="{ active: isSet(1) }">
-                                <a class="btn"> <i class="mt-1 me-3 fa fa-address-book"></i>
-                                    Storage</a>
-                            </div>
-                            <div class="w-100"></div>
-                            <div class="companyBtn" ng-class="{ active: isSet(2) }">
-                                <a class="btn active" ng-click="setTab(2)"> <i class="mt-1 me-3 fa fa-search"></i> Railing</a>
-                            </div>
-                            <div class="w-100"></div>
-                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                <a class="btn" ng-click="setTab(3)" style="color: var(--light); 
-                                background: var(--primary);"> <i
-                                        class="mt-1 me-3 fa fa-bell"></i> Stuffing</a>
-                            </div>
-                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                <a class="btn" ng-click="setTab(3)"> <i
-                                        class="mt-1 me-3 fa fa-bell"></i> Trucking</a>
-                            </div>
-                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                <a class="btn" ng-click="setTab(3)"> <i
-                                        class="mt-1 me-3 fa fa-bell"></i> Documentation</a>
-                            </div>
-                            <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                <a class="btn" ng-click="setTab(3)"> <i
-                                        class="mt-1 me-3 fa fa-bell"></i> Warehouse</a>
-                            </div>
+                          <div class="companyBtn" ng-class="{ active: isSet(1) }">
+                            <a class="btn" href="/forkliftServices"> <i class="mt-1 me-3 fa fa-address-book"></i>
+                                Forklifting</a>
+                        </div>
+
+                        <div class="w-100"></div>
+
+                        <div class="companyBtn" ng-class="{ active: isSet(2) }">
+                            <a class="btn" ng-click="setTab(2)" href="/railingRequest"> <i class="mt-1 me-3 fa fa-search"></i> Railing</a>
+                        </div>
+
+                        <div class="w-100"></div>
+                        <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                            <a class="btn" ng-click="setTab(3)" href="/stuffingRequest"> <i
+                                    class="mt-1 me-3 fa fa-bell"></i> Stuffing/Unstuffing</a>
+                        </div>
+                        <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                            <a class="btn" ng-click="setTab(3)" href="/truckingRequest"> <i
+                                    class="mt-1 me-3 fa fa-bell"></i> Trucking</a>
+                        </div>
+                        <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                            <a class="btn" ng-click="setTab(3)" href="/documentation" style="color: var(--light); 
+                            background: var(--primary);"> <i
+                                    class="mt-1 me-3 fa fa-bell"></i> Documentation</a>
+                        </div>
+                        <div class="companyBtn" ng-class="{ active: isSet(3) }">
+                            <a class="btn" ng-click="setTab(3)"> <i
+                                    class="mt-1 me-3 fa fa-bell"></i> Warehouse</a>
+                        </div>
                         </div>
                     </div>
                 </div>

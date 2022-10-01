@@ -78,93 +78,124 @@
                   </div>
                 </section>
                 <section>
-                  <div class="card mb-3 w-75 wow zoomIn">
-                    <div class="row g-0">
-                      <div class="col-md-4 border-end">
-                        <img
-                          src="https://media-exp2.licdn.com/dms/image/C560BAQE88xCsONDULQ/company-logo_200_200/0/1618231291419?e=2147483647&v=beta&t=vc_FjmDR3a48QsN0A5l29y7i07b2NmcTJQrCVCl4jC8"
-                          class="img-fluid rounded-start"
-                          alt="..."
-                          data-bs-toggle="modal"
-                          data-bs-target="#exampleModal"
-                        />
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-3 mb-3">
+                        <input type="text" id="myFilter" class="form-control" onkeyup="DateFunction()" placeholder="Search for Date..">
                       </div>
-
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <div class="d-flex bd-highlight">
-                            <h5 class="card-title" style="margin-right: 141px">
-                              Date
-                            </h5>
-                            <p class="card-text">hi</p>
+                      <div class="col-sm-3 mb-3">
+                        <input type="text" id="myTimeFilter" class="form-control" onkeyup="TimeFunction()" placeholder="Search for Time..">
+                      </div>
+                    </div>
+                    <div class="row" id="myItems">
+                      <div class="col-sm-12 mb-3">
+                        <div class="card" style="width: 800px;">
+                          <div class="col-md-4 border-end">
+                            <img
+                              src="https://media-exp2.licdn.com/dms/image/C560BAQE88xCsONDULQ/company-logo_200_200/0/1618231291419?e=2147483647&v=beta&t=vc_FjmDR3a48QsN0A5l29y7i07b2NmcTJQrCVCl4jC8"
+                              class="img-fluid rounded-start"
+                              alt="..."
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal"
+                            />
                           </div>
-                          <div class="d-flex bd-highlight">
-                            <h5
-                              class="card-title"
-                              style="margin-right: 136.5px"
-                            >
-                              Time
-                            </h5>
-                            <p class="card-text">hi</p>
-                          </div>
-                          <div class="d-flex bd-highlight">
-                            <h5 class="card-title" style="margin-right: 80px">
-                              Destination
-                            </h5>
-                            <p class="card-text">hi</p>
-                          </div>
-                          <div class="d-flex bd-highlight">
-                            <h5 class="card-title" style="margin-right: 30px">
-                              Available volume
-                            </h5>
-                            <p class="card-text">hi</p>
-                          </div>
-                          <div class="d-flex bd-highlight border-bottom">
-                            <h5 class="card-title" style="margin-right: 36px">
-                              Available weight
-                            </h5>
-                            <p class="card-text">hi</p>
-                          </div>
-                          <div class="d-flex bd-highlight">
-                            <div class="input-group mb-3 mt-3 me-3">
-                              <span class="input-group-text"
-                                >Required Weight</span
-                              >
-                              <input
-                                type="text"
-                                class="form-control"
-                                aria-label="Amount (to the nearest kilogram)"
-                              />
-                              <span class="input-group-text">kg</span>
-                            </div>
-                            <div class="input-group mb-3 mt-3">
-                              <span class="input-group-text"
-                                >Required volume</span
-                              >
-                              <input
-                                type="text"
-                                class="form-control"
-                                aria-label="Amount (to the nearest kilogram)"
-                              />
-                              <span class="input-group-text"
-                                >m<sup>3</sup></span
-                              >
-                            </div>
-                          </div>
-                          <div class="d-flex flex-row-reverse bd-highlight">
-                            <div class="d-flex flex-column bd-highlight">
-                              <a class="btn btn-primary" href=""
-                                >Request Space</a
-                              >
-                              <p class="card-text">
-                                <small class="text-muted"
-                                  >Last updated 3 mins ago</small
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <div class="d-flex bd-highlight">
+                                <h5 class="card-title" style="margin-right: 141px">
+                                  Date
+                                </h5>
+                                <p class="card-text" >bye</p>
+                              </div>
+                              <div class="d-flex bd-highlight">
+                                <h5
+                                  class="card-title"
+                                  style="margin-right: 136.5px"
                                 >
-                              </p>
+                                  Time
+                                </h5>
+                                <p class="card-text" >9am</p>
+                              </div>
+                              <div class="d-flex bd-highlight">
+                                <h5 class="card-title" style="margin-right: 80px">
+                                  Destination
+                                </h5>
+                                <p class="card-text">hi</p>
+                              </div>
+                              <div class="d-flex bd-highlight">
+                                <h5 class="card-title" style="margin-right: 30px">
+                                  Available volume
+                                </h5>
+                                <p class="card-text">hi</p>
+                              </div>
+                              <div class="d-flex bd-highlight border-bottom">
+                                <h5 class="card-title" style="margin-right: 36px">
+                                  Available weight
+                                </h5>
+                                <p class="card-text">hi</p>
+                              </div>
+                              <div class="d-flex bd-highlight">
+                                <div class="input-group mb-3 mt-3 me-3">
+                                  <span class="input-group-text"
+                                    >Required Weight</span
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-label="Amount (to the nearest kilogram)"
+                                  />
+                                  <span class="input-group-text">kg</span>
+                                </div>
+                                <div class="input-group mb-3 mt-3">
+                                  <span class="input-group-text"
+                                    >Required volume</span
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-label="Amount (to the nearest kilogram)"
+                                  />
+                                  <span class="input-group-text"
+                                    >m<sup>3</sup></span
+                                  >
+                                </div>
+                              </div>
+                              <div class="d-flex flex-row-reverse bd-highlight">
+                                <div class="d-flex flex-column bd-highlight">
+                                  <a class="btn btn-primary" href=""
+                                    >Request Space</a
+                                  >
+                                  <p class="card-text">
+                                    <small class="text-muted"
+                                      >Last updated 3 mins ago</small
+                                    >
+                                  </p>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
+                  
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title"><a href="#">Card Two</a></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some text.</p>
+                            <p class="card-text">Some text.</p>
+
+                          </div>
+                        </div>
+                  
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title"><a href="#">Card Three</a></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some text.</p>
+                            <p class="card-text">Some text.</p>
+
+                          </div>
+                        </div>    
+                      </div>    
                     </div>
                   </div>
                 </section>
@@ -186,68 +217,29 @@
                         <div class="row g-3">
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="number"  class="form-control" id="" placeholder="">
+                                    <input type="text"  class="form-control" id="" placeholder="">
                                     <label for="Quantity">Description</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="number"  class="form-control" id="" placeholder="">
-                                    <label for="companyname">Cargo Weight (kg)</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-floating">
-                                    <input type="number"  class="form-control" id="" placeholder="">
-                                    <label for="companyname">Dimensions (Width)</label>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="form-floating">
-                                    <input type="number"  class="form-control" id="" placeholder="">
-                                    <label for="companyname">Dimensions (Height)</label>
-                                </div>
-                            </div>  
-
-                            <div class="col-md-4">
-                                <div class="form-floating">
-                                    <input type="number"  class="form-control" id="" placeholder="">
-                                    <label for="companyname">Dimensions (Length)</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
                                     <input type="date" class="form-control"name="birthday">  
-                                    <label for="registereddate">Estimated Service Date</label>
+                                    <label for="registereddate">Date</label>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <select class="form-select" aria-label="Default select example" placeholder="Preferred Timeslot"> 
-                                        <option value="1" selected></option>
-                                        <option value="1">Airport - Port</option>
-                                        <option value="2">Port - Port</option>
-                                        <option value="3">Airport - Warehouse</option>
-                                        <option value="3">Port - Warehouse</option>
-                                    </select>
+                                  <input type="time" class="form-control"name="birthday">  
 
-                                    <label for="registereddate">Service Type</label>
+                                    <label for="registereddate">Time</label>
                                 </div>
                             </div>
 
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <select class="form-select" aria-label="Default select example" placeholder="Preferred Timeslot"> 
-                                        <option value="1" selected></option>
-                                        <option value="1">09:00AM - 12:00PM</option>
-                                        <option value="2">13:00PM - 15:00PM</option>
-                                        <option value="3">15:00PM - 18:00PM</option>
-                                        <option value="3">After 18:00PM</option>
-                                    </select>
-
-                                    <label for="registereddate">Preferred Timeslot</label>
+                                  <input type="text"  class="form-control" id="" placeholder="">
+                                    <label for="registereddate">Destination</label>
                                 </div>
                             </div>
                             
@@ -259,34 +251,21 @@
                                 </div>
                             </div>
 
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <select class="form-select" aria-label="Default select example" placeholder="Transfer From"> 
-                                        <option value="1" selected></option>
-                                        <option value="1">Warehouse 1</option>
-                                        <option value="2">Warehouse 2</option>
-                                        <option value="3">Warehouse 3</option>
-                                    </select>
-
-                                    <label for="registereddate">Transfer From</label>
-                                </div>
+                            <div class="col-md-6">
+                              <div class="form-floating">
+                                <input type="number"  class="form-control" id="" placeholder="">
+                                  <label for="registereddate">Available Volume</label>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-floating">
+                              <input type="number"  class="form-control" id="" placeholder="">
+                                <label for="registereddate">Available Weight</label>
                             </div>
-
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <select class="form-select" aria-label="Default select example" placeholder="Transfer From">
-                                        <option value="1" selected></option>
-                                        <option value="1">Warehouse 1</option>
-                                        <option value="2">Warehouse 2</option>
-                                        <option value="3">Warehouse 3</option>
-                                    </select>
-
-                                    <label for="registereddate">Transfer To</label>
-                                </div>
-                            </div>
+                        </div>
                                   
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Get a Quote</button>
+                                <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Submit post</button>
                             </div>
                             
                             
@@ -397,10 +376,11 @@
                   <h1>Status page</h1>
                   <p>Messages received</p>
                   <table class="table table-bordered">
-                    <thead>
+                    <thead class="table-dark">
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Unqiue Id</th>
+                        <th scope="col">Type</th>
                         <th scope="col">Status</th>
                       </tr>
                     </thead>
@@ -408,16 +388,19 @@
                       <tr>
                         <th scope="row">1</th>
                         <td>Mark</td>
+                        <td>Buy</td>
                         <td>Otto</td>
                       </tr>
                       <tr>
                         <th scope="row">2</th>
                         <td>Jacob</td>
+                        <td>Buy</td>
                         <td class="table-success">Thornton</td>
                       </tr>
                       <tr>
                         <th scope="row">3</th>
                         <td>Larry the Bird</td>
+                        <td>Sell</td>
                         <td class="table-danger">@twitter</td>
                       </tr>
                     </tbody>
@@ -596,5 +579,60 @@
       </div>
     </div>
   </div>
-  {% endblock %}
-</div>
+<script>
+function DateFunction() {
+  var input, filter, cards, cardContainer, h5, title, i;
+  input = document.getElementById("myFilter");
+  filter = input.value.toUpperCase();
+  cardContainer = document.getElementById("myItems");
+  cards = cardContainer.getElementsByClassName("card");
+  for (i = 0; i < cards.length; i++) {
+      // title = cards[i].querySelector(".card-body h5.card-title");
+      title = cards[i].querySelectorAll(".card-body p.card-text");
+      console.log(title);
+      date = title[0];
+      if (date.innerText.toUpperCase().indexOf(filter) > -1) {
+          cards[i].style.display = "";
+      } else {
+          cards[i].style.display = "none";
+      }
+  }
+}
+function TimeFunction() {
+  var input, filter, cards, cardContainer, h5, title, i;
+  input = document.getElementById("myTimeFilter");
+  filter = input.value.toUpperCase();
+  cardContainer = document.getElementById("myItems");
+  cards = cardContainer.getElementsByClassName("card");
+  for (i = 0; i < cards.length; i++) {
+      // title = cards[i].querySelector(".card-body h5.card-title");
+      title = cards[i].querySelectorAll(".card-body p.card-text");
+      time = title[1];
+      if (time.innerText.toUpperCase().indexOf(filter) > -1) {
+          cards[i].style.display = "";
+      } else {
+          cards[i].style.display = "none";
+      }
+  }
+}
+
+function DestinationFunction() {
+  var input, filter, cards, cardContainer, h5, title, i;
+  input = document.getElementById("myTimeFilter");
+  filter = input.value.toUpperCase();
+  cardContainer = document.getElementById("myItems");
+  cards = cardContainer.getElementsByClassName("card");
+  for (i = 0; i < cards.length; i++) {
+      // title = cards[i].querySelector(".card-body h5.card-title");
+      title = cards[i].querySelectorAll(".card-body p.card-text");
+      time = title[1];
+      if (time.innerText.toUpperCase().indexOf(filter) > -1) {
+          cards[i].style.display = "";
+      } else {
+          cards[i].style.display = "none";
+      }
+  }
+}
+
+</script>
+{% endblock %}
