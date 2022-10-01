@@ -159,6 +159,9 @@ def freightmarket(request):
         NotVerified = JobListing.objects.all()
     return render(request, 'freightmarket.html', {'form' : form, 'Verified': Verified, 'NotVerified': NotVerified })
 
+def freightdisplay(request):
+    return render(request, 'freightdisplay.html')
+
 def resources(request):
     return render(request, 'resources.html')
 
