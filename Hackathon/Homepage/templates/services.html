@@ -11,28 +11,28 @@
                     <div class="mt-n2 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="mb-5 nav nav-pills nav-stacked row" style="padding-top: 5%;">
                             <div class="companyBtn" ng-class="{ active: isSet(1) }">
-                                <a class="btn"> <i class="mt-1 me-3 fa fa-address-book"></i>
-                                    Storage</a>
+                                <a class="btn" href="/forkliftServices"> <i class="mt-1 me-3 fa fa-address-book"></i>
+                                    Forklifting</a>
                             </div>
 
                             <div class="w-100"></div>
 
                             <div class="companyBtn" ng-class="{ active: isSet(2) }">
-                                <a class="btn" ng-click="setTab(2)"> <i class="mt-1 me-3 fa fa-search"></i> Railing</a>
+                                <a class="btn" ng-click="setTab(2)" href="/railingRequest"> <i class="mt-1 me-3 fa fa-search"></i> Railing</a>
                             </div>
 
                             <div class="w-100"></div>
                             <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                <a class="btn" ng-click="setTab(3)"> <i
+                                <a class="btn" ng-click="setTab(3)" href="/stuffingRequest"> <i
                                         class="mt-1 me-3 fa fa-bell"></i> Stuffing</a>
                             </div>
                             <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                <a class="btn" ng-click="setTab(3)"> <i
+                                <a class="btn" ng-click="setTab(3)" href="/truckingRequest"> <i
                                         class="mt-1 me-3 fa fa-bell"></i> Trucking</a>
                             </div>
                             <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                <a class="btn" ng-click="setTab(3)"> <i
-                                        class="mt-1 me-3 fa fa-bell"></i> Documentation</a>
+                                <a class="btn" ng-click="setTab(3)" href="/documentation"> <i
+                                        class="mt-1 me-3 fa fa-bell"></i> Permits</a>
                             </div>
                             <div class="companyBtn" ng-class="{ active: isSet(3) }">
                                 <a class="btn" ng-click="setTab(3)"> <i
@@ -110,7 +110,7 @@
                                             <img class="img-fluid" style="margin-left: 0rem;"
                                                 src="{% static 'img/packaging-service.jpg' %}" alt="">
                                         </div>
-                                        <h3><a href="service-details.html" class="stretched-link">Permit
+                                        <h3><a href="/documentation" class="stretched-link">Permit
                                                 Documentation</a></h3>
                                         <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel
                                             cum onsequuntur maiores beatae consequatur magni voluptates</p>
