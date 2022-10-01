@@ -4,7 +4,7 @@ from Homepage.models import JobListing, Individual, Company, CoLoadingListing
 
 
 class LoginForm(forms.Form):
-    USERORCOMPANY = [ ('1','Company'), ('2','Individual'),]
+    USERORCOMPANY = [ ('1','KD Tenant'), ('2','Third Party'),]
     Choice = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-select'}), choices=USERORCOMPANY)
     Email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control'}), required=True)
     Password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}), required=True)
