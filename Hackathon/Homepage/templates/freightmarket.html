@@ -79,23 +79,36 @@
                 </section>
                 <section>
                   <div class="container">
-                    <div class="row" style = "justify-content: center ">
-                      <div class="col-sm-2 mb-3">
-                        <input type="text" id="myDateFilter" class="form-control" onkeyup="DateFilter()" placeholder="Search for Date..">
+                    <div class="row bg-primary p-2 rounded align-items-center" style = "justify-content: center ">
+                      <div class="col-sm-1">
+                        <i class="mt-1 me-3 fa fa-search" style="font-size: 2em; color: white;"></i>
                       </div>
-                      <div class="col-sm-2 mb-3">
-                        <input type="text" id="myTimeFilter" class="form-control" onkeyup="TimeFilter()" placeholder="Search for Time..">
+                      <div class="col-sm-2">
+                        <div class="input-group input-group-sm">
+                          <input type="text" id="myDateFilter" class="form-control" onkeyup="DateFilter()" placeholder="Date">
+                        </div>
                       </div>
-                      <div class="col-sm-2 mb-3">
-                        <input type="text" id="myDestinationFilter" class="form-control" onkeyup="DestinationFilter()" placeholder="Search for Destination..">
+                      <div class="col-sm-2">
+                        <div class="input-group input-group-sm">
+                          <input type="text" id="myTimeFilter" class="form-control" onkeyup="TimeFilter()" placeholder="Time">
+                        </div>
                       </div>
-                      <div class="col-sm-2 mb-3">
-                        <input min="0" type="number" id="MinVolFilter" class="form-control" onkeyup="VolumeFilter()" placeholder="Min Volume..">
-                        <input type="number" id="MaxVolFilter" class="form-control" onkeyup="VolumeFilter()" placeholder="Max Volume..">
+                      <div class="col-sm-2">
+                        <div class="input-group input-group-sm">
+                          <input type="text" id="myDestinationFilter" class="form-control" onkeyup="DestinationFilter()" placeholder="Destination">
+                        </div>
                       </div>
-                      <div class="col-sm-2 mb-3">
-                        <input min="0" type="number" id="MinWeightFilter" class="form-control" onkeyup="WeightFilter()" placeholder="Min Weight..">
-                        <input type="number" id="MaxWeightFilter" class="form-control" onkeyup="WeightFilter()" placeholder="Max Weight..">
+                      <div class="col-sm-2">
+                        <div class="input-group input-group-sm">
+                          <input min="0" type="number" id="MinVolFilter" class="form-control" onkeyup="VolumeFilter()" placeholder="Min Volume">
+                          <input type="number" id="MaxVolFilter" class="form-control" onkeyup="VolumeFilter()" placeholder="Max Volume">
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="input-group input-group-sm">
+                          <input min="0" type="number" id="MinWeightFilter" class="form-control" onkeyup="WeightFilter()" placeholder="Min Weight">
+                          <input type="number" id="MaxWeightFilter" class="form-control" onkeyup="WeightFilter()" placeholder="Max Weight">
+                        </div>
                       </div>
                     </div>
                     <div class="row" id="myItems">
