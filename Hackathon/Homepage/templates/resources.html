@@ -3,6 +3,40 @@
 {% block title %}<title>User Profile</title>{% endblock %}
         {% block content %}
         <div class="container">
+            <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">...</div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
             <div class="company">
                 <div ng-app="tabApp">
                     <div class="row" ng-controller="TabController">
@@ -33,6 +67,106 @@
                                     <h1>List Resources</h1>
                                     <p>List items you wish to share today!</p>
                                     <br>
+
+                                    <div class="row g-5">
+                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s" style="width: 60%;">
+                                            <div class="bg-light rounded h-100 d-flex align-items-center p-5 mt-5">
+                                                <form>
+                                                    <div class="row g-3">
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating">
+                                                                <input type="number"  class="form-control" id="" placeholder="">
+                                                                <label for="Quantity">Quantity of Container</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating">
+                                                                <input type="number"  class="form-control" id="" placeholder="">
+                                                                <label for="companyname">Cargo Weight (kg)</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-floating">
+                                                                <input type="number"  class="form-control" id="" placeholder="">
+                                                                <label for="companyname">Dimensions (Width)</label>
+                                                            </div>
+                                                        </div>
+                    
+                                                        <div class="col-md-4">
+                                                            <div class="form-floating">
+                                                                <input type="number"  class="form-control" id="" placeholder="">
+                                                                <label for="companyname">Dimensions (Height)</label>
+                                                            </div>
+                                                        </div>  
+                    
+                                                        <div class="col-md-4">
+                                                            <div class="form-floating">
+                                                                <input type="number"  class="form-control" id="" placeholder="">
+                                                                <label for="companyname">Dimensions (Length)</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating">
+                                                                <input type="date" class="form-control"name="birthday">  
+                                                                <label for="registereddate">Start Date</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating">
+                                                                <input type="date" class="form-control"name="birthday">  
+                                                                <label for="registereddate">End Date</label>
+                                                            </div>
+                                                        </div>
+                    
+                    
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input class="form-control" type="file" id="Businessdocs" multiple />
+                                                                <label for="Businessdocs" class="form-label">Upload Cargo Photo</label>
+                                                            </div>
+                                                        </div>
+                    
+                                                        <div class="col-12">
+                                                            <div class="form-floating">
+                                                                <select class="form-select" aria-label="Default select example" placeholder="Transfer From"> 
+                                                                    <option value="1" selected></option>
+                                                                    <option value="1">Warehouse 1</option>
+                                                                    <option value="2">Warehouse 2</option>
+                                                                    <option value="3">Warehouse 3</option>
+                                                                </select>
+                    
+                                                                <label for="registereddate">Transfer From</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="form-floating">
+                                                                <select class="form-select" aria-label="Default select example" placeholder="Transfer From">
+                                                                    <option value="1" selected></option>
+                                                                    <option value="1">Warehouse 1</option>
+                                                                    <option value="2">Warehouse 2</option>
+                                                                    <option value="3">Warehouse 3</option>
+                                                                </select>
+                    
+                                                                <label for="registereddate">Transfer To</label>
+                                                            </div>
+                                                        </div>
+                                                              
+                                                        <div class="col-12">
+                                                            <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Get a Quote</button>
+                                                        </div>
+                                                        
+                                                        
+                                                    </div>
+                    
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
                                     <div class="wow fadeInUp" data-wow-delay="0.3s">      
                                         <section class="resume-section" id="experience">
                                             <div class="resume-section-content">
@@ -101,6 +235,15 @@
                                     <h1>Find Resources</h1>
                                     <p>Look for the resources you need today!</p>
                                     <br>
+                                    <img
+                                    src="{% static 'img/demi.svg'%}"}"
+                                    class="img-fluid rounded-start"
+                                    style="object-fit: fill; width: 200px;"
+                                    alt="..."
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"
+                                  />
+
                                     <div class="row g-4">
                                         <!-- This is the display box -->
                                         <div class="col-lg-4 col-md-6 wow zoomIn">
@@ -332,6 +475,14 @@
                 </div>
             </div>
         </div>
-
+        <style>
+            .btn-outline-light:hover {
+              background-color: transparent !important;
+            }
+          </style>
+          <script>
+            var element = document.getElementById("resourceNavItem");
+            element.classList.add("btn-outline-light");
+          </script>
         {% endblock %} 
 
