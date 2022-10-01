@@ -399,9 +399,16 @@
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<style>
+  .btn-outline-light:hover {
+    background-color: transparent !important;
+  }
+</style>
 <script>
-    console.log("testing");
-    
+  var element = document.getElementById("serviceNavItem");
+  element.classList.add("btn-outline-light");
+</script>
+<script>
     $(document).ready(function(){
 		var date_input=$('input[name="date"]'); //our date input has the name "date"
 		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
