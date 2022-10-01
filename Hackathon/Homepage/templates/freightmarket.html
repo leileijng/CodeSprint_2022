@@ -725,14 +725,13 @@ function DestinationFilter() {
 
 function VolumeFilter() {
   var minInput,maxInput, filter, cards, cardContainer, title, i;
-  minInput = document.getElementById("MinVolFilter").value;
-  maxInput = document.getElementById("MaxVolFilter").value;
+  minInput = parseInt(document.getElementById("MinVolFilter").value);
+  maxInput = parseInt(document.getElementById("MaxVolFilter").value);
   cardContainer = document.getElementById("myItems");
   cards = cardContainer.getElementsByClassName("card");
   for (i = 0; i < cards.length; i++) {
       title = cards[i].querySelectorAll(".card-body p.card-text");
       volume = title[3];
-      console.log(typeof parseInt(volume.innerText));
       if (parseInt(volume.innerText) > maxInput || parseInt(volume.innerText) < minInput) {
           cards[i].style.display = "none";
       } else {
@@ -743,14 +742,13 @@ function VolumeFilter() {
 
 function WeightFilter() {
   var minInput,maxInput, filter, cards, cardContainer, title, i;
-  minInput = document.getElementById("MinWeightFilter").value;
-  maxInput = document.getElementById("MaxWeightFilter").value;
+  minInput = parseInt(document.getElementById("MinWeightFilter").value);
+  maxInput = parseInt(document.getElementById("MaxWeightFilter").value);
   cardContainer = document.getElementById("myItems");
   cards = cardContainer.getElementsByClassName("card");
   for (i = 0; i < cards.length; i++) {
       title = cards[i].querySelectorAll(".card-body p.card-text");
       weight = title[4];
-      console.log(typeof parseInt(weight.innerText));
       if (parseInt(weight.innerText) > maxInput || parseInt(weight.innerText) < minInput) {
           cards[i].style.display = "none";
       } else {
