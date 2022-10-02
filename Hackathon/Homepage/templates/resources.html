@@ -30,6 +30,109 @@
                         <div class="col-md-10" style="padding-left: 50px; padding-top: 10px; width: 87.49999965%;">
                             <div class="jumbotron">
                                 <div ng-show="isSet(1)">
+                                    <h1>List Resources</h1>
+                                    <p>List items you wish to share today!</p>
+                                    <br>
+
+                                    <div class="row g-5">
+                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s" style="width: 60%;">
+                                            <div class="bg-light rounded h-100 d-flex align-items-center p-5 mt-5">
+                                                <form>
+                                                    <div class="row g-3">
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating">
+                                                                <input type="number"  class="form-control" id="" placeholder="">
+                                                                <label for="Quantity">Quantity of Container</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating">
+                                                                <input type="number"  class="form-control" id="" placeholder="">
+                                                                <label for="companyname">Cargo Weight (kg)</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-floating">
+                                                                <input type="number"  class="form-control" id="" placeholder="">
+                                                                <label for="companyname">Dimensions (Width)</label>
+                                                            </div>
+                                                        </div>
+                    
+                                                        <div class="col-md-4">
+                                                            <div class="form-floating">
+                                                                <input type="number"  class="form-control" id="" placeholder="">
+                                                                <label for="companyname">Dimensions (Height)</label>
+                                                            </div>
+                                                        </div>  
+                    
+                                                        <div class="col-md-4">
+                                                            <div class="form-floating">
+                                                                <input type="number"  class="form-control" id="" placeholder="">
+                                                                <label for="companyname">Dimensions (Length)</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating">
+                                                                <input type="date" class="form-control"name="birthday">  
+                                                                <label for="registereddate">Start Date</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating">
+                                                                <input type="date" class="form-control"name="birthday">  
+                                                                <label for="registereddate">End Date</label>
+                                                            </div>
+                                                        </div>
+                    
+                    
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input class="form-control" type="file" id="Businessdocs" multiple />
+                                                                <label for="Businessdocs" class="form-label">Upload Cargo Photo</label>
+                                                            </div>
+                                                        </div>
+                    
+                                                        <div class="col-12">
+                                                            <div class="form-floating">
+                                                                <select class="form-select" aria-label="Default select example" placeholder="Transfer From"> 
+                                                                    <option value="1" selected></option>
+                                                                    <option value="1">Warehouse 1</option>
+                                                                    <option value="2">Warehouse 2</option>
+                                                                    <option value="3">Warehouse 3</option>
+                                                                </select>
+                    
+                                                                <label for="registereddate">Transfer From</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="form-floating">
+                                                                <select class="form-select" aria-label="Default select example" placeholder="Transfer From">
+                                                                    <option value="1" selected></option>
+                                                                    <option value="1">Warehouse 1</option>
+                                                                    <option value="2">Warehouse 2</option>
+                                                                    <option value="3">Warehouse 3</option>
+                                                                </select>
+                    
+                                                                <label for="registereddate">Transfer To</label>
+                                                            </div>
+                                                        </div>
+                                                              
+                                                        <div class="col-12">
+                                                            <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Get a Quote</button>
+                                                        </div>
+                                                        
+                                                        
+                                                    </div>
+                    
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
                                     <div class="wow fadeInUp" data-wow-delay="0.3s">      
                                         <section class="resume-section" id="experience">
                                             <div class="resume-section-content">
@@ -98,6 +201,7 @@
                                     <h1>Find Resources</h1>
                                     <p>Look for the resources you need today!</p>
                                     <br>
+
                                     <div class="row g-4">
                                         <!-- This is the display box -->
                                         <div class="col-lg-4 col-md-6 wow zoomIn">
@@ -115,8 +219,160 @@
                                                     </div>
                                                     <div class="col d-flex flex-column justify-content-between h-100 align-items-right">
                                                         <img class="mb-3 ms-auto verified" src="https://acropolis-wp-content-uploads.s3.us-west-1.amazonaws.com/types-of-forklifts.jpg" alt="" style="width:180px;height:180px;">
-                                                        <a class="btn px-3 mt-auto ms-auto" href="{% url 'jobinfo' %}">Request Resource</a>
+                                                        <!-- this is the button for the modal -->
+                                                        <a data-bs-toggle="modal"
+                                                        data-bs-target="#forkliftModal"
+                                                        class="btn px-3 mt-auto ms-auto" href="{% url 'jobinfo' %}">Request Resource</a>
                                                     </div>
+                                                    <!-- This is the modal -->
+                                                    <div
+                                                    class="modal"
+                                                    id="forkliftModal"
+                                                    tabindex="-1"
+                                                    role="dialog"
+                                                    aria-labelledby="exampleModalLabel"
+                                                    aria-hidden="true"
+                                                  >
+                                                    <div class="modal-dialog modal-xl" role="document">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header">
+                                                          <h5 class="modal-title" id="exampleModalLabel">Request Resource</h5>
+                                                          <button
+                                                            type="button"
+                                                            class="close"
+                                                            data-dismiss="modal"
+                                                            aria-label="Close"
+                                                          >
+                                                            <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="container">
+                                                                <div class="timetable-img text-center">
+                                                                    <img src="img/content/timetable.png" alt="">
+                                                                </div>
+                                                                <div class="table-responsive">
+                                                                    <table class="table table-bordered text-center">
+                                                                        <thead>
+                                                                            <tr class="bg-light-gray">
+                                                                                <th class="text-uppercase">09/2022
+                                                                                </th>
+                                                                                <th class="text-uppercase">Monday</th>
+                                                                                <th class="text-uppercase">Tuesday</th>
+                                                                                <th class="text-uppercase">Wednesday</th>
+                                                                                <th class="text-uppercase">Thursday</th>
+                                                                                <th class="text-uppercase">Friday</th>
+                                                                                <th class="text-uppercase">Saturday</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="align-middle">3/9 - 8/9</td>
+                                                                                <td>
+                                                                                    <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Booked</span>
+                                                                                    <div class="margin-10px-top font-size13 text-light-gray">CNL Logistic Solutions</div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Booked</span>
+                                                                                    <div class="margin-10px-top font-size13 text-light-gray">CNL Logistic Solutions</div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Booked</span>
+                                                                                    <div class="margin-10px-top font-size13 text-light-gray">CNL Logistic Solutions</div>
+                                                                                </td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                            </tr>
+                                                
+                                                                            <tr>
+                                                                                <td class="align-middle">10/9 - 15/9</td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                                <td>
+                                                                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Reserved</span>
+                                                                                    <div class="margin-10px-top font-size13 text-light-gray">You</div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Reserved</span>
+                                                                                    <div class="margin-10px-top font-size13 text-light-gray">You</div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Reserved</span>
+                                                                                    <div class="margin-10px-top font-size13 text-light-gray">You</div>
+                                                                                </td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                            </tr>
+                                                
+                                                                            <tr>
+                                                                                <td class="align-middle">17/9 - 22/9</td>
+                                                                                <td class="bg-light-gray flex-row">
+                                                                                    <label class="contain">
+                                                                                        <input type="checkbox">
+                                                                                        <span class="checkmark"></span>
+                                                                                      </label>
+                                                                                </td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                            </tr>
+                                                
+                                                                            <tr>
+                                                                                <td class="align-middle">24/9 - 29/9</td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                                <td class="bg-light-gray">
+                                                
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+
+
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                          <button type="button" class="btn btn-primary" data-dismiss="modal">Send Request</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
+
                                                 </div>
                                             </div>
                                         </div>
@@ -212,9 +468,10 @@
                                 </div>
                                 
                                 <div ng-show="isSet(3)">
+                                    <h1>Loans</h1>
+                                    <p>Manage your loans here!</p>
+                                    <br>
                                     <div class="wow fadeInUp row" data-wow-delay="0.3s">
-                                        <h1>Loans</h1>
-                                        <p>Manage your loans here!</p>
                                         <div class="col-lg-6 ">
                                             <span><h5>Loaned Items</h5></span>
                                             <div class="messages">
@@ -328,6 +585,195 @@
                 </div>
             </div>
         </div>
+        <style>
+.btn-outline-light:hover {
+    background-color: transparent !important;
+}
+.body{
+    margin-top:20px;
+}
+.bg-light-gray {
+    background-color: #f7f7f7;
+}
+.table-bordered thead td, .table-bordered thead th {
+    border-bottom-width: 2px;
+}
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+.table-bordered td, .table-bordered th {
+    border: 1px solid #dee2e6;
+}
 
+
+.bg-sky.box-shadow {
+    box-shadow: 0px 5px 0px 0px #00a2a7
+}
+
+.bg-orange.box-shadow {
+    box-shadow: 0px 5px 0px 0px #af4305
+}
+
+.bg-green.box-shadow {
+    box-shadow: 0px 5px 0px 0px #4ca520
+}
+
+.bg-yellow.box-shadow {
+    box-shadow: 0px 5px 0px 0px #dcbf02
+}
+
+.bg-pink.box-shadow {
+    box-shadow: 0px 5px 0px 0px #e82d8b
+}
+
+.bg-purple.box-shadow {
+    box-shadow: 0px 5px 0px 0px #8343e8
+}
+
+.bg-lightred.box-shadow {
+    box-shadow: 0px 5px 0px 0px #d84213
+}
+
+
+.bg-sky {
+    background-color: #02c2c7
+}
+
+.bg-orange {
+    background-color: #e95601
+}
+
+.bg-green {
+    background-color: #5bbd2a
+}
+
+.bg-yellow {
+    background-color: #f0d001
+}
+
+.bg-pink {
+    background-color: #ff48a4
+}
+
+.bg-purple {
+    background-color: #9d60ff
+}
+
+.bg-lightred {
+    background-color: #ff5722
+}
+
+.padding-15px-lr {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.padding-5px-tb {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.margin-10px-bottom {
+    margin-bottom: 10px;
+}
+.border-radius-5 {
+    border-radius: 5px;
+}
+
+.margin-10px-top {
+    margin-top: 10px;
+}
+.font-size14 {
+    font-size: 14px;
+}
+
+.text-light-gray {
+    color: #d6d5d5;
+}
+.font-size13 {
+    font-size: 13px;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #dee2e6;
+}
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Customize the label (the container) */
+.contain {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.contain input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.contain:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.contain input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.contain input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.contain .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+</style>
+<script>
+    var element = document.getElementById("resourceNavItem");
+    element.classList.add("btn-outline-light");
+</script>
         {% endblock %} 
 

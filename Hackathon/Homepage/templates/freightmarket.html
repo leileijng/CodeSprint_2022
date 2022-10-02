@@ -79,23 +79,36 @@
                 </section>
                 <section>
                   <div class="container">
-                    <div class="row" style = "justify-content: center ">
-                      <div class="col-sm-2 mb-3">
-                        <input type="text" id="myDateFilter" class="form-control" onkeyup="DateFilter()" placeholder="Search for Date..">
+                    <div class="row bg-primary p-2 rounded align-items-center" style = "justify-content: center ">
+                      <div class="col-sm-1">
+                        <i class="mt-1 me-3 fa fa-search" style="font-size: 2em; color: white;"></i>
                       </div>
-                      <div class="col-sm-2 mb-3">
-                        <input type="text" id="myTimeFilter" class="form-control" onkeyup="TimeFilter()" placeholder="Search for Time..">
+                      <div class="col-sm-2">
+                        <div class="input-group input-group-sm">
+                          <input type="text" id="myDateFilter" class="form-control" onkeyup="DateFilter()" placeholder="Date">
+                        </div>
                       </div>
-                      <div class="col-sm-2 mb-3">
-                        <input type="text" id="myDestinationFilter" class="form-control" onkeyup="DestinationFilter()" placeholder="Search for Destination..">
+                      <div class="col-sm-2">
+                        <div class="input-group input-group-sm">
+                          <input type="text" id="myTimeFilter" class="form-control" onkeyup="TimeFilter()" placeholder="Time">
+                        </div>
                       </div>
-                      <div class="col-sm-2 mb-3">
-                        <input min="0" type="number" id="MinVolFilter" class="form-control" onkeyup="VolumeFilter()" placeholder="Min Volume..">
-                        <input type="number" id="MaxVolFilter" class="form-control" onkeyup="VolumeFilter()" placeholder="Max Volume..">
+                      <div class="col-sm-2">
+                        <div class="input-group input-group-sm">
+                          <input type="text" id="myDestinationFilter" class="form-control" onkeyup="DestinationFilter()" placeholder="Destination">
+                        </div>
                       </div>
-                      <div class="col-sm-2 mb-3">
-                        <input min="0" type="number" id="MinWeightFilter" class="form-control" onkeyup="WeightFilter()" placeholder="Min Weight..">
-                        <input type="number" id="MaxWeightFilter" class="form-control" onkeyup="WeightFilter()" placeholder="Max Weight..">
+                      <div class="col-sm-2">
+                        <div class="input-group input-group-sm">
+                          <input min="0" type="number" id="MinVolFilter" class="form-control" onkeyup="VolumeFilter()" placeholder="Min Volume">
+                          <input type="number" id="MaxVolFilter" class="form-control" onkeyup="VolumeFilter()" placeholder="Max Volume">
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="input-group input-group-sm">
+                          <input min="0" type="number" id="MinWeightFilter" class="form-control" onkeyup="WeightFilter()" placeholder="Min Weight">
+                          <input type="number" id="MaxWeightFilter" class="form-control" onkeyup="WeightFilter()" placeholder="Max Weight">
+                        </div>
                       </div>
                     </div>
                     <div class="row" id="myItems">
@@ -449,7 +462,7 @@
                 <div class="wow fadeInUp" data-wow-delay="0.3s">
                   <h1>Status page</h1>
                   <table class="table table-bordered">
-                    <thead class="table-dark">
+                    <thead class="table-primary">
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Unqiue Id</th>
@@ -458,24 +471,45 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Buy</td>
+                      <tr data-bs-toggle="collapse" href="#row1collapse" role="button" aria-expanded="false" aria-controls="row1collapse">
+                        <td scope="row"><i class="mt-1 me-3 fa fa-eye"></i>1</td>
+                        <td>993231</td>
+                        <td>Buying</td>
                         <td class="table-danger">Rejected</td>
                       </tr>
+                      <tr scope="row" class="collapse p-0" id="row1collapse">
+                        <td colspan="12">
+                          <table class="table table-striped bg-light">
+                            <thead class="table-info">
+                              <tr class='info'>
+                                <th scope="col">Company name</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Weight</th>
+                                <th scope="col">Volume</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>hi terhi</td>
+                                <td>Bewruy</td>
+                                <td>ksjfdl</td>
+                                <td>ksjfdl</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
                       <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Buy</td>
+                        <td scope="row"><i class="mt-1 me-3 fa fa-eye"></i>2</td>
+                        <td>849132</td>
+                        <td>Buying</td>
                         <td class="table-success">Succeeded</td>
                       </tr>
                       <tr>
-                        <th scope="row">3</th>
-                        <td>Larry the Bird</td>
-                        <td>Sell</td>
-                        <td >pending
-                        </td>
+                        <td scope="row"><i class="mt-1 me-3 fa fa-eye"></i>3</td>
+                        <td>490481</td>
+                        <td>Selling</td>
+                        <td >Pending</td>
                       </tr>
                     </tbody>
                   </table>
@@ -712,14 +746,13 @@ function DestinationFilter() {
 
 function VolumeFilter() {
   var minInput,maxInput, filter, cards, cardContainer, title, i;
-  minInput = document.getElementById("MinVolFilter").value;
-  maxInput = document.getElementById("MaxVolFilter").value;
+  minInput = parseInt(document.getElementById("MinVolFilter").value);
+  maxInput = parseInt(document.getElementById("MaxVolFilter").value);
   cardContainer = document.getElementById("myItems");
   cards = cardContainer.getElementsByClassName("card");
   for (i = 0; i < cards.length; i++) {
       title = cards[i].querySelectorAll(".card-body p.card-text");
       volume = title[3];
-      console.log(typeof parseInt(volume.innerText));
       if (parseInt(volume.innerText) > maxInput || parseInt(volume.innerText) < minInput) {
           cards[i].style.display = "none";
       } else {
@@ -730,14 +763,13 @@ function VolumeFilter() {
 
 function WeightFilter() {
   var minInput,maxInput, filter, cards, cardContainer, title, i;
-  minInput = document.getElementById("MinWeightFilter").value;
-  maxInput = document.getElementById("MaxWeightFilter").value;
+  minInput = parseInt(document.getElementById("MinWeightFilter").value);
+  maxInput = parseInt(document.getElementById("MaxWeightFilter").value);
   cardContainer = document.getElementById("myItems");
   cards = cardContainer.getElementsByClassName("card");
   for (i = 0; i < cards.length; i++) {
       title = cards[i].querySelectorAll(".card-body p.card-text");
       weight = title[4];
-      console.log(typeof parseInt(weight.innerText));
       if (parseInt(weight.innerText) > maxInput || parseInt(weight.innerText) < minInput) {
           cards[i].style.display = "none";
       } else {
@@ -746,5 +778,14 @@ function WeightFilter() {
   }
 }
 
+</script>
+<style>
+  .btn-outline-light:hover {
+    background-color: transparent !important;
+  }
+</style>
+<script>
+  var element = document.getElementById("freightNavItem");
+  element.classList.add("btn-outline-light");
 </script>
 {% endblock %}
