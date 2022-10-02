@@ -13,344 +13,481 @@
 
                             <div class="companyBtn" ng-class="{ active: isSet(1) }">
                                 <a class="btn" href="/forkliftServices" style="color: var(--light); 
-                                background: var(--primary);" > 
+                                background: var(--primary);">
                                     <i class="mt-1 me-3 fa-solid fa-life-ring"></i>Forklifting</a>
                             </div>
-    
+
                             <div class="w-100"></div>
                             <div class="companyBtn" ng-class="{ active: isSet(2) }">
-                                <a class="btn" ng-click="setTab(2)" href="/railingRequest"> 
+                                <a class="btn" ng-click="setTab(2)" href="/railingRequest">
                                     <i class="mt-1 me-3 fa-solid fa-sailboat"></i> Railing</a>
                             </div>
-    
+
                             <div class="w-100"></div>
                             <div class="companyBtn" ng-class="{ active: isSet(3) }">
                                 <a class="btn" ng-click="setTab(3)" href="/stuffingRequest">
                                     <i class="mt-1 me-3 fa-solid fa-box"></i> Stuffing</a>
                             </div>
                             <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                <a class="btn" ng-click="setTab(3)" href="/truckingRequest"> 
+                                <a class="btn" ng-click="setTab(3)" href="/truckingRequest">
                                     <i class="mt-1 me-3 fa-solid fa-truck-moving"></i> Trucking</a>
                             </div>
                             <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                <a class="btn" ng-click="setTab(3)" href="/documentation"> 
+                                <a class="btn" ng-click="setTab(3)" href="/documentation">
                                     <i class="mt-1 me-3 fa-solid fa-file-import"></i> Permits</a>
                             </div>
                             <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                <a class="btn" ng-click="setTab(3)"> 
+                                <a class="btn" ng-click="setTab(3)" href="https://www.singaporepsa.com/">
                                     <i class="mt-1 me-3 fa-solid fa-comment-dots"></i> Feedback</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-10" style="padding-left: 50px; padding-top: 10px; width: 87.49999965%;">
-                    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+                    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+                        rel="stylesheet">
                     <div class="container">
-                    <div class="wrapper wrapper-content animated fadeInRight">
-                        <div class="row">
-                            <div class="col-md-14">
-                                <div class="ibox">
-                                    <div class="ibox-title">
-                                        <span class="pull-right" style="width: 120px;"><strong>Total Charge</strong></span>
-                                        <span class="pull-right" style="width: 170px;"><strong>Weekly Charge</strong></span>
-                                        <span class="pull-right" style="width: 210px;"><strong>Daily Charge</strong></span>
-                                        <h5>Available Forklifting Services</h5>
-                                    </div>
-                                    <div class="ibox-content">
-                                        <div class="table-responsive">
-                                            <table class="table shoping-cart-table">
-                                                <tbody>
-                                                <tr>
-                                                    <td class="desc" width="540">
-                                                        <h3>
-                                                        <a href="#" class="text-navy">
-                                                            Small Forklifts (2,000 - 15,000 lbs)
-                                                        </a>
-                                                        </h3>
-                                                        <p class="small">
-                                                            This size of forklift is an economical choice since it can lift many types and sizes of objects. It also has a high horsepower which allows for increased speed and maneuverability in tight spaces.
-                                                        </p>
-                                                    </td>
-                    
-                                                    <td width="200">
-                                                        <span style="padding-left: 120px;">$100.00</span>
-                                                        <dl class="small" style="width: 50px; margin-left: 130px; margin-top: 10px;">
-                                                            <input type="number" id="smallDaily" onchange="smallSum(this.value);" class="form-control" placeholder="0" value="0">
-                                                        </dl>
-                                                    </td>
-                                                    <td width="150">
-                                                        <span style="padding-left: 60px;">$350.00</span>
-                                                        <dl class="small" style="width: 50px; margin-left: 70px; margin-top: 10px;">
-                                                            <input type="number" id="smallWeekly" onchange="smallSum(this.value);" class="form-control" placeholder="0" value="0">
-                                                        </dl>
-                                                    </td>
-                                                    <td width="70">
-                                                        <h4 id="smallTotal" style="margin-left: 25px;">
-                                                            $0
-                                                        </h4>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
+                        <div class="wrapper wrapper-content animated fadeInRight">
+                            <div class="row">
+                                <div class="col-md-14">
+                                    <div class="ibox">
+                                        <div class="ibox-title">
+                                            <span class="pull-right" style="width: 120px;"><strong>Total
+                                                    Charge</strong></span>
+                                            <span class="pull-right" style="width: 170px;"><strong>Weekly
+                                                    Charge</strong></span>
+                                            <span class="pull-right" style="width: 210px;"><strong>Daily
+                                                    Charge</strong></span>
+                                            <h5>Available Forklifting Services</h5>
                                         </div>
-                    
-                                    </div>
-                                    <div class="ibox-content">
-                                        <div class="table-responsive">
-                                            <table class="table shoping-cart-table">
-                                                <tbody>
-                                                <tr>
-                                                    <td class="desc" width="540">
-                                                        <h3>
-                                                        <a href="#" class="text-navy">
-                                                            Medium Forklifts (20,000 - 40,000 lbs)
-                                                        </a>
-                                                        </h3>
-                                                        <p class="small">
-                                                            This size of forklift can carry a much larger and heavier load than the smaller forks and is more suited for heavier tasks such as moving pallets and very large loads. While it has a high weight capacity, it also has an equally high cost per ton, making it a more expensive option than the other forklifts.
-                                                        </p>
-                                                    </td>
-                    
-                                                    <td width="200">
-                                                        <span style="padding-left: 120px;">$150.00</span>
-                                                        <dl class="small" style="width: 50px; margin-left: 130px; margin-top: 10px;">
-                                                            <input type="number" id="mediumDaily" onchange="mediumSum(this.value);" class="form-control" placeholder="0" value="0">
-                                                        </dl>
-                                                    </td>
-                                                    <td width="150">
-                                                        <span style="padding-left: 60px;">$600,00</span>
-                                                        <dl class="small" style="width: 50px; margin-left: 70px; margin-top: 10px;">
-                                                            <input type="number" id="mediumWeekly" onchange="mediumSum(this.value);" class="form-control" placeholder="0" value="0">
-                                                        </dl>
-                                                    </td>
-                                                    <td width="70">
-                                                        <h4 id="mediumTotal" style="margin-left: 25px;">
-                                                            $0
-                                                        </h4>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
+                                        <div class="ibox-content">
+                                            <div class="table-responsive">
+                                                <table class="table shoping-cart-table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="desc" width="540">
+                                                                <h3>
+                                                                    <a href="#" class="text-navy">
+                                                                        Small Forklifts (2,000 - 15,000 lbs)
+                                                                    </a>
+                                                                </h3>
+                                                                <p class="small">
+                                                                    This size of forklift is an economical choice since
+                                                                    it can lift many types and sizes of objects. It also
+                                                                    has a high horsepower which allows for increased
+                                                                    speed and maneuverability in tight spaces.
+                                                                </p>
+                                                            </td>
+
+                                                            <td width="200">
+                                                                <span style="padding-left: 120px;">$100.00</span>
+                                                                <dl class="small"
+                                                                    style="width: 50px; margin-left: 130px; margin-top: 10px;">
+                                                                    <input type="number" id="smallDaily"
+                                                                        onchange="smallSum(this.value);"
+                                                                        class="form-control" placeholder="0" value="0">
+                                                                </dl>
+                                                            </td>
+                                                            <td width="150">
+                                                                <span style="padding-left: 60px;">$350.00</span>
+                                                                <dl class="small"
+                                                                    style="width: 50px; margin-left: 70px; margin-top: 10px;">
+                                                                    <input type="number" id="smallWeekly"
+                                                                        onchange="smallSum(this.value);"
+                                                                        class="form-control" placeholder="0" value="0">
+                                                                </dl>
+                                                            </td>
+                                                            <td width="70">
+                                                                <h4 id="smallTotal" style="margin-left: 25px;">
+                                                                    $0
+                                                                </h4>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
                                         </div>
-                    
-                                    </div>
-                                    <div class="ibox-content">
-                                        <div class="table-responsive">
-                                            <table class="table shoping-cart-table">
-                                                <tbody>
-                                                <tr>
-                                                    <td class="desc" width="540">
-                                                        <h3>
-                                                        <a href="#" class="text-navy">
-                                                            Large Forklifts (40,000 - 70,000 lbs)
-                                                        </a>
-                                                        </h3>
-                                                        <p class="small">
-                                                            The side of this big forklift makes it ideal for moving large and heavy loads because it is designed to hold a lot of weight and has a high capacity. Also, this forklift can lift heavier objects, making it possible to move very large and heavy objects like containers or machinery.
-                                                        </p>
-                                                    </td>
-                    
-                                                    <td width="200">
-                                                        <span style="padding-left: 120px;">$380.00</span>
-                                                        <dl class="small" style="width: 50px; margin-left: 130px; margin-top: 10px;">
-                                                            <input type="number" id="largeDaily"  onchange="largeSum(this.value);" class="form-control" placeholder="0" value="0">
-                                                        </dl>
-                                                    </td>
-                                                    <td width="150">
-                                                        <span style="padding-left: 60px;">$800.00</span>
-                                                        <dl class="small" style="width: 50px; margin-left: 70px; margin-top: 10px;">
-                                                            <input type="number" id="largeWeekly"  onchange="largeSum(this.value);" class="form-control" placeholder="0" value="0">
-                                                        </dl>
-                                                    </td>
-                                                    <td width="70">
-                                                        <h4 id="largeTotal" style="margin-left: 25px;">
-                                                            $0
-                                                        </h4>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
+                                        <div class="ibox-content">
+                                            <div class="table-responsive">
+                                                <table class="table shoping-cart-table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="desc" width="540">
+                                                                <h3>
+                                                                    <a href="#" class="text-navy">
+                                                                        Medium Forklifts (20,000 - 40,000 lbs)
+                                                                    </a>
+                                                                </h3>
+                                                                <p class="small">
+                                                                    This size of forklift can carry a much larger and
+                                                                    heavier load than the smaller forks and is more
+                                                                    suited for heavier tasks such as moving pallets and
+                                                                    very large loads. While it has a high weight
+                                                                    capacity, it also has an equally high cost per ton,
+                                                                    making it a more expensive option than the other
+                                                                    forklifts.
+                                                                </p>
+                                                            </td>
+
+                                                            <td width="200">
+                                                                <span style="padding-left: 120px;">$150.00</span>
+                                                                <dl class="small"
+                                                                    style="width: 50px; margin-left: 130px; margin-top: 10px;">
+                                                                    <input type="number" id="mediumDaily"
+                                                                        onchange="mediumSum(this.value);"
+                                                                        class="form-control" placeholder="0" value="0">
+                                                                </dl>
+                                                            </td>
+                                                            <td width="150">
+                                                                <span style="padding-left: 60px;">$600,00</span>
+                                                                <dl class="small"
+                                                                    style="width: 50px; margin-left: 70px; margin-top: 10px;">
+                                                                    <input type="number" id="mediumWeekly"
+                                                                        onchange="mediumSum(this.value);"
+                                                                        class="form-control" placeholder="0" value="0">
+                                                                </dl>
+                                                            </td>
+                                                            <td width="70">
+                                                                <h4 id="mediumTotal" style="margin-left: 25px;">
+                                                                    $0
+                                                                </h4>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
                                         </div>
-                    
+                                        <div class="ibox-content">
+                                            <div class="table-responsive">
+                                                <table class="table shoping-cart-table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="desc" width="540">
+                                                                <h3>
+                                                                    <a href="#" class="text-navy">
+                                                                        Large Forklifts (40,000 - 70,000 lbs)
+                                                                    </a>
+                                                                </h3>
+                                                                <p class="small">
+                                                                    The side of this big forklift makes it ideal for
+                                                                    moving large and heavy loads because it is designed
+                                                                    to hold a lot of weight and has a high capacity.
+                                                                    Also, this forklift can lift heavier objects, making
+                                                                    it possible to move very large and heavy objects
+                                                                    like containers or machinery.
+                                                                </p>
+                                                            </td>
+
+                                                            <td width="200">
+                                                                <span style="padding-left: 120px;">$380.00</span>
+                                                                <dl class="small"
+                                                                    style="width: 50px; margin-left: 130px; margin-top: 10px;">
+                                                                    <input type="number" id="largeDaily"
+                                                                        onchange="largeSum(this.value);"
+                                                                        class="form-control" placeholder="0" value="0">
+                                                                </dl>
+                                                            </td>
+                                                            <td width="150">
+                                                                <span style="padding-left: 60px;">$800.00</span>
+                                                                <dl class="small"
+                                                                    style="width: 50px; margin-left: 70px; margin-top: 10px;">
+                                                                    <input type="number" id="largeWeekly"
+                                                                        onchange="largeSum(this.value);"
+                                                                        class="form-control" placeholder="0" value="0">
+                                                                </dl>
+                                                            </td>
+                                                            <td width="70">
+                                                                <h4 id="largeTotal" style="margin-left: 25px;">
+                                                                    $0
+                                                                </h4>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="m-t-sm">
+                                            <div class="pull-right">
+                                                <a data-toggle="modal" data-target="#forkliftServiceModal"
+                                                    class="btn btn-primary w-100 py-3" id="checkoutBtn"> Checkout</a>
+                                            </div>
+                                        </div>
+
+
+                                        
+
                                     </div>
 
-                                    <div class="m-t-sm">
-                                        <div class="pull-right">
-                                        <a href="#" class="btn btn-primary w-100 py-3"> Checkout</a>
-                                        </div>
-                                    </div>
-                                    
                                 </div>
-                    
+
                             </div>
-                            
                         </div>
                     </div>
-                    </div>
-                
+
                 </div>
 
             </div>
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal" id="forkliftServiceModal" tabindex="-9999" role="dialog"
+aria-labelledby="" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Check Out</h5>
+            
+        </div>
+        <div class="modal-body">
+            <div class="container" data-aos="fade-up">
+                <div class="info-item" style="padding-left: 20px;"> 
+                    <div>
+                      <h4>Pick-up Location:</h4>
+                    </div>
+                <div>
+                    <iframe style="border:0; width: 100%; height: 340px;" 
+                  src="https://maps.google.com/maps?q=511%20Kampong%20Bahru%20Rd,%20Singapore%20099447&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  frameborder="0" allowfullscreen></iframe>
+                </div><!-- End Google Maps -->
+        
+                <div class="row gy-4 mt-0 mb-2">
+        
+                    
+                  <div class="col-lg-4">
+                    <div class="info-item d-flex" style="padding-left: 20px;"> 
+                      <div>
+                        <h4>Contact Details:</h4>
+                      </div>
+                    </div><!-- End Info Item -->
+                  </div>
+        
+                  <div class="col-lg-8">
+                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                      <div class="row">
+                        <div class="col-md-6 form-group">
+                          <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                          <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                        </div>
+                      </div>
+
+                      <div class="form-group mt-3">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Service Area (Leave it blank if you want to self pick up)" required>
+                      </div>
+                      <div class="form-group mt-3">
+                        <textarea class="form-control" name="Remarks" rows="5" placeholder="Message" required></textarea>
+                      </div>
+                    </form>
+                  </div><!-- End Contact Form -->
+        
+                </div>
+        
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button id="btnModalClose" type="button" class="btn btn-secondary"
+                data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="sendBtn">Send</button>
+        </div>
+    </div>
+</div>
+</div>
+
 <style type="text/css">
-.companyBtn .btn::before {
-    position: absolute;
-    content: "";
-    width: 35px;
-    height: 35px;
-    top: 0;
-    left: 0;
-    border-radius: 35px;
-    background: transparent;
-    transition: .5s;
-    z-index: -1;
-}
+    .companyBtn .btn::before {
+        position: absolute;
+        content: "";
+        width: 35px;
+        height: 35px;
+        top: 0;
+        left: 0;
+        border-radius: 35px;
+        background: transparent;
+        transition: .5s;
+        z-index: -1;
+    }
 
-.cart-product-imitation {
-  text-align: center;
-  padding-top: 30px;
-  height: 80px;
-  width: 80px;
-  background-color: #f8f8f9;
-}
-.product-imitation.xl {
-  padding: 120px 0;
-}
-.product-desc {
-  padding: 20px;
-  position: relative;
-}
-.ecommerce .tag-list {
-  padding: 0;
-}
-.ecommerce .fa-star {
-  color: #d1dade;
-}
-.ecommerce .fa-star.active {
-  color: #f8ac59;
-}
-.ecommerce .note-editor {
-  border: 1px solid #e7eaec;
-}
-table.shoping-cart-table {
-  margin-bottom: 0;
-}
-table.shoping-cart-table tr td {
-  border: none;
-  text-align: left;
-}
-table.shoping-cart-table tr td.desc,
-table.shoping-cart-table tr td:first-child {
-  text-align: left;
-}
-table.shoping-cart-table tr td:last-child {
-  width: 80px;
-}
-.ibox {
-  clear: both;
-  margin-bottom: 25px;
-  margin-top: 0;
-  padding: 0;
-}
-.ibox.collapsed .ibox-content {
-  display: none;
-}
-.ibox:after,
-.ibox:before {
-  display: table;
-}
-.ibox-title {
-  -moz-border-bottom-colors: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  background-color: #ffffff;
-  border-color: #e7eaec;
-  border-image: none;
-  border-style: solid solid none;
-  border-width: 3px 0 0;
-  color: inherit;
-  margin-bottom: 0;
-  padding: 14px 15px 7px;
-  min-height: 48px;
-}
-.ibox-content {
-  background-color: #ffffff;
-  color: inherit;
-  padding: 15px 20px 20px 20px;
-  border-color: #e7eaec;
-  border-image: none;
-  border-style: solid solid none;
-  border-width: 1px 0;
-}
-.ibox-footer {
-  color: inherit;
-  border-top: 1px solid #e7eaec;
-  font-size: 90%;
-  background: #ffffff;
-  padding: 10px 15px;
-}
+    .cart-product-imitation {
+        text-align: center;
+        padding-top: 30px;
+        height: 80px;
+        width: 80px;
+        background-color: #f8f8f9;
+    }
 
+    .product-imitation.xl {
+        padding: 120px 0;
+    }
+
+    .product-desc {
+        padding: 20px;
+        position: relative;
+    }
+
+    .ecommerce .tag-list {
+        padding: 0;
+    }
+
+    .ecommerce .fa-star {
+        color: #d1dade;
+    }
+
+    .ecommerce .fa-star.active {
+        color: #f8ac59;
+    }
+
+    .ecommerce .note-editor {
+        border: 1px solid #e7eaec;
+    }
+
+    table.shoping-cart-table {
+        margin-bottom: 0;
+    }
+
+    table.shoping-cart-table tr td {
+        border: none;
+        text-align: left;
+    }
+
+    table.shoping-cart-table tr td.desc,
+    table.shoping-cart-table tr td:first-child {
+        text-align: left;
+    }
+
+    table.shoping-cart-table tr td:last-child {
+        width: 80px;
+    }
+
+    .ibox {
+        clear: both;
+        margin-bottom: 25px;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .ibox.collapsed .ibox-content {
+        display: none;
+    }
+
+    .ibox:after,
+    .ibox:before {
+        display: table;
+    }
+
+    .ibox-title {
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        background-color: #ffffff;
+        border-color: #e7eaec;
+        border-image: none;
+        border-style: solid solid none;
+        border-width: 3px 0 0;
+        color: inherit;
+        margin-bottom: 0;
+        padding: 14px 15px 7px;
+        min-height: 48px;
+    }
+
+    .ibox-content {
+        background-color: #ffffff;
+        color: inherit;
+        padding: 15px 20px 20px 20px;
+        border-color: #e7eaec;
+        border-image: none;
+        border-style: solid solid none;
+        border-width: 1px 0;
+    }
+
+    .ibox-footer {
+        color: inherit;
+        border-top: 1px solid #e7eaec;
+        font-size: 90%;
+        background: #ffffff;
+        padding: 10px 15px;
+    }
 </style>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script>
-    console.log("testing");
-    
+
     // $(document).ready(function(){
-	// 	var date_input=$('input[name="date"]'); //our date input has the name "date"
-	// 	var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-	// 	date_input.datepicker({
-	// 		format: 'mm/dd/yyyy',
-	// 		container: container,
-	// 		todayHighlight: true,
-	// 		autoclose: true,
-	// 	});
-	// })
+    // 	var date_input=$('input[name="date"]'); //our date input has the name "date"
+    // 	var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+    // 	date_input.datepicker({
+    // 		format: 'mm/dd/yyyy',
+    // 		container: container,
+    // 		todayHighlight: true,
+    // 		autoclose: true,
+    // 	});
+    // })
 
-function smallSum() {
-    console.log("hello");
-    var smallDaily,smallWeekly;
-    var total = 0
-    smallDaily = document.getElementById("smallDaily").value;
-    smallWeekly = document.getElementById("smallWeekly").value;
-     total = (parseInt(smallDaily) * 100) + (parseInt(smallWeekly) * 350);
-    document.getElementById("smallTotal").innerHTML = total;
-}
+    function smallSum() {
+        console.log("hello");
+        var smallDaily, smallWeekly;
+        var total = 0
+        smallDaily = document.getElementById("smallDaily").value;
+        smallWeekly = document.getElementById("smallWeekly").value;
+        total = (parseInt(smallDaily) * 100) + (parseInt(smallWeekly) * 350);
+        document.getElementById("smallTotal").innerHTML = total;
+    }
 
-function mediumSum() {
-    var mediumDaily,mediumWeekly;
-    var total = 0
-    mediumDaily = document.getElementById("mediumDaily").value;
-    mediumWeekly = document.getElementById("mediumWeekly").value;
-     total = (parseInt(mediumDaily) * 150) + (parseInt(mediumWeekly) * 600);
-    document.getElementById("mediumTotal").innerHTML = total;
-}
+    function mediumSum() {
+        var mediumDaily, mediumWeekly;
+        var total = 0
+        mediumDaily = document.getElementById("mediumDaily").value;
+        mediumWeekly = document.getElementById("mediumWeekly").value;
+        total = (parseInt(mediumDaily) * 150) + (parseInt(mediumWeekly) * 600);
+        document.getElementById("mediumTotal").innerHTML = total;
+    }
 
-function largeSum() {
-    var largeDaily,largeWeekly, total;
-    largeDaily = largeWeekly = total = 0;
-    largeDaily = document.getElementById("largeDaily").value;
-    largeWeekly = document.getElementById("largeWeekly").value;
-     total = (parseInt(largeDaily) * 380) + (parseInt(largeWeekly) * 800);
-    document.getElementById("largeTotal").innerHTML = total;
-}
+    function largeSum() {
+        var largeDaily, largeWeekly, total;
+        largeDaily = largeWeekly = total = 0;
+        largeDaily = document.getElementById("largeDaily").value;
+        largeWeekly = document.getElementById("largeWeekly").value;
+        total = (parseInt(largeDaily) * 380) + (parseInt(largeWeekly) * 800);
+        document.getElementById("largeTotal").innerHTML = total;
+    }
 </script>
 <style>
     .btn-outline-light:hover {
-      background-color: transparent !important;
+        background-color: transparent !important;
     }
-  </style>
-  <script>
+
+</style>
+<script>
     var element = document.getElementById("serviceNavItem");
     element.classList.add("btn-outline-light");
-  </script>
+
+
+    $("#checkoutBtn").click(function () {
+        $('#forkliftServiceModal').modal('toggle');
+      });
+    $("#btnModalClose").click(function () {
+        $('#forkliftServiceModal').modal('hide');
+      });
+
+      $("#sendBtn").click(function () {
+
+        $.notify('Quote Sent Successfully!', "success");
+        $('#forkliftServiceModal').modal('hide');
+      });
+</script>
 {% endblock %}

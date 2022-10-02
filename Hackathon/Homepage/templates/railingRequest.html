@@ -37,7 +37,7 @@
                                     <i class="mt-1 me-3 fa-solid fa-file-import"></i> Permits</a>
                             </div>
                             <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                                <a class="btn" ng-click="setTab(3)"> 
+                                <a class="btn" ng-click="setTab(3)" href="https://www.singaporepsa.com/" > 
                                     <i class="mt-1 me-3 fa-solid fa-comment-dots"></i> Feedback</a>
                             </div>
                         </div>
@@ -57,45 +57,45 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="number"  class="form-control" id="" placeholder="">
+                                            <input type="number"  class="form-control" id="qtyInput" placeholder="" required>
                                             <label for="Quantity">Quantity of Container</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="number"  class="form-control" id="" placeholder="">
-                                            <label for="companyname">Cargo Weight (kg)</label>
+                                            <input type="number"  class="form-control" id="weightInput" placeholder="" required>
+                                            <label for="companyname">Cargo Weight (t)</label>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-floating">
-                                            <input type="number"  class="form-control" id="" placeholder="">
+                                            <input type="number"  class="form-control" id="dwInput" placeholder="" required>
                                             <label for="companyname">Dimensions (Width)</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md-4">
                                         <div class="form-floating">
-                                            <input type="number"  class="form-control" id="" placeholder="">
+                                            <input type="number"  class="form-control" id="dhInput" placeholder="" required>
                                             <label for="companyname">Dimensions (Height)</label>
                                         </div>
                                     </div>  
 
                                     <div class="col-md-4">
                                         <div class="form-floating">
-                                            <input type="number"  class="form-control" id="" placeholder="">
+                                            <input type="number"  class="form-control" id="dlInput" placeholder="" required>
                                             <label for="companyname">Dimensions (Length)</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="date" class="form-control"name="birthday">  
+                                            <input type="date" class="form-control"name="birthday" id="startDateInput" required>  
                                             <label for="registereddate">Start Date</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="date" class="form-control"name="birthday">  
+                                            <input type="date" class="form-control"name="birthday" id="endDateInput" required>
                                             <label for="registereddate">End Date</label>
                                         </div>
                                     </div>
@@ -103,14 +103,14 @@
 
                                     <div class="col-md-12">
                                         <div class="form-floating">
-											<input class="form-control" type="file" id="Businessdocs" multiple />
+											<input class="form-control" type="file" id="Businessdocs" multiple id="photoInput" required/>
 											<label for="Businessdocs" class="form-label">Upload Cargo Photo</label>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <select class="form-select" aria-label="Default select example" placeholder="Transfer From"> 
+                                            <select class="form-select" aria-label="Default select example" placeholder="Transfer From" id="startWhInput" required> 
                                                 <option value="1" selected></option>
                                                 <option value="1">Warehouse 1</option>
                                                 <option value="2">Warehouse 2</option>
@@ -122,7 +122,7 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <select class="form-select" aria-label="Default select example" placeholder="Transfer From">
+                                            <select class="form-select" aria-label="Default select example" placeholder="Transfer To" id="endWhInput" required>
                                                 <option value="1" selected></option>
                                                 <option value="1">Warehouse 1</option>
                                                 <option value="2">Warehouse 2</option>
@@ -134,7 +134,7 @@
                                     </div>
                                           
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Get a Quote</button>
+                                        <button class="btn btn-primary w-100 py-3" id="quoteBtn" type="submit">Get a Quote</button>
                                     </div>
                                     
                                     
@@ -151,7 +151,6 @@
     </div>
 </div>
 <style type="text/css">
-   
    .companyBtn .btn::before {
     position: absolute;
     content: "";
@@ -165,26 +164,53 @@
     z-index: -1;
 }
 </style>
-
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="/resources/demos/style.css">
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script>
-    console.log("testing");
-    
     $(document).ready(function(){
-		var date_input=$('input[name="date"]'); //our date input has the name "date"
-		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-		date_input.datepicker({
-			format: 'mm/dd/yyyy',
-			container: container,
-			todayHighlight: true,
-			autoclose: true,
-		});
+        function formValidation() {
+        /*
+        if(($("#qtyInput").val()) == null || !($("#weightInput").val())  || !($("#dwInput").val()) || !($("#dhInput").val())  || !($("#dlInput").val()) || !($("#endDateInput").val()) 
+        || !($("#startDateInput").val()) || !($("#startWhInput").val()) || !($("#endWhInput").val()) || !($("#photoInput").val())){
+            return "Please fill up all the fields!";
+        }*/
+      if($("#qtyInput").val() <= 0 ){
+        return "Invalid Container Quantity";
+      }
+      if ($("#weightInput").val() <= 0) {
+        return "Invalid Cargo Weight";
+      }
+      if ($("#dwInput").val() <= 0) {
+        return "Invalid Container Width";
+      }
+      if ($("#dhInput").val() <= 0) {
+        return "Invalid Container Height";
+      }
+      if ($("#dlInput").val() <= 0) {
+        return "Invalid Container Length";
+      }
+      if($("#endDateInput").val() < $("#startDateInput").val()){
+        return "End Date must be later than start Date."
+      }
+      if($("#startWhInput").val() == $("#endWhInput").val()){
+        return "Start warehouse must not be the same as Destination warehouse."
+      }
+      if (valid) {
+        return "Quote Sent Successfully";
+      }
+      return valid;
+    }
+    
+    $("#quoteBtn").click(function () {
+      var valMsg = formValidation();
+      if (valMsg.indexOf("Successfully") != -1) {
+        $.notify('Job Posted Successfully!', "success");
+      }
+        else {
+        $.notify(valMsg, "error");
+        }
+      });
+
 	})
 </script>
 
