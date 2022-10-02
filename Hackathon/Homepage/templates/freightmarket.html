@@ -168,7 +168,7 @@
                                   <input
                                     type="text"
                                     class="form-control"
-                                    aria-label="Amount (to the nearest kilogram)"
+                                    aria-label="Amount (to the nearest kilogram)" id="weight1Input"
                                   />
                                   <span class="input-group-text">kg</span>
                                 </div>
@@ -179,7 +179,7 @@
                                   <input
                                     type="text"
                                     class="form-control"
-                                    aria-label="Amount (to the nearest kilogram)"
+                                    aria-label="Amount (to the nearest kilogram)" id="vol1Input"
                                   />
                                   <span class="input-group-text"
                                     >m<sup>3</sup></span
@@ -188,7 +188,7 @@
                               </div>
                               <div class="d-flex flex-row-reverse bd-highlight">
                                 <div class="d-flex flex-column bd-highlight">
-                                  <a class="btn btn-primary" href=""
+                                  <a class="btn btn-primary requestBtn" href=""
                                     >Request Space</a
                                   >
                                   <p class="card-text">
@@ -276,7 +276,7 @@
                               </div>
                               <div class="d-flex flex-row-reverse bd-highlight">
                                 <div class="d-flex flex-column bd-highlight">
-                                  <a class="btn btn-primary" href=""
+                                  <a class="btn btn-primary requestBtn" href=""
                                     >Request Space</a
                                   >
                                   <p class="card-text">
@@ -364,7 +364,7 @@
                               </div>
                               <div class="d-flex flex-row-reverse bd-highlight">
                                 <div class="d-flex flex-column bd-highlight">
-                                  <a class="btn btn-primary" href=""
+                                  <a class="btn btn-primary requestBtn" href=""
                                     >Request Space</a
                                   >
                                   <p class="card-text">
@@ -581,7 +581,30 @@
       </div>
     </div>
   </div>
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script>
+
+$(".requestBtn").click(function () {
+  console.log("no!!");
+  var weight = $("#weight1Input").val();
+  var vol = $("#vol1Input").val();
+    if (weight <=0 || vol<= 0) {
+      $.notify("Please provide valid weight & volume", "error");
+    }
+      else {
+      $.notify("Request Sent Successfully!", "success");
+      }
+    });
+
 
 function CreateNotification(approved) {
   if (approved) {
