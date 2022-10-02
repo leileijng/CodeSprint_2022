@@ -338,12 +338,12 @@
                                                 
                                                                             <tr >
                                                                                 <td class="align-middle">17/9 - 21/9</td>
-                                                                                <td class="bg-light-gray align-middle justify-centre">
+                                                                                <td class="bg-light-gray align-middle m-0">
                                                                                     <!-- <label class="contain"> need to center
                                                                                         <input type="checkbox">
                                                                                         <span class="checkmark"></span>
                                                                                     </label> -->
-                                                                                    <label class="toggler-wrapper style-20">
+                                                                                    <label class="toggler-wrapper style-20 ms-auto me-auto">
                                                                                         <input type="checkbox" >
                                                                                         <div class="toggler-slider">
                                                                                           <div class="toggler-knob"></div>
@@ -394,7 +394,7 @@
                                                         <div class="modal-footer">
                                                             <a data-bs-toggle="modal"
                                                             data-bs-target="#forkliftModal"
-                                                            class="btn px-3 mt-auto ms-auto">Send Request</a>
+                                                            class="btn px-3 mt-auto ms-auto" onclick="CreateNotification(1)">Send Request</a>
                                                         </div>
                                                       </div>
                                                     </div>
@@ -903,6 +903,12 @@
 <script>
     var element = document.getElementById("resourceNavItem");
     element.classList.add("btn-outline-light");
+
+    function CreateNotification(approved) {
+        if(approved) {
+            $.notify('Booking Updated!', "success");
+        }
+    }
 </script>
         {% endblock %} 
 
