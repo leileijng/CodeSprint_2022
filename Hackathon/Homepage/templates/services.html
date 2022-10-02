@@ -243,5 +243,10 @@
     var element = document.getElementById("serviceNavItem");
     element.classList.add("btn-outline-light");
 </script>
+<script>
+    for (let element of document.getElementsByClassName("navhide")){
+      element.style.visibility="";
+    }
+  </script>
 <link href="{% static 'css/main.css' %}" rel="stylesheet">
 {% endblock %}

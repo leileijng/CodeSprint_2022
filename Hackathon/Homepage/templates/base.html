@@ -78,20 +78,25 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <a  class=" py-2 px-4 text-light m-3"> </a>
         </div>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div style="visibility: hidden;" class="collapse navbar-collapse navhide" id="navbarCollapse">
           <a href="/resources" class="btn py-2 px-4 text-light m-3" id="resourceNavItem"> Resources</a>
         </div>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div style="visibility: hidden;" class="collapse navbar-collapse navhide" id="navbarCollapse">
           <a href="/services" class="btn text-light py-2 px-4 m-3" id="serviceNavItem"> Services</a>
         </div>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div style="visibility: hidden;" class="collapse navbar-collapse navhide" id="navbarCollapse">
           <a href="/freightmarket" class="btn text-light py-2 px-4 m-3" id="freightNavItem"> Freight Market</a>
         </div>
 
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div style="visibility: hidden;" class="collapse navbar-collapse navhide" id="navbarCollapse">
           <a href="https://www.singaporepsa.com/" class="btn text-light py-2 px-4  m-3">Contact
             us</a>
         </div>
+
+        <div style="visibility: hidden;" class="collapse navbar-collapse navhide" id="navbarCollapse">
+            <a href="/new_user"><i class="fa-regular fa-user"  style="color: white"></i>
+        </div>
+
       </nav>
       {% block top %}
       <div class="container-xxl bg-primary hero-header mb-5" style="padding-top: 75px"></div>
@@ -229,6 +234,7 @@
   <script src="{% static 'js/company.js' %}"></script>
   <script src="{% static 'js/timeline.js' %}"></script>
   <script>
+
     function postJobOpportunityValidation() {
       var jobDesc = $("#id_JobDescription").val();
       var valid = true;
