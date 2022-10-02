@@ -21,8 +21,7 @@
           </div>
           <div class="row">
             <!--/col-3-->
-            <div class="col-sm-9">
-              <strong>Information</strong><br />
+            <div class="col-sm-9" style="margin-left: 20px;">
               <div class="table-responsive">
                 <table class="table table-user-information table-bordered">
                   <tbody>
@@ -32,20 +31,33 @@
                           <span
                             class="glyphicon glyphicon-asterisk text-primary"
                           ></span>
-                          Identification
+                          Role
                         </strong>
                       </td>
-                      <td class="text-primary">123456789</td>
+                      <td class="text-primary">KD Tenant</td>
+                    </tr>
+
+
+                    <tr>
+                      <td>
+                        <strong>
+                          <span
+                            class="glyphicon glyphicon-asterisk text-primary"
+                          ></span>
+                          Tenant Code
+                        </strong>
+                      </td>
+                      <td class="text-primary">HSCS_09102022</td>
                     </tr>
                     <tr>    
                         <td>
                             <strong>
                                 <span class="glyphicon glyphicon-user  text-primary"></span>    
-                                Name                                                
+                                Contact Person                                                
                             </strong>
                         </td>
                         <td class="text-primary">
-                            Bootdey     
+                            Mr Lee Soon Heng     
                         </td>
                     </tr>
                     <tr>    
@@ -65,10 +77,10 @@
                           <span
                             class="glyphicon glyphicon-eye-open text-primary"
                           ></span>
-                          Role
+                          Contact Number
                         </strong>
                       </td>
-                      <td class="text-primary">Admin</td>
+                      <td class="text-primary">+65 12345432</td>
                     </tr>
                     <tr>
                       <td>
@@ -79,7 +91,7 @@
                           Email
                         </strong>
                       </td>
-                      <td class="text-primary">noreply@email.com</td>
+                      <td class="text-primary">hscs_0910.2022@kd.psa.com</td>
                     </tr>
                     <tr>
                         <td>
@@ -87,10 +99,10 @@
                             <span
                               class="glyphicon glyphicon-envelope text-primary"
                             ></span>
-                            Joined
+                            Joined Date
                           </strong>
                         </td>
-                        <td class="text-primary">2.13.202</td>
+                        <td class="text-primary">09/10/2022</td>
                       </tr>
                   </tbody>
                 </table>
@@ -239,5 +251,11 @@
       </div>
     </div>
   </div>
+
+  <script>
+    for (let element of document.getElementsByClassName("navhide")){
+      element.style.visibility="";
+    }
+  </script>
   {% endblock %}
 </div>

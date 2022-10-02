@@ -46,7 +46,7 @@
                 <div class="col-md-10" style="padding-left: 50px; padding-top: 10px; width: 87.49999965%;">
                 <div class="row g-5">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="width: 40%; padding-left: 5%;">
-                        <p class="d-inline-block border rounded-pill py-1 px-4">Stuffing</p>
+                        <p class="d-inline-block border rounded-pill py-1 px-4">Permit Document</p>
                         <p class="mb-4">Make use of decentralised technology to get trustworthy prove and detect scams!</p>
                         <img class="img-fluid mt-0 " src="{% static 'img/portwallpaper.jpeg' %}">
                     </div>
@@ -65,11 +65,11 @@
                                 <div class="col-lg-12">
                       
                                   <div class="accordion accordion-flush" id="faqlist">
-                      
+
                                     <div class="accordion-item">
                                       <h3 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                                          Combined PSA Temporary Pass/Temporary Vehicle Permit Application
+                                        <i class="fa-regular fa-file" style="padding-right: 20px;  color:#001973;"></i> Combined PSA Temporary Pass/Temporary Vehicle Permit Application
                                         </button>
                                       </h3>
                                       <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
@@ -82,7 +82,8 @@
                                     <div class="accordion-item">
                                       <h3 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                                          Temporary Pass Sponsor Letter Template 
+                                         <i class="fa-regular fa-file" style="padding-right: 20px;  color:#001973;"></i> 
+                                        Temporary Pass Sponsor Letter Template 
                                         </button>
                                       </h3>
                                       <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
@@ -95,7 +96,8 @@
                                     <div class="accordion-item">
                                       <h3 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                                          PSA Pass Application & Renewal Form
+                                         <i class="fa-regular fa-file" style="padding-right: 20px;  color:#001973;"></i> 
+                                         PSA Pass Application & Renewal Form
                                         </button>
                                       </h3>
                                       <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
@@ -108,7 +110,8 @@
                                     <div class="accordion-item">
                                       <h3 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
-                                          PSA Car Entry Permit (“PSA CEP”) (Type D / E / F) / PSA Commercial Vehicle Entry Permit (“PSA CVEP”)
+                                         <i class="fa-regular fa-file" style="padding-right: 20px;  color:#001973;"></i> 
+                                         PSA Car Entry Permit (“PSA CEP”) (Type D / E / F) / PSA Commercial Vehicle Entry Permit (“PSA CVEP”)
                                         </button>
                                       </h3>
                                       <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
@@ -182,7 +185,7 @@
 }
 
 .faq .accordion-button {
-  padding: 18px 30px 20px 60px;
+  padding: 18px 30px 20px 20px;
   font-weight: 400;
   border: 0;
   font-size: 16px;
@@ -217,7 +220,7 @@
 }
 
 .faq .accordion-body {
-  padding: 0 30px 25px 60px;
+  padding: 0 30px 25px 30px;
   border: 0;
   background: rgba(14, 29, 52, 0.03);
   border-radius: 5px;
@@ -306,5 +309,10 @@
 <script>
   var element = document.getElementById("serviceNavItem");
   element.classList.add("btn-outline-light");
+</script>
+<script>
+  for (let element of document.getElementsByClassName("navhide")){
+    element.style.visibility="";
+  }
 </script>
 {% endblock %}
