@@ -142,9 +142,9 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-floating input-group">
-                        <input class="form-control" type="file" id="permit" multiple />
+                        <input id="permitinput" class="form-control" type="file" id="permit" multiple />
                         <label for="permit" class="form-label">Upload Form</label>
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</button>
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="handleSubmit()">Submit</button>
                     </div>
                   </div>
 
@@ -309,6 +309,14 @@
 <script>
   var element = document.getElementById("serviceNavItem");
   element.classList.add("btn-outline-light");
+
+  function handleSubmit() {
+    if( document.getElementById("permitinput").files.length == 0 ){
+      $.notify('Please upload a completed form', "danger");   
+    } else {
+      $.notify('Form uploaded! Please wait while your request is processed.', "success"); 
+    }
+}
 </script>
 <script>
   for (let element of document.getElementsByClassName("navhide")){
