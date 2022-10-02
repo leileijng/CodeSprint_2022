@@ -159,7 +159,7 @@
 
                                                                 <div class="col-12">
                                                                     <button class="btn btn-primary w-100 py-3"
-                                                                        id="postBtn" type="submit">Post</button>
+                                                                        id="postEquipmentBtn" type="submit">Post</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2594,6 +2594,11 @@
     $("#btnModalClose").click(function () {
         $('#loanItemModal1').modal('hide');
     });
+
+    $("#postEquipmentBtn").click(function () {
+        $.notify('Post Submitted Successfully!', "success");
+    });
+    
 
 
 </script>
