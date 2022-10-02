@@ -134,8 +134,34 @@
                                 <div ng-show="isSet(2)">
                                     <h1>Find Resources</h1>
                                     <p>Look for the resources you need today!</p>
-                                    <br>
 
+                                    <div class="row mb-4 bg-primary p-2 rounded align-items-center wow zoomIn" style = "justify-content: center ">
+                                        <div class="col-sm-1">
+                                          <i class="mt-1 me-3 fa fa-search" style="font-size: 2em; color: white;"></i>
+                                        </div>
+                                        <div class="col-sm-2">
+                                          <div class="input-group input-group-sm">
+                                            <input type="text" id="myDateFilter" class="form-control" onkeyup="DateFilter()" placeholder="Item Name">
+                                          </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                          <div class="input-group input-group-sm">
+                                            <input type="text" id="myTimeFilter" class="form-control" onkeyup="TimeFilter()" placeholder="Date Available">
+                                          </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                          <div class="input-group input-group-sm">
+                                            <input type="text" id="myDestinationFilter" class="form-control" onkeyup="DestinationFilter()" placeholder="Company">
+                                          </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                          <div class="input-group input-group-sm">
+                                            <input min="0" type="number" id="MinVolFilter" class="form-control" onkeyup="VolumeFilter()" placeholder="Min Price">
+                                            <input type="number" id="MaxVolFilter" class="form-control" onkeyup="VolumeFilter()" placeholder="Max Price">
+                                          </div>
+                                        </div>
+                                        
+                                    </div>
                                     <div class="row g-4">
                                         <!-- This is the display box -->
                                         <div class="col-lg-4 col-md-6 wow zoomIn">
@@ -1180,9 +1206,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                
-                                
+                                </div>                            
                                 <div ng-show="isSet(3)">
                                     <h1>Loans</h1>
                                     <p>Manage your loans here!</p>
@@ -1524,9 +1548,9 @@
                  </div>
              </div>
              <div class="modal-footer">
-                 <a data-bs-toggle="modal"
-                 data-bs-target="#forkliftModal"
-                 class="btn px-3 mt-auto ms-auto" onclick="CreateNotification(1)">Send Request</a>
+                <a data-bs-toggle="modal"
+                data-bs-target="#forkliftModal"
+                class="btn px-3 mt-auto ms-auto" onclick="CreateNotification(1)">Send Request</a>
              </div>
            </div>
          </div>
