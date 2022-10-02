@@ -38,9 +38,8 @@ def login(request):
             print(form.cleaned_data['Choice'])
             if(form.cleaned_data['Choice'] == '1'):
                 for Data in Company.objects.all():
-                    return HttpResponseRedirect('home')
-                msg = 'Wrong Email/Password'
-                
+                    msg = 'Wrong Email/Password'
+                return HttpResponseRedirect('home') 
             else:
                 for Data in Individual.objects.all():
                     return HttpResponseRedirect('home')
