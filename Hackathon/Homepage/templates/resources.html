@@ -3,6 +3,30 @@
 {% block title %}<title>User Profile</title>{% endblock %}
         {% block content %}
         <div class="container">
+
+            <script>
+                const handleFormTypeChange = () => {
+                    equipmentForm = document.getElementById("equipmentFormContent");
+                    transportForm = document.getElementById("transportFormContent");
+                    resourceSelection = document.getElementById("resourceSelection").value
+                    console.log("form type changed", resourceSelection);
+
+                    if (resourceSelection == 1) {
+                        equipmentForm.style.display = "none";
+                        transportForm.style.display = "block";
+                    } else  if (resourceSelection == 2) {
+                        equipmentForm.style.display = "block";
+                        transportForm.style.display = "none";
+                    } else {
+                        equipmentForm.style.display = "none";
+                        transportForm.style.display = "none";
+                    }
+
+                }
+            </script>
+
+
+
             <div class="company">
                 <div ng-app="tabApp">
                     <div class="row" ng-controller="TabController">
@@ -39,93 +63,159 @@
                                             <div class="bg-light rounded h-100 d-flex align-items-center p-5">
                                                 <form>
                                                     <div class="row g-3">
+                                                        <!-- resource type selection -->
                                                         <div class="col-12">
-                                                            <div class="form-floating">
-                                                                <select class="form-select" aria-label="Default select example" placeholder="Type of Resource"> 
+                                                            <div class="col-12 form-floating">
+                                                                <select id="resourceSelection" onchange="handleFormTypeChange()" class="form-select" aria-label="Default select example" placeholder="Type of Resource"> 
                                                                     <option value="1" selected></option>
                                                                     <option value="1">Transport</option>
-                                                                    <option value="2">Forklift</option>
-                                                                    <option value="3">Trolley</option>
+                                                                    <option value="2">Equipment</option>
                                                                 </select>
                                                                 <label for="registereddate">Type of Resource</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-12">
-                                                            <div class="form-floating">
-                                                                <input type="text"  class="form-control" id="" placeholder="">
-                                                                <label for="companyname">Description</label>
+                                                        <!-- dynamic form container -->
+                                                        <div id="actualFormContentContainer">
+                                                            <!-- equipment form-->
+                                                            <div style="display: none;" id="equipmentFormContent">
+                                                                <div class="row g-3">
+                                                                <h3>Equipment form</h3>
+                                                                <div class="col-md-12">
+                                                                <div class="form-floating">
+                                                                    <input type="text"  class="form-control" id="" placeholder="">
+                                                                    <label for="companyname">Description</label>
+                                                                </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-floating">
+                                                                        <input type="text"  class="form-control" id="" placeholder="">
+                                                                        <label for="companyname">Model</label>
+                                                                    </div>
+                                                                </div>
+    
+                                                                <div class="col-md-4">
+                                                                    <div class="form-floating">
+                                                                        <input type="number"  class="form-control" id="" placeholder="">
+                                                                        <label for="companyname">Load (Pounds)</label>
+                                                                    </div>
+                                                                </div>
+    
+                        
+                                                                <div class="col-md-12">
+                                                                    <div class="form-floating">
+                                                                        <input type="number"  class="form-control" id="" placeholder="">
+                                                                        <label for="companyname">Price</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div clas="col-md-12">
+                                                                <div class="d-flex bd-highlight">
+                                                                    <div class="input-group mb-3 ">
+                                                                        <span class="input-group-text"
+                                                                        >$</span
+                                                                        >
+                                                                        <input
+                                                                        style="width: 70%;"
+                                                                        type="text"
+                                                                        class="form-control"
+                                                                        aria-label="Amount (to the nearest kilogram)"
+                                                                        />
+                                                                        <select class="form-select" aria-label="Default select example">
+                                                                            <option selected>per..</option>
+                                                                            <option value="1">/day</option>
+                                                                            <option value="2">/week</option>
+                                                                            <option value="3">/month</option>
+                                                                        </select>                                                         </div>
+                                                                </div>
+                                                            
+                            
+                                                                <div class="col-md-12 mb-3">
+                                                                    <div class="form-floating">
+                                                                        <input class="form-control" type="file" id="Businessdocs" multiple />
+                                                                        <label for="Businessdocs" class="form-label">Upload Resouces Photo</label>
+                                                                    </div>
+                                                                </div>
+                                                                    
+                                                                <div class="col-12">
+                                                                    <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Post</button>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="col-md-12">
-                                                            <div class="form-floating">
-                                                                <input type="text"  class="form-control" id="" placeholder="">
-                                                                <label for="companyname">Model</label>
                                                             </div>
-                                                        </div>
+                                                            </div>
+                                                            <!-- transport form-->
+                                                            <div style="display: none;" id="transportFormContent">
+                                                                <h3>Transport form</h3>
+                                                                <div class="row g-3">
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-floating">
+                                                                            <input type="text"  class="form-control" id="" placeholder="">
+                                                                            <label for="companyname">Description</label>
+                                                                        </div>
+                                                                    </div>
+            
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number"  class="form-control" id="" placeholder="">
+                                                                            <label for="companyname">Size</label>
+                                                                        </div>
+                                                                    </div>
+            
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number"  class="form-control" id="" placeholder="">
+                                                                            <label for="companyname">Quantity Available</label>
+                                                                        </div>
+                                                                    </div>  
+                                
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-floating">
+                                                                            <input type="number"  class="form-control" id="" placeholder="">
+                                                                            <label for="companyname">Price</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div clas="col-md-12">
+                                                                    <div class="d-flex bd-highlight">
+                                                                        <div class="input-group mb-3 ">
+                                                                            <span class="input-group-text"
+                                                                            >$</span
+                                                                            >
+                                                                            <input
+                                                                            style="width: 70%;"
+                                                                            type="text"
+                                                                            class="form-control"
+                                                                            aria-label="Amount (to the nearest kilogram)"
+                                                                            />
+                                                                            <select class="form-select" aria-label="Default select example">
+                                                                                <option selected>per..</option>
+                                                                                <option value="1">/day</option>
+                                                                                <option value="2">/week</option>
+                                                                                <option value="3">/month</option>
+                                                                            </select>                                                         </div>
+                                                                    </div>
 
-                                                        <div class="col-md-4">
-                                                            <div class="form-floating">
-                                                                <input type="number"  class="form-control" id="" placeholder="">
-                                                                <label for="companyname">Load (Pounds)</label>
+                                                                    <div class="col-md-12 mb-3">
+                                                                        <div class="form-floating">
+                                                                            <input class="form-control" type="file" id="Businessdocs" multiple />
+                                                                            <label for="Businessdocs" class="form-label">Upload Resouces Photo</label>
+                                                                        </div>
+                                                                    </div>
+                                                                        
+                                                                    <div class="col-12">
+                                                                        <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Post</button>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-
-                                                        <div class="col-md-4">
-                                                            <div class="form-floating">
-                                                                <input type="number"  class="form-control" id="" placeholder="">
-                                                                <label for="companyname">Size</label>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-md-4">
-                                                            <div class="form-floating">
-                                                                <input type="number"  class="form-control" id="" placeholder="">
-                                                                <label for="companyname">Quantity Available</label>
-                                                            </div>
-                                                        </div>  
-                    
-                                                        <div class="col-md-12">
-                                                            <div class="form-floating">
-                                                                <input type="number"  class="form-control" id="" placeholder="">
-                                                                <label for="companyname">Price</label>
-                                                            </div>
-                                                        </div>
-                                                        <div clas="col-md-12">
-                                                        <div class="d-flex bd-highlight">
-                                                            <div class="input-group mb-3 ">
-                                                                <span class="input-group-text"
-                                                                >$</span
-                                                                >
-                                                                <input
-                                                                style="width: 70%;"
-                                                                type="text"
-                                                                class="form-control"
-                                                                aria-label="Amount (to the nearest kilogram)"
-                                                                />
-                                                                <select class="form-select" aria-label="Default select example">
-                                                                    <option selected>per..</option>
-                                                                    <option value="1">/day</option>
-                                                                    <option value="2">/week</option>
-                                                                    <option value="3">/month</option>
-                                                                </select>                                                         </div>
-                                                        </div>
-                                                    
-                    
-                                                        <div class="col-md-12 mb-3">
-                                                            <div class="form-floating">
-                                                                <input class="form-control" type="file" id="Businessdocs" multiple />
-                                                                <label for="Businessdocs" class="form-label">Upload Resouces Photo</label>
-                                                            </div>
-                                                        </div>
-                                                              
-                                                        <div class="col-12">
-                                                            <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Post</button>
-                                                        </div>
-                                                        
-                                                        
                                                     </div>
-                                                    </div>
-                    
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row g-5">
+                                        <div class="col-lg-12 wow fadeInUp mx-auto flex-row" data-wow-delay="0.5s" style="width: 60%;">
+                                            <div class="bg-light rounded h-100 d-flex align-items-center p-5">
+                                                <form>
+                                              
                                                 </form>
                                             </div>
                                         </div>
