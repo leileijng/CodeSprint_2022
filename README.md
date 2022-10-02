@@ -1,7 +1,7 @@
 # CodeSprint_2022
 
 # PSA Central
-Wesbite Link: https://psa-central.herokuapp.com/
+Wesbite Link: https://psa-central.herokuapp.com/ (buggy)
 
 ## Running PSA Central
 To run PSA Central, ensure that you have Django first (Downloading Instructions: https://realpython.com/django-setup/)
