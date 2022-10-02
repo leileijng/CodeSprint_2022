@@ -694,4 +694,9 @@ function WeightFilter() {
   var element = document.getElementById("freightNavItem");
   element.classList.add("btn-outline-light");
 </script>
+<script>
+  for (let element of document.getElementsByClassName("navhide")){
+    element.style.visibility="";
+  }
+</script>
 {% endblock %}
