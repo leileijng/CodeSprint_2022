@@ -6,6 +6,7 @@
 
             <script>
                 const handleFormTypeChange = () => {
+                    sideimage = document.getElementById("sideimage");
                     equipmentForm = document.getElementById("equipmentFormContent");
                     transportForm = document.getElementById("transportFormContent");
                     resourceSelection = document.getElementById("resourceSelection").value
@@ -14,12 +15,15 @@
                     if (resourceSelection == 1) {
                         equipmentForm.style.display = "none";
                         transportForm.style.display = "block";
+                        sideimage.src = "/static/img/KalmarForkliftTOCEurope_1280_800_84_s_c1.jpeg";
                     } else  if (resourceSelection == 2) {
                         equipmentForm.style.display = "block";
                         transportForm.style.display = "none";
+                        sideimage.src = "/static/img/port_equip.jpeg";
                     } else {
                         equipmentForm.style.display = "none";
                         transportForm.style.display = "none";
+                        sideimage.src = "";
                     }
 
                 }
@@ -59,27 +63,37 @@
                                     <br>
 
                                     <div class="row g-5">
-                                        <div class="col-lg-12 wow fadeInUp mx-auto flex-row" data-wow-delay="0.5s" style="width: 60%;">
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="width: 40%; padding-left: 5%;">
+                                            <p class="mb-4">Resource</p>
+                                            <img id="sideimage" class="img-fluid mt-0 " src="{% static 'img/KalmarForkliftTOCEurope_1280_800_84_s_c1.jpeg' %}">
+                                        </div>
+                                        <div class="col-lg-12 wow fadeInUp flex-row" data-wow-delay="0.5s" style="width: 60%;">
                                             <div class="bg-light rounded h-100 d-flex align-items-center p-5">
                                                 <form>
                                                     <div class="row g-3">
                                                         <!-- resource type selection -->
                                                         <div class="col-12">
                                                             <div class="col-12 form-floating">
-                                                                <select id="resourceSelection" onchange="handleFormTypeChange()" class="form-select" aria-label="Default select example" placeholder="Type of Resource"> 
-                                                                    <option value="1" selected></option>
+                                                                <select id="resourceSelection" onchange="handleFormTypeChange()" class="form-select" aria-label="Default select example" placeholder="Type of Resource">
                                                                     <option value="1">Transport</option>
                                                                     <option value="2">Equipment</option>
                                                                 </select>
                                                                 <label for="registereddate">Type of Resource</label>
                                                             </div>
                                                         </div>
+                                                        <hr>
                                                         <!-- dynamic form container -->
                                                         <div id="actualFormContentContainer">
                                                             <!-- equipment form-->
                                                             <div style="display: none;" id="equipmentFormContent">
+                                                                <!-- <img
+                                                                src="{% static 'img/KalmarForkliftTOCEurope_1280_800_84_s_c1.jpeg'%}"}"
+                                                                class="img-fluid rounded-start mt-5"
+                                                                style="object-fit: fill; width: 200px;"
+                                                                alt="..."
+                                                              /> -->
                                                                 <div class="row g-3">
-                                                                <h3>Equipment form</h3>
+                                                                <h3 class="text-muted">Equipment Form</h3>
                                                                 <div class="col-md-12">
                                                                 <div class="form-floating">
                                                                     <input type="text"  class="form-control" id="" placeholder="">
@@ -142,8 +156,14 @@
                                                             </div>
                                                             </div>
                                                             <!-- transport form-->
-                                                            <div style="display: none;" id="transportFormContent">
-                                                                <h3>Transport form</h3>
+                                                            <div id="transportFormContent">
+                                                                <!-- <img
+                                                                src="{% static 'img/KalmarForkliftTOCEurope_1280_800_84_s_c1.jpeg'%}"}"
+                                                                class="img-fluid rounded-start mt-5"
+                                                                style="object-fit: fill; width: 200px;"
+                                                                alt="..."
+                                                              /> -->
+                                                                <h3 class="text-muted">Transport Form</h3>
                                                                 <div class="row g-3">
                                                                     <div class="col-md-12">
                                                                         <div class="form-floating">
@@ -211,7 +231,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row g-5">
+                                    <!-- <div class="row g-5">
                                         <div class="col-lg-12 wow fadeInUp mx-auto flex-row" data-wow-delay="0.5s" style="width: 60%;">
                                             <div class="bg-light rounded h-100 d-flex align-items-center p-5">
                                                 <form>
@@ -219,7 +239,7 @@
                                                 </form>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div ng-show="isSet(2)">
                                     <h1>Find Resources</h1>
