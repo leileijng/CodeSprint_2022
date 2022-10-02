@@ -35,85 +35,83 @@
                                     <br>
 
                                     <div class="row g-5">
-                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s" style="width: 60%;">
-                                            <div class="bg-light rounded h-100 d-flex align-items-center p-5 mt-5">
+                                        <div class="col-lg-12 wow fadeInUp mx-auto flex-row" data-wow-delay="0.5s" style="width: 60%;">
+                                            <div class="bg-light rounded h-100 d-flex align-items-center p-5">
                                                 <form>
                                                     <div class="row g-3">
-                                                        <div class="col-md-6">
+                                                        <div class="col-12">
                                                             <div class="form-floating">
-                                                                <input type="number"  class="form-control" id="" placeholder="">
-                                                                <label for="Quantity">Quantity of Container</label>
+                                                                <select class="form-select" aria-label="Default select example" placeholder="Type of Resource"> 
+                                                                    <option value="1" selected></option>
+                                                                    <option value="1">Transport</option>
+                                                                    <option value="2">Forklift</option>
+                                                                    <option value="3">Trolley</option>
+                                                                </select>
+                                                                <label for="registereddate">Type of Resource</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-12">
                                                             <div class="form-floating">
-                                                                <input type="number"  class="form-control" id="" placeholder="">
-                                                                <label for="companyname">Cargo Weight (kg)</label>
+                                                                <input type="text"  class="form-control" id="" placeholder="">
+                                                                <label for="companyname">Description</label>
                                                             </div>
                                                         </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input type="text"  class="form-control" id="" placeholder="">
+                                                                <label for="companyname">Model</label>
+                                                            </div>
+                                                        </div>
+
                                                         <div class="col-md-4">
                                                             <div class="form-floating">
                                                                 <input type="number"  class="form-control" id="" placeholder="">
-                                                                <label for="companyname">Dimensions (Width)</label>
+                                                                <label for="companyname">Load (Pounds)</label>
                                                             </div>
                                                         </div>
-                    
+
                                                         <div class="col-md-4">
                                                             <div class="form-floating">
                                                                 <input type="number"  class="form-control" id="" placeholder="">
-                                                                <label for="companyname">Dimensions (Height)</label>
+                                                                <label for="companyname">Size</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-4">
+                                                            <div class="form-floating">
+                                                                <input type="number"  class="form-control" id="" placeholder="">
+                                                                <label for="companyname">Quantity Available</label>
                                                             </div>
                                                         </div>  
                     
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-12">
                                                             <div class="form-floating">
                                                                 <input type="number"  class="form-control" id="" placeholder="">
-                                                                <label for="companyname">Dimensions (Length)</label>
+                                                                <label for="companyname">Price</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-floating">
-                                                                <input type="date" class="form-control"name="birthday">  
-                                                                <label for="registereddate">Start Date</label>
+                                                        <div clas="col-md-12">
+                                                        <div class="form-floating">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text">$</span>
+                                                              </div>
+                                                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                                            <label for="companyname">Dimensions (Length)</label>
+                                                            <div class="input-group-append">
+                                                              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                              <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                              </div>
                                                             </div>
+                                                          </div>
                                                         </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-floating">
-                                                                <input type="date" class="form-control"name="birthday">  
-                                                                <label for="registereddate">End Date</label>
-                                                            </div>
-                                                        </div>
-                    
                     
                                                         <div class="col-md-12">
                                                             <div class="form-floating">
                                                                 <input class="form-control" type="file" id="Businessdocs" multiple />
-                                                                <label for="Businessdocs" class="form-label">Upload Cargo Photo</label>
-                                                            </div>
-                                                        </div>
-                    
-                                                        <div class="col-12">
-                                                            <div class="form-floating">
-                                                                <select class="form-select" aria-label="Default select example" placeholder="Transfer From"> 
-                                                                    <option value="1" selected></option>
-                                                                    <option value="1">Warehouse 1</option>
-                                                                    <option value="2">Warehouse 2</option>
-                                                                    <option value="3">Warehouse 3</option>
-                                                                </select>
-                    
-                                                                <label for="registereddate">Transfer From</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12">
-                                                            <div class="form-floating">
-                                                                <select class="form-select" aria-label="Default select example" placeholder="Transfer From">
-                                                                    <option value="1" selected></option>
-                                                                    <option value="1">Warehouse 1</option>
-                                                                    <option value="2">Warehouse 2</option>
-                                                                    <option value="3">Warehouse 3</option>
-                                                                </select>
-                    
-                                                                <label for="registereddate">Transfer To</label>
+                                                                <label for="Businessdocs" class="form-label">Upload Resouces Photo</label>
                                                             </div>
                                                         </div>
                                                               
@@ -127,74 +125,6 @@
                                                 </form>
                                             </div>
                                         </div>
-                                    </div>
-
-
-
-
-
-                                    <div class="wow fadeInUp" data-wow-delay="0.3s">      
-                                        <section class="resume-section" id="experience">
-                                            <div class="resume-section-content">
-                                                <h2 class="mb-3 resume-title">Work Experience</h2>
-                                                <div class="d-flex flex-column flex-md-row justify-content-between">
-                                                    <div class="flex-grow-1">
-                                                        <h3 class="mb-0">Senior Web Developer</h3>
-                                                        <div class="d-flex mt-2">
-                                                            <img class="mb-2 company-logo" style="width: 33px; height: 33px; margin-right: 10px;" src="https://whiteduck.de/wp-content/uploads/Microsoft-Logo.png" alt="">
-                                                            <p class="mt-1" style="color:darkolivegreen;"> Microsoft</p>
-                                                            <img class="mb-1 verified" style="margin-left: 1rem;" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
-                                                        </div>
-                                                        <p class="margin-bottom: 0;">Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
-                                                    </div>
-                                                    <div class="flex-shrink-0"><span class="text-primary">March 2013 - Present</span></div>
-                                                </div>
-                                                <div class="mb-3 d-flex">
-                                                    <span class="text-primary me-1" style="font-weight:bold;">Skills : </span>
-                                                    <p>Python, C++, Vue, React, Django, SQL</p>
-                                                </div>
-                                                <div class="d-flex flex-column flex-md-row justify-content-between">
-                                                    <div class="flex-grow-1">
-                                                        <h3 class="mb-0">Web Developer</h3>
-                                                        <div class="d-flex mt-2">
-                                                            <img class="mb-2 company-logo" style="width: 33px; height: 33px; margin-right: 10px;" src="https://media-exp1.licdn.com/dms/image/C560BAQHdAaarsO-eyA/company-logo_100_100/0/1595530301220?e=1662595200&v=beta&t=7QwpJKXzZthPTXzCrYB9mH7K_QG21d9m05GO5BJqZck" alt="">
-                                                            <p class="mt-1" style="color:darkolivegreen;"> Apple</p>
-                                                            <img class="mb-1 pending" style="margin-left: 1rem;" src="{% static 'img/time.png' %}" alt="">
-                                                        </div>
-                                                        <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-                                                    </div>
-                                                    <div class="flex-shrink-0"><span class="text-primary">December 2011 - March 2013</span></div>
-                                                </div>
-                                                <div class="mb-5 d-flex">
-                                                    <span class="text-primary me-1" style="font-weight:bold;">Skills : </span>
-                                                    <p>HTML, CSS, Javascript, github, Latex</p>
-                                                </div>
-                                            </div>
-                                        </section>
-
-                                        <hr/>
-                                        <section class="resume-section" id="experience">
-                                            <div class="resume-section-content">
-                                                <h2 class="mb-3 resume-title">Education</h2>
-                                                <div class="d-flex flex-column flex-md-row justify-content-between">
-                                                    
-                                                    <div class="flex-grow-1">
-                                                        <h3 class="mb-0">Nanyang Technological University of Singapore</h3>
-                                                        <div class="d-flex mt-2">
-                                                            <p class="mt-1" style="color:darkolivegreen;"> Bachelor of Science</p>
-                                                            <img class="mb-1 verified" style="margin-left: 1rem;" src="https://s1.ax1x.com/2022/06/03/XUj8XR.png" alt="">
-                                                        </div>
-                                                        <div>Computer Science - Web Development Track</div>
-                                                        <p>GPA: 4.23</p>
-                                                    </div>
-                                                    <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div>
-                                                </div>
-                                                <div class="mb-5 d-flex">
-                                                    <span class="text-primary me-1" style="font-weight:bold;">Courses : </span>
-                                                    <p>Computer Architecture, Network, Operating System, Database, Cyber Security</p>
-                                                </div>
-                                            </div>
-                                        </section>
                                     </div>
                                 </div>
                                 <div ng-show="isSet(2)">
