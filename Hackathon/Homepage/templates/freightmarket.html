@@ -447,7 +447,7 @@
                               </div>
                                         
                                   <div class="col-12">
-                                      <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Submit post</button>
+                                      <button class="btn btn-primary w-100 py-3" id="postSalseBtn" type="submit">Submit post</button>
                                   </div>
                                   
                                   
@@ -721,5 +721,10 @@ function WeightFilter() {
   for (let element of document.getElementsByClassName("navhide")){
     element.style.visibility="";
   }
+
+  $("#postSalseBtn").click(function () {
+        $.notify('Post Submitted Successfully!', "success");
+    });
+  
 </script>
 {% endblock %}
