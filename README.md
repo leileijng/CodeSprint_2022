@@ -1,15 +1,21 @@
 # CodeSprint_2022
 
-## PSA Central
+# PSA Central
 
 ## Running PSA Central
-To run PSA Central, ensure that you have Django first
-Please download the files and then run 
+To run PSA Central, ensure that you have Django first (Downloading Instructions: https://realpython.com/django-setup/)
+
+Please download the files. Once downloaded, open a new terminal in the downloaded folder.
+Ensure that you are in the 'Hackathon' folder before running the following command:
+
 python manage.py runserver
 
 The website should be hosted on http://127.0.0.1:8000/
 
+YouTube Link: https://youtu.be/wBCLIjk8Htc
+
 ## What PSA Central is about
+
 A community platform to enhance operation synergies and generate revenue from Container Freight Stations
 <img width="449" alt="image" src="https://user-images.githubusercontent.com/77710925/193464287-d429ccdf-1fc3-48d1-b9c3-7da97fec16a3.png">
 
