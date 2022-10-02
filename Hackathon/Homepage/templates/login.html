@@ -22,6 +22,7 @@
 										</div>
 										{% endif %}
 										<form method="POST">
+											{% csrf_token %}
 											<div class="row g-3">
                                                 <div class="col-md-12">
 													<div class="form-floating">
@@ -46,7 +47,8 @@
 													<label class="form-check-label" for="RememberMe"> Remember me </label>
 												</div>
 												<div class="col-12">
-													<button class="btn btn-primary w-100 py-3" type="submit" value='OK'>Login</button>
+													<a href="/home"><button class="btn btn-primary w-100 py-3">Login</button></a>
+														<!-- <button class="btn btn-primary w-100 py-3" type="submit" value='OK'>Login</button> -->
 												</div>
 											</div>
 										</form>
