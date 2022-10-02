@@ -462,54 +462,113 @@
                 <div class="wow fadeInUp" data-wow-delay="0.3s">
                   <h1>Status page</h1>
                   <table class="table table-bordered">
-                    <thead class="table-primary">
+                    <thead class="bg-primary" style="color: white;">
                       <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Unqiue Id</th>
+                        <th scope="col">Unique ID</th>
                         <th scope="col">Type</th>
                         <th scope="col">Status</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr data-bs-toggle="collapse" href="#row1collapse" role="button" aria-expanded="false" aria-controls="row1collapse">
-                        <td scope="row"><i class="mt-1 me-3 fa fa-eye"></i>1</td>
+                      <tr>
+                        <td scope="row" data-bs-toggle="collapse" href="#row1collapse" role="button" aria-expanded="false" aria-controls="row1collapse"><i class="mt-1 me-3 fa fa-eye"></i>1</td>
                         <td>993231</td>
                         <td>Buying</td>
                         <td class="table-danger">Rejected</td>
                       </tr>
                       <tr scope="row" class="collapse p-0" id="row1collapse">
-                        <td colspan="12">
-                          <table class="table table-striped bg-light">
-                            <thead class="table-info">
-                              <tr class='info'>
-                                <th scope="col">Company name</th>
-                                <th scope="col">Location</th>
-                                <th scope="col">Weight</th>
-                                <th scope="col">Volume</th>
+                        <td colspan="12" style="padding: 0 !important;">
+                          <table class="table table-striped bg-light m-0">
+                            <thead>
+                              <tr class='light'>
+                                <th scope="col">Provider</th>
+                                <th scope="col">Freight ID</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Requested Weight</th>
+                                <th scope="col">Requested Volume</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <td>hi terhi</td>
-                                <td>Bewruy</td>
-                                <td>ksjfdl</td>
-                                <td>ksjfdl</td>
+                                <td>KMS Lines Pte Ltd</td>
+                                <td>cx3k8d</td>
+                                <td>Port of Shanghai</td>
+                                <td>2500 kg</td>
+                                <td>3 m<sup>3</sup></td>
                               </tr>
                             </tbody>
                           </table>
                         </td>
                       </tr>
                       <tr>
-                        <td scope="row"><i class="mt-1 me-3 fa fa-eye"></i>2</td>
+                        <td scope="row" data-bs-toggle="collapse" href="#row2collapse" role="button" aria-expanded="false" aria-controls="row2collapse"><i class="mt-1 me-3 fa fa-eye"></i>2</td>
                         <td>849132</td>
                         <td>Buying</td>
-                        <td class="table-success">Succeeded</td>
+                        <td class="table-success">Approved</td>
+                      </tr>
+                      <tr scope="row" class="collapse p-0" id="row2collapse">
+                        <td colspan="12" style="padding: 0 !important;">
+                          <table class="table table-striped bg-light m-0">
+                            <thead>
+                              <tr class='light'>
+                                <th scope="col">Provider</th>
+                                <th scope="col">Freight ID</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Requested Weight</th>
+                                <th scope="col">Requested Volume</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>KMS Lines Pte Ltd</td>
+                                <td>cx3k8d</td>
+                                <td>Port of Shanghai</td>
+                                <td>2500 kg</td>
+                                <td>3 m<sup>3</sup></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
                       </tr>
                       <tr>
-                        <td scope="row"><i class="mt-1 me-3 fa fa-eye"></i>3</td>
+                        <td scope="row" data-bs-toggle="collapse" href="#row3collapse" role="button" aria-expanded="false" aria-controls="row3collapse"><i class="mt-1 me-3 fa fa-eye"></i>3</td>
                         <td>490481</td>
                         <td>Selling</td>
-                        <td >Pending</td>
+                        <td id="sellingrow" class="d-flex">
+                          <button class="btn btn-outline-primary me-2" type="button" onclick="CreateNotification(1)">
+                            <i class="bi bi-check text-success"></i>
+                            Approve
+                          </button>
+                          <button class="btn btn-outline-primary" type="button" onclick="CreateNotification(0)">
+                            <i class="bi bi-x text-danger"></i>
+                            Reject
+                          </button>
+                        </td>
+                      </tr>
+                      <tr scope="row" class="collapse p-0" id="row3collapse">
+                        <td colspan="12" style="padding: 0 !important;">
+                          <table class="table table-striped bg-light m-0">
+                            <thead>
+                              <tr class='light'>
+                                <th scope="col">Requester</th>
+                                <th scope="col">Freight ID</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Requested Weight</th>
+                                <th scope="col">Requested Volume</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>KMS Lines Pte Ltd</td>
+                                <td>cx3k8d</td>
+                                <td>Port of Shanghai</td>
+                                <td>2500 kg</td>
+                                <td>3 m<sup>3</sup></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -688,6 +747,20 @@
     </div>
   </div>
 <script>
+
+function CreateNotification(approved) {
+  if (approved) {
+    $.notify('Request Approved!', "success");    
+    $('#sellingrow').html("Approved");
+    $('#sellingrow').addClass("table-success");
+  } else {
+    $.notify('Request Rejected!', "error");  
+    $('#sellingrow').html("Rejected");
+    $('#sellingrow').addClass("table-danger");
+  }
+   
+}
+
 function DateFilter() {
   var input, filter, cards, cardContainer, h5, title, i;
   input = document.getElementById("myDateFilter");
