@@ -9,37 +9,38 @@
             <div class="row" ng-controller="TabController">
                 <div class="col-md-1 splitLine mt-3" style="height: 700px; width: 12.499999995%">
                     <div class="mt-n2 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="mb-5 nav nav-pills nav-stacked row" style="padding-top: 5%;">
-                          <div class="companyBtn" ng-class="{ active: isSet(1) }">
-                            <a class="btn" href="/forkliftServices"> <i class="mt-1 me-3 fa fa-address-book"></i>
-                                Forklifting</a>
+                      <div class="mb-5 nav nav-pills nav-stacked row" style="padding-top: 5%;">
+
+                        <div class="companyBtn" ng-class="{ active: isSet(1) }">
+                            <a class="btn" href="/forkliftServices"> 
+                                <i class="mt-1 me-3 fa-solid fa-life-ring"></i>Forklifting</a>
                         </div>
 
                         <div class="w-100"></div>
-
                         <div class="companyBtn" ng-class="{ active: isSet(2) }">
-                            <a class="btn" ng-click="setTab(2)" href="/railingRequest"> <i class="mt-1 me-3 fa fa-search"></i> Railing</a>
+                            <a class="btn" ng-click="setTab(2)" href="/railingRequest"> 
+                                <i class="mt-1 me-3 fa-solid fa-sailboat"></i> Railing</a>
                         </div>
 
                         <div class="w-100"></div>
                         <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                            <a class="btn" ng-click="setTab(3)" href="/stuffingRequest"> <i
-                                    class="mt-1 me-3 fa fa-bell"></i> Stuffing</a>
+                            <a class="btn" ng-click="setTab(3)" href="/stuffingRequest">
+                                <i class="mt-1 me-3 fa-solid fa-box"></i> Stuffing</a>
                         </div>
                         <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                            <a class="btn" ng-click="setTab(3)" href="/truckingRequest" style="color: var(--light); 
-                            background: var(--primary);"> <i
-                                    class="mt-1 me-3 fa fa-bell"></i> Trucking</a>
+                            <a class="btn" ng-click="setTab(3)" style="color: var(--light); 
+                            background: var(--primary);" href="/truckingRequest"> 
+                                <i class="mt-1 me-3 fa-solid fa-truck-moving"></i> Trucking</a>
                         </div>
                         <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                            <a class="btn" ng-click="setTab(3)" href="/documentation"> <i
-                                    class="mt-1 me-3 fa fa-bell"></i> Permits</a>
+                            <a class="btn" ng-click="setTab(3)" href="/documentation"> 
+                                <i class="mt-1 me-3 fa-solid fa-file-import"></i> Permits</a>
                         </div>
                         <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                            <a class="btn" ng-click="setTab(3)"> <i
-                                    class="mt-1 me-3 fa fa-bell"></i> Warehouse</a>
+                            <a class="btn" ng-click="setTab(3)" href="https://www.singaporepsa.com/" > 
+                                <i class="mt-1 me-3 fa-solid fa-comment-dots"></i> Feedback</a>
                         </div>
-                        </div>
+                    </div>
                     </div>
                 </div>
                 <div class="col-md-10" style="padding-left: 50px; padding-top: 10px; width: 87.49999965%;">
@@ -121,46 +122,46 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="number"  class="form-control" id="" placeholder="">
+                                        <input type="number"  class="form-control" id="qtyInput" placeholder="">
                                         <label for="Quantity">Quantity of Container</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="number"  class="form-control" id="" placeholder="">
+                                        <input type="number"  class="form-control" id="weightInput" placeholder="">
                                         <label for="companyname">Cargo Weight (kg)</label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-floating">
-                                        <input type="number"  class="form-control" id="" placeholder="">
+                                        <input type="number"  class="form-control" id="dwInput" placeholder="">
                                         <label for="companyname">Dimensions (Width)</label>
                                     </div>
                                 </div>
 
                                 <div class="col-md-4">
                                     <div class="form-floating">
-                                        <input type="number"  class="form-control" id="" placeholder="">
+                                        <input type="number"  class="form-control" id="dhInput" placeholder="">
                                         <label for="companyname">Dimensions (Height)</label>
                                     </div>
                                 </div>  
 
                                 <div class="col-md-4">
                                     <div class="form-floating">
-                                        <input type="number"  class="form-control" id="" placeholder="">
+                                        <input type="number"  class="form-control" id="dlInput" placeholder="">
                                         <label for="companyname">Dimensions (Length)</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="date" class="form-control"name="birthday">  
+                                        <input type="date" class="form-control"name="birthday" id="serviceDateInput">  
                                         <label for="registereddate">Estimated Service Date</label>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select" aria-label="Default select example" placeholder="Preferred Timeslot"> 
+                                        <select class="form-select" aria-label="Default select example" placeholder="Preferred Timeslot" id="timeslotInput"> 
                                             <option value="1" selected></option>
                                             <option value="1">Airport - Port</option>
                                             <option value="2">Port - Port</option>
@@ -174,7 +175,7 @@
 
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <select class="form-select" aria-label="Default select example" placeholder="Preferred Timeslot"> 
+                                        <select class="form-select" aria-label="Default select example" placeholder="Preferred Timeslot" id="timeslotInput"> 
                                             <option value="1" selected></option>
                                             <option value="1">09:00AM - 12:00PM</option>
                                             <option value="2">13:00PM - 15:00PM</option>
@@ -189,14 +190,14 @@
 
                                 <div class="col-md-12">
                                     <div class="form-floating">
-                                        <input class="form-control" type="file" id="Businessdocs" multiple />
+                                        <input class="form-control" type="file" id="Businessdocs" multiple id="photoInput"/>
                                         <label for="Businessdocs" class="form-label">Upload Cargo Photo</label>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <select class="form-select" aria-label="Default select example" placeholder="Transfer From"> 
+                                        <select class="form-select" aria-label="Default select example" placeholder="Transfer From" id="startWhInput"> 
                                             <option value="1" selected></option>
                                             <option value="1">Warehouse 1</option>
                                             <option value="2">Warehouse 2</option>
@@ -209,7 +210,7 @@
 
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <select class="form-select" aria-label="Default select example" placeholder="Transfer From">
+                                        <select class="form-select" aria-label="Default select example" placeholder="Transfer To" id="endWhInput">
                                             <option value="1" selected></option>
                                             <option value="1">Warehouse 1</option>
                                             <option value="2">Warehouse 2</option>
@@ -221,7 +222,7 @@
                                 </div>
                                       
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" id="postBtn" type="submit">Get a Quote</button>
+                                    <button class="btn btn-primary w-100 py-3" id="quoteBtn" type="submit">Get a Quote</button>
                                 </div>
                                 
                                 
@@ -424,18 +425,54 @@
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
 <script>
-    console.log("testing");
-    
-    $(document).ready(function(){
-		var date_input=$('input[name="date"]'); //our date input has the name "date"
-		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-		date_input.datepicker({
-			format: 'mm/dd/yyyy',
-			container: container,
-			todayHighlight: true,
-			autoclose: true,
-		});
-	})
+  $(document).ready(function(){
+      function formValidation() {
+      /*
+      if(($("#qtyInput").val()) == null || !($("#weightInput").val())  || !($("#dwInput").val()) || !($("#dhInput").val())  || !($("#dlInput").val()) || !($("#endDateInput").val()) 
+      || !($("#startDateInput").val()) || !($("#startWhInput").val()) || !($("#endWhInput").val()) || !($("#photoInput").val())){
+          return "Please fill up all the fields!";
+      }*/
+    if($("#qtyInput").val() <= 0 ){
+      return "Invalid Container Quantity";
+    }
+    if ($("#weightInput").val() <= 0) {
+      return "Invalid Cargo Weight";
+    }
+    if ($("#dwInput").val() <= 0) {
+      return "Invalid Container Width";
+    }
+    if ($("#dhInput").val() <= 0) {
+      return "Invalid Container Height";
+    }
+    if ($("#dlInput").val() <= 0) {
+      return "Invalid Container Length";
+    }
+    if($("#serviceDateInput").val() ==  ""){
+      return "Please enter your preferred service date."
+    }
+    if($("#timeslotInput").val() ==  "0"){
+      return "Please enter your preferred service timeslot."
+    }
+    if($("#startWhInput").val() == $("#endWhInput").val()){
+      return "Start warehouse must not be the same as Destination warehouse."
+    }
+    if (valid) {
+      return "Quote Sent Successfully";
+    }
+    return valid;
+  }
+  
+  $("#quoteBtn").click(function () {
+    var valMsg = formValidation();
+    if (valMsg.indexOf("Successfully") != -1) {
+      $.notify('Job Posted Successfully!', "success");
+    }
+      else {
+      $.notify(valMsg, "error");
+      }
+    });
+
+})
 </script>
 
 <style>

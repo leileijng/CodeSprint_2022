@@ -30,6 +30,9 @@ urlpatterns = [
     path('documentation', views.documentation, name='documentation'),
 
     path('truckingRequest', views.truckingRequest, name='truckingRequest'),
-    path('forkliftServices', views.forkliftServices, name='forkliftServices')
+    path('forkliftServices', views.forkliftServices, name='forkliftServices'),
+
+
+    path('home', views.home, name='home')
     
 ]
