@@ -9,37 +9,38 @@
             <div class="row" ng-controller="TabController">
                 <div class="col-md-1 splitLine mt-3" style="height: 700px; width: 12.499999995%">
                     <div class="mt-n2 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="mb-5 nav nav-pills nav-stacked row" style="padding-top: 5%;">
-                          <div class="companyBtn" ng-class="{ active: isSet(1) }">
-                            <a class="btn" href="/forkliftServices"> <i class="mt-1 me-3 fa fa-address-book"></i>
-                                Forklifting</a>
+                      <div class="mb-5 nav nav-pills nav-stacked row" style="padding-top: 5%;">
+
+                        <div class="companyBtn" ng-class="{ active: isSet(1) }">
+                            <a class="btn" href="/forkliftServices"> 
+                                <i class="mt-1 me-3 fa-solid fa-life-ring"></i>Forklifting</a>
                         </div>
 
                         <div class="w-100"></div>
-
                         <div class="companyBtn" ng-class="{ active: isSet(2) }">
-                            <a class="btn" ng-click="setTab(2)" href="/railingRequest"> <i class="mt-1 me-3 fa fa-search"></i> Railing</a>
+                            <a class="btn" ng-click="setTab(2)" href="/railingRequest"> 
+                                <i class="mt-1 me-3 fa-solid fa-sailboat"></i> Railing</a>
                         </div>
 
                         <div class="w-100"></div>
                         <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                            <a class="btn" ng-click="setTab(3)" href="/stuffingRequest"> <i
-                                    class="mt-1 me-3 fa fa-bell"></i> Stuffing</a>
+                            <a class="btn" ng-click="setTab(3)" href="/stuffingRequest">
+                                <i class="mt-1 me-3 fa-solid fa-box"></i> Stuffing</a>
                         </div>
                         <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                            <a class="btn" ng-click="setTab(3)" href="/truckingRequest" style="color: var(--light); 
-                            background: var(--primary);"> <i
-                                    class="mt-1 me-3 fa fa-bell"></i> Trucking</a>
+                            <a class="btn" ng-click="setTab(3)" style="color: var(--light); 
+                            background: var(--primary);" href="/truckingRequest"> 
+                                <i class="mt-1 me-3 fa-solid fa-truck-moving"></i> Trucking</a>
                         </div>
                         <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                            <a class="btn" ng-click="setTab(3)" href="/documentation"> <i
-                                    class="mt-1 me-3 fa fa-bell"></i> Permits</a>
+                            <a class="btn" ng-click="setTab(3)" href="/documentation"> 
+                                <i class="mt-1 me-3 fa-solid fa-file-import"></i> Permits</a>
                         </div>
                         <div class="companyBtn" ng-class="{ active: isSet(3) }">
-                            <a class="btn" ng-click="setTab(3)"> <i
-                                    class="mt-1 me-3 fa fa-bell"></i> Warehouse</a>
+                            <a class="btn" ng-click="setTab(3)"> 
+                                <i class="mt-1 me-3 fa-solid fa-comment-dots"></i> Feedback</a>
                         </div>
-                        </div>
+                    </div>
                     </div>
                 </div>
                 <div class="col-md-10" style="padding-left: 50px; padding-top: 10px; width: 87.49999965%;">

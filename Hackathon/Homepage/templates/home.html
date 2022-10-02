@@ -1,0 +1,216 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}<title>Home Page</title>{% endblock %}
+{% block content %}
+
+<!-- Contact Start -->
+<!-- ======= Breadcrumbs ======= -->
+<div class="container-xxl mb-5" style="padding: 0;">
+  <div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center" style="background-image: url('static/img/page-header.jpg');">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>PSA KD Community</h2>
+            <p>
+              Container Freight Station (CFS), is a multi-tenanted
+              distripark. <br>There are 22 Tenants operating in KD, who are either Cargo
+              Consolidators cum CFS Operators or CFS Operators serving the various
+              Cargo Consolidators and Freight Forwarders. <br>The CFS Operators will also
+              have their appointed 3rd party Hauliers or having own fleet of Haulier Drivers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Breadcrumbs -->
+
+  <section id="features" class="features" style="margin: 0 100px;">
+    <div class="container">
+      <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
+
+        <div class="col-md-6">
+          <img src="{% static 'img/cta-bg.jpg' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-6" style="padding-left: 5rem;">
+          <h3>Keppel Distripark (KD) </h3>
+          <p class="fst-italic">
+            A multi-tenanted, modern cargo distribution complex comprising of various warehousing and office facilities.
+            KD’s direct link to our terminals at Brani, Keppel, Tanjong Pagar and Pasir Panjang allows quick transit for
+            containers between the port and distripark, while also in close proximity with major roadways and
+            expressways such as the AYE, CTE, ECP and highways which grants excellent connectivity to the city, airport
+            and major industrial hubs.
+          </p>
+        </div>
+      </div><!-- Features Item -->
+
+      <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
+        <div class="col-md-6 order-1 order-md-2">
+          <img src="{% static 'img/about.jpg' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-6 order-2 order-md-1" style="padding-right: 5rem;">
+          <h3>Physical Resources Sharing & Services</h3>
+          <p class="fst-italic">
+            With KD community, PSA goes beyond just being a
+commercial landlord. Potentially, there are opportunities to offer different service offerings
+that could benefit the KD community. Services that PSA could offer to bring value to the KD Community would fall
+under the broad categories below
+          </p>
+          <ul>
+            <li><i class="bi bi-check"></i> PSA as a broker on sharing of physical resources where operation
+              synergies could be reaped in terms of warehouse space, handling
+              equipment (forklift), trailers and pallets.</li>
+            <li><i class="bi bi-check"></i> PSA as a master service provider to offer common services including
+              supply of forklifts, supply of labour for container unstuffing/stuffing,
+              container trucking, container storage, railing of cargoes, between
+              warehouses, permit documentations.</li>
+          </ul>
+        </div>
+      </div><!-- Features Item -->
+
+      <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
+        <div class="col-md-6">
+          <img src="{% static 'img/features-4.jpg' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-6" style="padding-left: 5rem;">
+          <h3>A marketplace for the Cargo Consolidators/Freight Forwarders</h3>
+          <p>PSA as a marketplace for the Cargo Consolidators/Freight Forwarders to
+            sell cargo space in container for certain trade lane or destination that they
+            are unable to fill with their own cargoes to freight forwarder who need to
+            buy cargo space (co-load) as they do not have the base volume for that
+            trade lane or destination.</p>
+          <ul>
+            <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+            <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
+          </ul>
+        </div>
+      </div><!-- Features Item -->
+
+     
+
+    </div>
+  </section><!-- End Features Section -->
+
+</div>
+
+
+<style type="text/css">
+  .hero-header {
+    margin-bottom: 0px !important;
+  }
+
+  /*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+  .breadcrumbs .page-header {
+    padding: 160px 0 180px 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .breadcrumbs .page-header:before {
+    content: "";
+    background-color: rgba(14, 29, 52, 0.8);
+    position: absolute;
+    inset: 0;
+  }
+
+  .breadcrumbs .page-header h2 {
+    font-size: 56px;
+    font-weight: 500;
+    color: #fff;
+    font-family: var(--font-secondary);
+  }
+
+  .breadcrumbs .page-header p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .breadcrumbs nav {
+    background-color: #f3f6fc;
+    padding: 20px 0;
+  }
+
+  .breadcrumbs nav ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-secondary);
+  }
+
+  .breadcrumbs nav ol a {
+    color: var(--color-primary);
+    transition: 0.3s;
+  }
+
+  .breadcrumbs nav ol a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumbs nav ol li+li {
+    padding-left: 8px;
+  }
+
+  .breadcrumbs nav ol li+li::before {
+    display: inline-block;
+    padding-right: 8px;
+    color: #4278cc;
+    content: "/";
+  }
+
+  /*--------------------------------------------------------------
+# Features Section
+--------------------------------------------------------------*/
+  .features {
+    padding-top: 80px;
+  }
+
+  .features .features-item+.features-item {
+    margin-top: 100px;
+  }
+
+  @media (max-width: 640px) {
+    .features .features-item+.features-item {
+      margin-top: 40px;
+    }
+  }
+
+  .features .features-item h3 {
+    font-weight: 600;
+    font-size: 26px;
+    color: #001973;
+  }
+
+  .features .features-item ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .features .features-item ul li {
+    padding-bottom: 10px;
+  }
+
+  .features .features-item ul li:last-child {
+    padding-bottom: 0;
+  }
+
+  .features .features-item ul i {
+    font-size: 20px;
+    padding-right: 4px;
+    color: var(--color-primary);
+  }
+
+  .features .features-item p:last-child {
+    margin-bottom: 0;
+  }
+</style>
+<script>
+</script>
+<link href="{% static 'css/main.css' %}" rel="stylesheet">
+{% endblock %}
