@@ -91,21 +91,27 @@
                                                             </div>
                                                         </div>
                                                         <div clas="col-md-12">
-                                                            <div class="d-flex bd-highlight">
-                                                                <div class="input-group mb-3 mt-3 me-3">
-                                                                  <span class="input-group-text"
-                                                                    >Required Weight</span
-                                                                  >
-                                                                  <input
-                                                                    type="text"
-                                                                    class="form-control"
-                                                                    aria-label="Amount (to the nearest kilogram)"
-                                                                  />
-                                                                  <span class="input-group-text">kg</span>
-                                                                </div>
+                                                        <div class="d-flex bd-highlight">
+                                                            <div class="input-group mb-3 ">
+                                                                <span class="input-group-text"
+                                                                >$</span
+                                                                >
+                                                                <input
+                                                                style="width: 70%;"
+                                                                type="text"
+                                                                class="form-control"
+                                                                aria-label="Amount (to the nearest kilogram)"
+                                                                />
+                                                                <select class="form-select" aria-label="Default select example">
+                                                                    <option selected>per..</option>
+                                                                    <option value="1">/day</option>
+                                                                    <option value="2">/week</option>
+                                                                    <option value="3">/month</option>
+                                                                </select>                                                         </div>
                                                         </div>
+                                                    
                     
-                                                        <div class="col-md-12">
+                                                        <div class="col-md-12 mb-3">
                                                             <div class="form-floating">
                                                                 <input class="form-control" type="file" id="Businessdocs" multiple />
                                                                 <label for="Businessdocs" class="form-label">Upload Resouces Photo</label>
@@ -117,6 +123,7 @@
                                                         </div>
                                                         
                                                         
+                                                    </div>
                                                     </div>
                     
                                                 </form>
@@ -175,33 +182,24 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="container">
-                                                                <div class="row h-100 d-flex justify-content-between">
-                                                                    <div class="col-5 mb-2 d-flex justify-content-between align-items-center">
-                                                                        <div class="col-6 d-flex flex-column justify-content-center align-items-center">
-                                                                            <img class="m-0 verified" src="https://m.media-amazon.com/images/I/61I6xQgrIIL._SL1500_.jpg" alt="" style="width:180px;height:180px;">
-                                                                        </div>
-                                                                        <div class="col-6 d-flex align-items-center justify-content-between">
-                                                                            <div class="col-12">
-                                                                                <div class="d-flex flex-column">
-                                                                                    <h5 class="m-0 mb-2">Electric Pallet Jack</h5>
-                                                                                    <div class="d-flex">
-                                                                                        <img class="mb-3 company-logo me-3" src="http://gilmoncfs.sg/gilmon.png" alt="">
-                                                                                        <p class="mb-3" style="color: var(--dark)">Gilmon CFS</p>
-                                                                                    </div>
-                                                                        
-                                                                                </div>
-                                                                                <ul class="m-0" style="height: fit-content;">
-                                                                                    <li>Model: Vestil EPT-2048-45</li>
-                                                                                    <li>Load: 4,500 pounds</li>
-                                                                                    <li>Price: $20 / day</li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
+                                                                <div class="row h-100">
+                                                                    <div class="col">
+                                                                        <img class="mb-3 company-logo" src="http://gilmoncfs.sg/gilmon.png" alt="">
+                                                                        <h5 class="mb-1">Electric Pallet Jack</h5>
+                                                                        <p class="mb-3" style="color: var(--dark)">Gilmon CFS</p>
+                                                                        <ul>
+                                                                            <li>Model: Vestil EPT-2048-45</li>
+                                                                            <li>Load: 4,500 pounds</li>
+                                                                            <li>Price: $20 / day</li>
+                                                                        </ul>
                                                                     </div>
-                                                                    <div class="col-3 d-flex flex-column timetable-img text-center justify-content-end">
-                                                                        <h3>Booking Schedule</h3>
-                                                                        <img src="img/content/timetable.png" alt="">
+                                                                    <div class="col d-flex flex-column justify-content-between align-items-left">
+                                                                        <img class="mb-3 ms-auto verified" src="https://m.media-amazon.com/images/I/61I6xQgrIIL._SL1500_.jpg" alt="" style="width:180px;height:180px;">
                                                                     </div>
+                                                                </div>
+                                                                <div class="timetable-img text-center">
+                                                                    <h3>Booking Schedule</h3>
+                                                                    <img src="img/content/timetable.png" alt="">
                                                                 </div>
                                                                 <div class="table-responsive">
                                                                     <table class="table table-bordered text-center">
@@ -265,12 +263,12 @@
                                                 
                                                                             <tr >
                                                                                 <td class="align-middle">17/9 - 21/9</td>
-                                                                                <td class="bg-light-gray align-middle m-0">
+                                                                                <td class="bg-light-gray align-middle justify-centre">
                                                                                     <!-- <label class="contain"> need to center
                                                                                         <input type="checkbox">
                                                                                         <span class="checkmark"></span>
                                                                                     </label> -->
-                                                                                    <label class="toggler-wrapper style-20 ms-auto me-auto">
+                                                                                    <label class="toggler-wrapper style-20">
                                                                                         <input type="checkbox" >
                                                                                         <div class="toggler-slider">
                                                                                           <div class="toggler-knob"></div>
@@ -321,7 +319,7 @@
                                                         <div class="modal-footer">
                                                             <a data-bs-toggle="modal"
                                                             data-bs-target="#forkliftModal"
-                                                            class="btn px-3 mt-auto ms-auto" onclick="CreateNotification(1)">Send Request</a>
+                                                            class="btn px-3 mt-auto ms-auto">Send Request</a>
                                                         </div>
                                                       </div>
                                                     </div>
@@ -830,12 +828,10 @@
 <script>
     var element = document.getElementById("resourceNavItem");
     element.classList.add("btn-outline-light");
-
-    function CreateNotification(approved) {
-        if(approved) {
-            $.notify('Booking Updated!', "success");
-        }
+    for (let element of document.getElementsByClassName("navhide")){
+      element.style.visibility="";
     }
+
 </script>
-        {% endblock %} 
+{% endblock %} 
 
