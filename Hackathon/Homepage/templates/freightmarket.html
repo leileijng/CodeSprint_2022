@@ -505,7 +505,7 @@
                         <td scope="row" data-bs-toggle="collapse" href="#row2collapse" role="button" aria-expanded="false" aria-controls="row2collapse"><i class="mt-1 me-3 fa fa-eye"></i>2</td>
                         <td>849132</td>
                         <td>Buying</td>
-                        <td class="table-success">Succeeded</td>
+                        <td class="table-success">Approved</td>
                       </tr>
                       <tr scope="row" class="collapse p-0" id="row2collapse">
                         <td colspan="12" style="padding: 0 !important;">
@@ -535,12 +535,12 @@
                         <td scope="row" data-bs-toggle="collapse" href="#row3collapse" role="button" aria-expanded="false" aria-controls="row3collapse"><i class="mt-1 me-3 fa fa-eye"></i>3</td>
                         <td>490481</td>
                         <td>Selling</td>
-                        <td class="d-flex">
-                          <button class="btn btn-outline-primary me-2" type="button">
+                        <td id="sellingrow" class="d-flex">
+                          <button class="btn btn-outline-primary me-2" type="button" onclick="CreateNotification(1)">
                             <i class="bi bi-check text-success"></i>
                             Approve
                           </button>
-                          <button class="btn btn-outline-primary" type="button">
+                          <button class="btn btn-outline-primary" type="button" onclick="CreateNotification(0)">
                             <i class="bi bi-x text-danger"></i>
                             Reject
                           </button>
@@ -747,6 +747,20 @@
     </div>
   </div>
 <script>
+
+function CreateNotification(approved) {
+  if (approved) {
+    $.notify('Request Approved!', "success");    
+    $('#sellingrow').html("Approved");
+    $('#sellingrow').addClass("table-success");
+  } else {
+    $.notify('Request Rejected!', "error");  
+    $('#sellingrow').html("Rejected");
+    $('#sellingrow').addClass("table-danger");
+  }
+   
+}
+
 function DateFilter() {
   var input, filter, cards, cardContainer, h5, title, i;
   input = document.getElementById("myDateFilter");
