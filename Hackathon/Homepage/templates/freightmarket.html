@@ -59,7 +59,7 @@
               <div class="w-100"></div>
               <div class="companyBtn" ng-class="{ active: isSet(3) }">
                 <a class="btn notification notify" ng-click="setTab(3)">
-                  <i class="mt-1 me-3 fa fa-bell"></i> Status</a
+                  <i class="mt-1 me-3 fa fa-bell"></i> Manage</a
                 >
               </div>
             </div>
@@ -75,6 +75,7 @@
                 <section class="resume-section" id="experience">
                   <div class="resume-section-content">
                     <h1>Buy Cargo Space</h1>
+                    <p class="mb-4">Find cargo space that meets your requirements and send a request to the provider to use the space.</p>
                   </div>
                 </section>
                 <section>
@@ -388,9 +389,8 @@
 
               <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="width: 40%; padding-left: 5%;">
-                    <p class="d-inline-block border rounded-pill py-1 px-4">Sell</p>
                     <h1 class="mb-4">Sell Cargo Space</h1>
-                    <p class="mb-4">Make use of decentralised technology to get trustworthy prove and detect scams!</p>
+                    <p class="mb-4">Fill this form out to list your available cargo space on the market. Buyers will then be able to request for your cargo space. You will then be able to see all requests under the manage page.</p>
                     <img class="img-fluid mt-0 " src="{% static 'img/storage-container.jpg' %}">
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style="width: 60%;">
@@ -460,7 +460,8 @@
             </div>
               <div ng-show="isSet(3)">
                 <div class="wow fadeInUp" data-wow-delay="0.3s">
-                  <h1>Status page</h1>
+                  <h1>Cargo Space Management Page</h1>
+                  <p class="mb-4">View your cargo space requests. Accept or reject parties requesting for your space.</p>
                   <table class="table table-bordered">
                     <thead class="bg-primary" style="color: white;">
                       <tr>
